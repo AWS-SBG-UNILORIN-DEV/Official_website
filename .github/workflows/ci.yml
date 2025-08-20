@@ -1,37 +1,52 @@
-name: React CI/CD
+name: CI
 
 on:
-  pull_request:
-    branches:
-      - handyman
   push:
-    branches:
-      - handyman
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+concurrency:
+  group: ci-${{ github.ref_name }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
 
 jobs:
   build-and-test:
-    runs-on: [ "*" ]
-
+    runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
+      - name: Checkout
+        uses: actions/checkout@v4
         with:
-          node-version: '18'
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
 
       - name: Install dependencies
-        run: npm install  # Changed from npm ci to npm install
+        run: npm ci
 
-      - name: Lint code
-        run: npm run lint
+      - name: Format check
+        run: npx prettier --check "src/**/*.{js,jsx,ts,tsx,css,md}"
 
-      - name: Build project
+      - name: Lint (fail on warnings)
+        run: npm run lint -- --max-warnings=0
+
+      - name: Type check
+        run: npx tsc --noEmit
+
+
+      - name: Build
         run: npm run build
 
-      - name: Upload production-ready build as artifact
-        uses: actions/upload-artifact@v3
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
         with:
-          name: build
+          name: build-${{ github.sha }}
           path: build/
+          retention-days: 7
