@@ -32,7 +32,7 @@ jobs:
         run: npm ci
 
       - name: Format check
-        run: npx prettier --check "src/**/*.{js,jsx,ts,tsx,css,md}"
+        run: npx prettier --config .prettierrc.cjs --check "src/**/*.{js,jsx,ts,tsx,css,md}"
 
       - name: Lint (fail on warnings)
         run: npm run lint -- --max-warnings=0
