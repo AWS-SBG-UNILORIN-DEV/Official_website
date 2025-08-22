@@ -33,7 +33,7 @@ const HeroSection = () => {
             <div className="w-3/4">
                 <img src={hero_image} />
             </div>
-            
+
         </div>
       )
     }
