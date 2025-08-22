@@ -1,28 +1,26 @@
-@font-face{
-  font-family: "Alexandria";
-  src: url("../src/assets/fonts/Alexandria-Light.ttf");
-  font-weight: 300; 
+@font-face {
+  font-family: 'Alexandria';
+  src: url('../src/assets/fonts/Alexandria-Light.ttf');
+  font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Alexandria";
-  src: url("../src/assets/fonts/Alexandria-Regular.ttf");
-  font-weight: 400; 
+  font-family: 'Alexandria';
+  src: url('../src/assets/fonts/Alexandria-Regular.ttf');
+  font-weight: 400;
   font-style: normal;
 }
 
-
-@font-face{
-  font-family: "Alexandria";
-  src: url("../src/assets/fonts/Alexandria-SemiBold.ttf");
-  font-weight: 500; 
+@font-face {
+  font-family: 'Alexandria';
+  src: url('../src/assets/fonts/Alexandria-SemiBold.ttf');
+  font-weight: 500;
   font-style: normal;
 }
 
+@import 'tailwindcss';
 
-@import "tailwindcss";
-
-@theme{
-  --font-alexandria: Alexandria, "san-serif"
+@theme {
+  --font-alexandria: Alexandria, 'san-serif';
 }

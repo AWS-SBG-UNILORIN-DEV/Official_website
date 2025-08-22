@@ -1,14 +1,11 @@
-
-
-import HeroSection from './components/HeroSection.tsx'
+import HeroSection from './components/HeroSection.tsx';
 
 function App() {
-
   return (
-      <>
-        <HeroSection />
-      </>
-    )
-  }
+    <>
+      <HeroSection />
+    </>
+  );
+}
 
 export default App;

@@ -6,10 +6,10 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-  "lint": "eslint src/**/*.{ts,tsx}",
+    "lint": "eslint src/**/*.{ts,tsx}",
     "preview": "vite preview",
     "tailwind:init": "tailwindcss init -p",
-  "lint:fix": "eslint src/**/*.{ts,tsx} --fix",
+    "lint:fix": "eslint src/**/*.{ts,tsx} --fix",
     "format": "prettier --write src/**/*.{js,jsx,ts,tsx,css,md}",
     "prepare": "husky install"
   },
