@@ -1,4 +1,5 @@
 
+
 import HeroSection from './components/HeroSection.tsx'
 
 function App() {
@@ -10,4 +11,4 @@ function App() {
     )
   }
 
-export default App
+export default App;
