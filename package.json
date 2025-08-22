@@ -6,14 +6,15 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-  "lint": "eslint src/**/*.{ts,tsx}",
+    "lint": "eslint src/**/*.{ts,tsx}",
     "preview": "vite preview",
     "tailwind:init": "tailwindcss init -p",
-  "lint:fix": "eslint src/**/*.{ts,tsx} --fix",
+    "lint:fix": "eslint src/**/*.{ts,tsx} --fix",
     "format": "prettier --write src/**/*.{js,jsx,ts,tsx,css,md}",
     "prepare": "husky install"
   },
   "dependencies": {
+    "@tailwindcss/vite": "^4.1.12",
     "react": "^19.1.1",
     "react-dom": "^19.1.1"
   },
@@ -38,7 +39,8 @@
     "lint-staged": "^16.1.5",
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.39.1",
-    "vite": "^7.1.2"
+    "vite": "^7.1.2",
+    "tailwindcss": "^4.0.0"
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx}": [
