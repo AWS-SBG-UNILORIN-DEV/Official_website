@@ -1,11 +1,10 @@
 import { useState, useEffect } from 'react'
-import arrow from '/src/assets/arrow.png'
+import next from '/src/assets/next.png'
+import prev from '/src/assets/prev.png'
+
 
 const Event = () => {
 
-    // type image = [
-
-    // ]
 
     const [scroll, setScroll] = useState(0)
 
@@ -15,21 +14,21 @@ const Event = () => {
   return (
     <div className='flex flex-col justify-center items-center py-12 px-4 gap-6 min-h-screen w-full'>
         <div>
-            <h2 className="text-2xl font-bold">
+            <h2 className="text-[60px] font-normal">
                 Events
             </h2>
           </div>
           
-          <div className=" paragraph-next-prev-section flex items-center justify-between">
+          <div className="flex items-center w-[80%] justify-between">
             <div>
-                <p>
+                <p className="font-bold text-2xl">
                     Our Upcoming Events
                 </p>
               </div>
               
-              <div className="flex ">
-                  <img src={arrow} className="prev" />
-                  <img src={arrow} className="next"/>
+              <div className="flex justify-between gap-20">
+                  <img src={prev} className="prev bg-[#f5f5f5] p-4 rounded-full border border-[#9747FF]" />
+                  <img src={next} className="next bg-[#9747FF] p-4  rounded-full"/>
                   
               </div>
               
