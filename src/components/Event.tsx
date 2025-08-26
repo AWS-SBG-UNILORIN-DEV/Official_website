@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import next from '/src/assets/next.png'
 import prev from '/src/assets/prev.png'
+import arrow from '/src/assets/arrow.png'
 
 
 // Event Card Slider code
@@ -47,8 +48,17 @@ const Event = ({ Sliders }) => {
                       { Sliders.map((item, id) => {
                         return (
                           <div className={eventSlider===id ? "block": "hidden"} > 
-                            <div key={id} >
-                              <img src={item.src} className="w-1/3"/>
+                            <div key={id} className="w-3/3" >
+                              <img src={item.src} className="w-2/4" />
+                              <div className="bg-[#f5f5f5] w-1/4 flex space-x-6 py-4 px-6 rounded-md shadow-xl items-center">
+                                <div > 
+                                  <h3 className="font-bold">{item.date}</h3>
+                                  <p>{ item.description }</p>
+                                </div>
+                                <div> 
+                                  <img src={arrow} />
+                                </div>
+                              </div>
                             </div>
                          </div>
                         )
