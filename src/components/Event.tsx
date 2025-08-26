@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import next from '/src/assets/next.png'
 import prev from '/src/assets/prev.png'
-import arrow from '/src/assets/arrow.png'
+import arrow from '/src/assets/arrow-right-up.png'
 
 
 // Event Card Slider code
@@ -22,7 +22,17 @@ const Event = ({ Sliders }) => {
       const nextBtn = () => {
         setEventSlider(eventSlider === Sliders.length - 1 ? 0 : eventSlider + 1)
         console.log(Sliders.length)
-    }
+  }
+  
+      
+        useEffect(() => {
+          const interval = setInterval(() => {
+            setEventSlider(prev =>
+              prev === Sliders.length + 1? 0 : prev + 1
+            )
+          }, 10000)
+          return () => clearInterval(interval)
+        }, [Sliders.length])
   
         return (
           <div className='flex flex-col justify-center items-center py-12 px-4 gap-6 min-h-screen w-full'>
@@ -44,26 +54,42 @@ const Event = ({ Sliders }) => {
                       <img src={next} className="next bg-[#9747FF] p-4  rounded-full hover hover:bg-[#7F00FF]" onClick={ nextBtn } />
                     </div>
                 </div>
-                    <div className="flex items-center justify-end">
-                      { Sliders.map((item, id) => {
-                        return (
-                          <div className={eventSlider===id ? "block": "hidden"} > 
-                            <div key={id} className="w-3/3" >
-                              <img src={item.src} className="w-2/4" />
-                              <div className="bg-[#f5f5f5] w-1/4 flex space-x-6 py-4 px-6 rounded-md shadow-xl items-center">
-                                <div > 
-                                  <h3 className="font-bold">{item.date}</h3>
-                                  <p>{ item.description }</p>
-                                </div>
-                                <div> 
-                                  <img src={arrow} />
-                                </div>
-                              </div>
-                            </div>
-                         </div>
-                        )
-                      })}
+            
+            <div className="flex items-center justify-end w-[90%] overflow-hidden">
+              <div className="flex transition-transform duration-500"
+                style={{
+                  width: '90%',
+                  transform: `translateX(0%)`
+                }}>
+                
+                {[0, 1, 2].map((offset) => {
+                  const idx = (eventSlider + offset) % Sliders.length;
+                  const item = Sliders[idx];
+                  // })}
+                  return (
+                    <div key={idx}
+                      className="w-2/5 min-w-[320px] mx-2"
+                      style={{
+                        opacity: offset < 2 ? 1 : 0.5,
+                        transition: 'opacity 0.3s'
+                      }}
+                    >
+                      <img src={item.src} className="w-full shadow-xl" />
+                      <div className="bg-[#f5f5f5] absolute w-[280px] my-[-100px] mx-[30px] z-100 flex space-x-6 py-2 px-6 rounded-md shadow-sm items-center justify-around">
+                        <div>
+                          <h3 className="font-bold">{item.date}</h3>
+                          <p>{item.description}</p>
+                        </div>
+                        <div>
+                          <img src={arrow} className="bg-[#9747FF] p-2 rounded-full hover hover:bg-[#7F00FF]" />
+                        </div>
+                      </div>
                     </div>
+                  )
+                })}  
+              </div>
+            </div>
+
           </div>
         )
       }
