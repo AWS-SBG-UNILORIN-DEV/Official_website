@@ -1,0 +1,21 @@
+{
+    "Sliders": [
+        {
+            "id": 1,
+            "name": "cloud skill",
+            "src": "src/assets/event1.jpg"
+        },
+
+         {
+            "id": 2,
+            "name": "Back and Ready to Build",
+            "src": "src/assets/event2.jpg"
+        },
+        
+          {
+            "id": 3,
+            "name": "AWS Career Paths and Certifications",
+            "src": "src/assets/event3.jpg"
+        }
+    ]
+}

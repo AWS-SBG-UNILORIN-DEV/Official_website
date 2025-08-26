@@ -1,11 +1,13 @@
 import HeroSection from './components/HeroSection.tsx';
-import Event from './components/Event.tsx'
+import Event from './components/Event'
+import { Sliders } from './assets/event.json'
 
-function App() {
+
+const App = () => {
   return (
     <>
       <HeroSection />
-      <Event />
+      <Event Sliders = { Sliders } />
     </>
   );
 }
