@@ -1,13 +1,16 @@
 import HeroSection from './components/HeroSection.tsx';
 import Event from './components/Event'
 import { Sliders } from './assets/event.json'
+import { Reviews } from './assets/review.json'
+import Review from './components/Review'
 
 
 const App = () => {
   return (
     <>
       <HeroSection />
-      <Event Sliders = { Sliders } />
+      <Event Sliders={Sliders} />
+      <Review Reviews={Reviews} />
     </>
   );
 }

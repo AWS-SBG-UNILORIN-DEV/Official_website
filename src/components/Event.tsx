@@ -23,7 +23,7 @@ const Event = ({ Sliders }) => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setEventSlider(prev => (prev === Sliders.length + 1 ? 0 : prev + 1));
+      setEventSlider(prev => (prev === Sliders.length - 1 ? 0 : prev + 1));
     }, 10000);
     return () => clearInterval(interval);
   }, [Sliders.length]);
@@ -57,9 +57,10 @@ const Event = ({ Sliders }) => {
         <div
           className='flex transition-transform duration-700 ease-in-out'
           style={{
-            width: '90%',
-            // transform: `translateX(-${eventSlider * (100 / 2.5)}%)`
-            transform: `translateX0(0%)`,
+            width: '100%',
+            // transform: `translateX(-${eventSlider * (100 / 3)}%)`,
+            transform: `translateX(0%)`,
+            // transform: `translateX(0%)`,
           }}
         >
           {[0, 1, 2].map(offset => {
