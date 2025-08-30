@@ -3,23 +3,49 @@ import next from '/src/assets/next.png';
 import prev from '/src/assets/prev.png';
 import arrow from '/src/assets/arrow-right-up.png';
 
+import { Splide, SplideSlide } from '@splidejs/react-splide';
+// import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
+
+// new Splide('.splide').mount({ AutoScroll });
+
 // Event Card Slider code
 
 const Event = ({ Sliders }) => {
   // eventString: typeof EventString = null;
 
-  const [eventSlider, setEventSlider] = useState(0);
-  //setting the previous view button
+  const [eventSlider, setEventSlider] = useState(1);
+  const [isTransitioning, setIsTransitioning] = useState(true);
+
+  const extendedSlider = [Sliders[Sliders.length - 1], ...Sliders, ...Sliders];
+  // const spreadSlider = [...Sliders];
+  // console.log(spreadSlider[2]);
+
   const prevBtn = () => {
-    setEventSlider(eventSlider === 0 ? Sliders.length - 1 : eventSlider - 1);
-    console.log('clicked');
-    console.log(Sliders.length);
+    if (!isTransitioning) return;
+    setEventSlider(prev => prev - 1);
   };
 
   const nextBtn = () => {
-    setEventSlider(eventSlider === Sliders.length - 1 ? 0 : eventSlider + 1);
-    console.log(Sliders.length);
+    if (!isTransitioning) return;
+    setEventSlider(prev => prev + 1);
   };
+
+  const handleTransitionEnd = () => {
+    if (eventSlider === extendedSlider.length - 1) {
+      setIsTransitioning(false);
+      setEventSlider(1);
+    } else if (eventSlider === 0) {
+      setIsTransitioning(false);
+      setEventSlider(1);
+    }
+  };
+
+  useEffect(() => {
+    if (!isTransitioning) {
+      const timeout = setTimeout(() => setIsTransitioning(true), 50);
+      return () => clearTimeout(timeout);
+    }
+  });
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -65,16 +91,21 @@ const Event = ({ Sliders }) => {
         >
           {[0, 1, 2].map(offset => {
             const idx = (eventSlider + offset) % Sliders.length;
-            const item = Sliders[idx];
+            const item = extendedSlider[idx];
             // })}
             return (
               <div
                 key={idx}
                 className='w-2/5 min-w-[320px] mx-2'
                 style={{
-                  opacity: offset < 2 ? 1 : 0.5,
-                  transition: 'opacity 0.3s',
+                  // opacity: offset < 2 ? 1 : 0.5,
+                  transform: `translateX(-${eventSlider * 100} %)`,
+                  // transition: 'opacity 0.3s'
+                  transition: isTransitioning
+                    ? 'transform 0.5s ease-in-out'
+                    : 'none',
                 }}
+                onTransitionEnd={handleTransitionEnd}
               >
                 <img src={item.src} className='w-full shadow-xl' />
                 <div className='bg-[#f5f5f5] absolute w-[280px] my-[-100px] mx-[30px] z-100 flex space-x-6 py-2 px-6 rounded-md shadow-sm items-center justify-around'>
