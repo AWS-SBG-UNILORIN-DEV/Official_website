@@ -1,21 +1,32 @@
 import { useRef } from 'react';
-import reviewImg from '/src/assets/reviewImg.png';
-import prev from '/src/assets/prev.png';
 import next from '/src/assets/next.png';
-import '@splidejs/react-splide/css';
+import prev from '/src/assets/prev.png';
+import '@splidejs/react-splide/css/core';
+import reviewImg from '/src/assets/reviewImg.png';
 
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 
-const Review = ({ Reviews }) => {
-  const reviewRef = useRef();
+interface Review {
+  name: string;
+  levelCourse: string;
+  description: string;
+}
 
-  const splideOptions = {
+interface ReviewsProps {
+  Reviews: Review[];
+}
+
+const Review = ({ Reviews }: ReviewsProps) => {
+  console.log(Reviews);
+  const reviewRef = useRef<any>(null);
+
+  const reviewOptions = {
     type: 'loop',
     perPage: 1,
     perMove: 1,
     padding: '1rem',
-    arrows: false, //removing splide default arrow;
-    pagination: false, // remove the dots under;
+    arrows: false, //removing the default library next and previous button
+    pagination: false, //removing the default library dots under the slide
     breakpoints: {
       1024: {
         perPage: 1,
@@ -27,7 +38,7 @@ const Review = ({ Reviews }) => {
       },
       576: {
         perPage: 1,
-        gap: '0.5rem',
+        gap: '0.7rem',
       },
     },
   };
@@ -43,49 +54,56 @@ const Review = ({ Reviews }) => {
       reviewRef.current.go('>');
     }
   };
+
   return (
-    <div className='flex w-full flex-col md:flex-row items-center justify-center gap-8 py-18 px-24'>
-      <div className='review w-[616px] h-[400px] bg-[#1E242C] rounded-lg flex flex-col items-center justify-center p-4'>
-        <Splide
-          ref={reviewRef}
-          options={splideOptions}
-          className='flex-1 w-full flex items-center'
-        >
-          {Reviews.map((item, id) => (
-            <SplideSlide className='text-center text-white ' key={id}>
-              <div className='flex space-y-8 px-16 mb-6 text-center'>
-                <h3 className='font-bold'>{item.name}</h3>
-                <p className='font-light'> {item.levelCourse}</p>
-              </div>
-              <div className='px-16 flex-1 flex items-center'>
-                <p className='text-center text-3xl '>"{item.description}"</p>
-              </div>
-            </SplideSlide>
-          ))}
-        </Splide>
-
-        <div className='flex justify-between gap-4'>
-          <img
-            src={prev}
-            alt=''
-            className='prev bg-[#f5f5f5] p-3 rounded-full border border-[#9747FF] hover hover:bg-[#fff]'
-            onClick={prevBtn}
-          />
-          <img
-            src={next}
-            alt=''
-            className='next bg-[#9747FF] p-3 rounded-full hover hover:bg-[#7F00FF]'
-            onClick={nextBtn}
-          />
+    <div className='w-full py-12 px-8'>
+      <div className='flex flex-col md:flex-wrap space-y-6'>
+        <div className='title'>
+          <h1>What Our Members Say</h1>
         </div>
-      </div>
 
-      <div className='image w-full md:w-[500px]'>
-        <img
-          src={reviewImg}
-          alt=''
-          className='rounded-lg w-full md:w-[400px] md:h-[400px]'
-        />
+        <div className='review-slide-image-section flex flex-col md:flex-row gap-6'>
+          <div className='review-slider-section bg-[#1E242C] w-full md:w-[600px] rounded-md text-white flex flex-col items-center justify-center p-8'>
+            <Splide
+              ref={reviewRef}
+              options={reviewOptions}
+              className='flex-1 w-full flex items-center justify-center'
+            >
+              {Reviews.map((item, id) => (
+                <SplideSlide key={id} className='text-center text-white h-full'>
+                  <div className='flex flex-col'>
+                    <div className='flex w-full'>
+                      <h3 className='font-bold'>{item.name}</h3>
+                      <p className='font-normal'>{item.levelCourse}</p>
+                    </div>
+                    <div>
+                      <p>{item.description}</p>
+                    </div>
+                  </div>
+                </SplideSlide>
+              ))}
+            </Splide>
+
+            <div className='flex gap-4 items-center justify-center pt-8'>
+              <img
+                src={prev}
+                onClick={prevBtn}
+                alt='previous button'
+                className='prev bg-[#f5f5f5] p-2 rounded-full border border-[#9747FF] hover:bg-[#fff] cursor-pointer transition-colors'
+              />
+              <img
+                src={next}
+                onClick={nextBtn}
+                alt='next button'
+                className='next bg-[#9747FF] p-2 rounded-full hover:bg-[#7F00FF] cursor-pointer transition-colors'
+              />
+            </div>
+          </div>
+
+          <div className='image-container'>
+            <img src={reviewImg} className='rounded-md' />
+          </div>
+        </div>
       </div>
     </div>
   );
