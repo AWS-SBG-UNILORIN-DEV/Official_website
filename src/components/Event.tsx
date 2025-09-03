@@ -2,13 +2,13 @@ import { useRef } from 'react';
 import next from '/src/assets/next.png';
 import prev from '/src/assets/prev.png';
 import arrow from '/src/assets/arrow-right-up.png';
-import '@splidejs/react-splide/css/core';
+import '@splidejs/react-splide/css';
 
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 
 interface SliderReview {
   name: string;
-  levelCourse: string;
+  src: string;
   description: string;
 }
 
@@ -69,12 +69,12 @@ const Event = ({ Sliders }: SliderProps) => {
         <div className='flex justify-between gap-4'>
           <img
             src={prev}
-            className='prev bg-[#f5f5f5] p-3 rounded-full border border-[#9747FF] hover hover:bg-[#fff] '
+            className='prev bg-[#f5f5f5] p-2 rounded-full border border-[#9747FF] hover hover:bg-[#fff] '
             onClick={prevBtn}
           />
           <img
             src={next}
-            className='next bg-[#9747FF] p-3  rounded-full hover hover:bg-[#7F00FF]'
+            className='next bg-[#9747FF] p-2  rounded-full hover hover:bg-[#7F00FF]'
             onClick={nextBtn}
           />
         </div>

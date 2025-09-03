@@ -3,6 +3,7 @@ import Event from './components/Event'
 import { Sliders } from './assets/event.json'
 import { Reviews } from './assets/review.json'
 import Review from './components/Review'
+import '@splidejs/react-splide/css'
 
 
 const App = () => {

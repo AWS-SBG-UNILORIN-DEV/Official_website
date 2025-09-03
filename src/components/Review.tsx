@@ -1,9 +1,7 @@
-import { useRef } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import next from '/src/assets/next.png';
 import prev from '/src/assets/prev.png';
-import '@splidejs/react-splide/css/core';
 import reviewImg from '/src/assets/reviewImg.png';
-
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 
 interface Review {
@@ -16,21 +14,30 @@ interface ReviewsProps {
   Reviews: Review[];
 }
 
+// simple interface for splider instance methods we need
+interface SplideInstance {
+  go: (direction: string | number) => void;
+}
+
 const Review = ({ Reviews }: ReviewsProps) => {
   console.log(Reviews);
-  const reviewRef = useRef<any>(null);
+
+  const [splideInstance, setSplideInstance] = useState<SplideInstance | null>(
+    null
+  );
+  const splideRef = useRef<{ splide: SplideInstance } | null>(null);
 
   const reviewOptions = {
-    type: 'loop',
+    type: 'loop' as const,
     perPage: 1,
     perMove: 1,
-    padding: '1rem',
+    padding: '0',
     arrows: false, //removing the default library next and previous button
     pagination: false, //removing the default library dots under the slide
     breakpoints: {
       1024: {
         perPage: 1,
-        gap: '0.8rem',
+        gap: '6rem',
       },
       768: {
         perPage: 1,
@@ -43,65 +50,89 @@ const Review = ({ Reviews }: ReviewsProps) => {
     },
   };
 
+  //set the splide instance after the component mounts
+  useEffect(() => {
+    if (splideRef.current) {
+      setSplideInstance(splideRef.current.splide);
+    }
+  }, []);
+
   const prevBtn = () => {
-    if (reviewRef.current) {
-      reviewRef.current.go('<');
+    if (splideInstance) {
+      splideInstance.go('<');
     }
   };
 
   const nextBtn = () => {
-    if (reviewRef.current) {
-      reviewRef.current.go('>');
+    if (splideInstance) {
+      splideInstance.go('>');
     }
   };
 
   return (
-    <div className='w-full py-12 px-8'>
-      <div className='flex flex-col md:flex-wrap space-y-6'>
+    <div className='w-full py-8 px-4 sm:px-6 lg:px-8 lg:py-16'>
+      <div className='flex flex-col space-y-6 lg:space-y-8 max-w-8xl mx-auto'>
         <div className='title'>
-          <h1>What Our Members Say</h1>
+          <h1 className='text-2xl lg:text-2xl font-normal lg:pl-16 font-alexandria font-light'>
+            What Our Members Say
+          </h1>
         </div>
 
-        <div className='review-slide-image-section flex flex-col md:flex-row gap-6'>
-          <div className='review-slider-section bg-[#1E242C] w-full md:w-[600px] rounded-md text-white flex flex-col items-center justify-center p-8'>
+        <div className=' flex flex-col lg:flex-row gap-6 lg:gap-6 items-center justify-start lg:pl-16 lg:items-stretch lg:w-6xl'>
+          <div className='bg-[#1E242C] rounded-lg text-white flex flex-col py-6 lg:py-8 px-6 lg:px-8 w-full lg:flex-1 lg:min-h-[400px] justify-between lg:max-w-xl overflow-hidden'>
+            {/* <div className='flex-1 mb-6 lg:mb-8'> */}
             <Splide
-              ref={reviewRef}
+              ref={splideRef}
+              // onSplideMount={splide => setSplideInstance(splide)}
               options={reviewOptions}
               className='flex-1 w-full flex items-center justify-center'
             >
               {Reviews.map((item, id) => (
-                <SplideSlide key={id} className='text-center text-white h-full'>
-                  <div className='flex flex-col'>
-                    <div className='flex w-full'>
-                      <h3 className='font-bold'>{item.name}</h3>
-                      <p className='font-normal'>{item.levelCourse}</p>
+                <SplideSlide
+                  key={id}
+                  className='text-center text-white h-full flex items-center'
+                >
+                  <div className='flex flex-col gap-4 lg:gap-6 w-full'>
+                    <div className='flex items-center justify-center gap-4 w-full'>
+                      <h3 className='font-semibold text-lg'>
+                        {item.name}{' '}
+                        <span className='text-sm text-gray-300 font-normal'>
+                          {item.levelCourse}
+                        </span>
+                      </h3>
                     </div>
-                    <div>
-                      <p>{item.description}</p>
+                    <div className=''>
+                      <p className='text-lg leading-relaxed font-medium font-alike font-light'>
+                        {item.description}
+                      </p>
                     </div>
                   </div>
                 </SplideSlide>
               ))}
             </Splide>
+            {/* </div> */}
 
-            <div className='flex gap-4 items-center justify-center pt-8'>
-              <img
-                src={prev}
+            <div className='flex gap-3 items-center justify-center'>
+              <button
                 onClick={prevBtn}
-                alt='previous button'
                 className='prev bg-[#f5f5f5] p-2 rounded-full border border-[#9747FF] hover:bg-[#fff] cursor-pointer transition-colors'
-              />
-              <img
-                src={next}
+              >
+                <img src={prev} alt='previous-btn-image' />
+              </button>
+              <button
                 onClick={nextBtn}
-                alt='next button'
                 className='next bg-[#9747FF] p-2 rounded-full hover:bg-[#7F00FF] cursor-pointer transition-colors'
-              />
+              >
+                <img src={next} alt='next-btn-image' />
+              </button>
             </div>
           </div>
 
-          <div className='image-container'>
-            <img src={reviewImg} className='rounded-md' />
+          <div className='image-container lg:w-96 xl:w-[450px] w-full'>
+            <img
+              src={reviewImg}
+              className='rounded-lg w-full h-64 sm:h-80 lg:h-[400px] object-cover'
+            />
           </div>
         </div>
       </div>
