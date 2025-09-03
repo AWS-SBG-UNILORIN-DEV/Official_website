@@ -1,15 +1,16 @@
-import { useRef } from 'react';
+import { useState } from 'react';
 import next from '/src/assets/next.png';
 import prev from '/src/assets/prev.png';
 import arrow from '/src/assets/arrow-right-up.png';
-import '@splidejs/react-splide/css';
-
+// import '@splidejs/react-splide/css';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
+import type { Splide as SplideClass } from '@splidejs/splide';
 
 interface SliderReview {
   name: string;
   src: string;
   description: string;
+  date: string;
 }
 
 interface SliderProps {
@@ -17,7 +18,8 @@ interface SliderProps {
 }
 
 const Event = ({ Sliders }: SliderProps) => {
-  const splideRef = useRef<any>(null);
+  // Hold Splide instance here
+  const [splide, setSplide] = useState<SplideClass | null>(null);
 
   const splideOptions = {
     type: 'loop',
@@ -25,35 +27,17 @@ const Event = ({ Sliders }: SliderProps) => {
     perMove: 1,
     gap: '2em',
     padding: '1rem',
-    arrows: false, //disabled the library default arrow for my own defined arrow
-    pagination: false, //removing the dots under
+    arrows: false,
+    pagination: false,
     breakpoints: {
-      1024: {
-        perPage: 2,
-        gap: '4em',
-      },
-      768: {
-        perPage: 2,
-        gap: '0.5rem',
-      },
-      576: {
-        perPage: 1,
-        gap: '0.5rem',
-      },
+      1024: { perPage: 2, gap: '4em' },
+      768: { perPage: 2, gap: '0.5rem' },
+      576: { perPage: 1, gap: '0.5rem' },
     },
   };
 
-  const prevBtn = () => {
-    if (splideRef.current) {
-      splideRef.current.go('<');
-    }
-  };
-
-  const nextBtn = () => {
-    if (splideRef.current) {
-      splideRef.current.go('>');
-    }
-  };
+  const prevBtn = () => splide?.go('<');
+  const nextBtn = () => splide?.go('>');
 
   return (
     <div className='flex flex-col justify-center items-center py-12 px-8 gap-6 min-h-screen w-full'>
@@ -69,23 +53,26 @@ const Event = ({ Sliders }: SliderProps) => {
         <div className='flex justify-between gap-4'>
           <img
             src={prev}
-            className='prev bg-[#f5f5f5] p-2 rounded-full border border-[#9747FF] hover hover:bg-[#fff] '
+            className='prev bg-[#f5f5f5] p-2 rounded-full border border-[#9747FF] hover hover:bg-[#fff]'
             onClick={prevBtn}
           />
           <img
             src={next}
-            className='next bg-[#9747FF] p-2  rounded-full hover hover:bg-[#7F00FF]'
+            className='next bg-[#9747FF] p-2 rounded-full hover hover:bg-[#7F00FF]'
             onClick={nextBtn}
           />
         </div>
       </div>
 
       <div className='w-[90%]'>
-        <Splide ref={splideRef} options={splideOptions}>
+        <Splide
+          options={splideOptions}
+          onSplideMount={splideInstance => setSplide(splideInstance)}
+        >
           {Sliders.map((item, id) => (
             <SplideSlide key={id}>
               <img src={item.src} className='w-full shadow-xl rounded-md' />
-              <div className='bg-[#f5f5f5] absolute w-[280px] my-[-100px] mx-[30px] z-100 flex space-x-6 py-2 px-6 rounded-md shadow-sm items-center justify-around'>
+              <div className='bg-[#f5f5f5] absolute lg:w-[280px] my-[-100px] mx-[30px] z-100 flex space-x-6 py-2 px-6 rounded-md shadow-sm items-center justify-around'>
                 <div>
                   <h3 className='font-bold'>{item.date}</h3>
                   <p>{item.description}</p>

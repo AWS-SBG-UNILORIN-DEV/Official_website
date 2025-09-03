@@ -3,14 +3,15 @@ declare module '@splidejs/react-splide' {
 
 
     export interface SplideProps{
-        // onSplideMount?: (splide: any) => void
-        // options?: (splide: any) => void;
+        options?: splideOptions;
+        onSplideMount?: (splide: SplideClass) => void;
+        ref?: (splideRef: SplideClass) => void;
         children?: ReactNode;
         className?: string;
     }
 
     export interface SplideSlideProps {
-        children?: ReactNde;
+        children?: ReactNode;
         className?: string;
     }
 

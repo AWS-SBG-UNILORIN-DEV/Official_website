@@ -1,8 +1,9 @@
-import { useRef, useState, useEffect } from 'react';
+import { useState} from 'react';
 import next from '/src/assets/next.png';
 import prev from '/src/assets/prev.png';
 import reviewImg from '/src/assets/reviewImg.png';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
+import type { Splide as SplideClass } from '@splidejs/splide'; // Splide core type
 
 interface Review {
   name: string;
@@ -14,18 +15,12 @@ interface ReviewsProps {
   Reviews: Review[];
 }
 
-// simple interface for splider instance methods we need
-interface SplideInstance {
-  go: (direction: string | number) => void;
-}
-
 const Review = ({ Reviews }: ReviewsProps) => {
   console.log(Reviews);
 
-  const [splideInstance, setSplideInstance] = useState<SplideInstance | null>(
-    null
-  );
-  const splideRef = useRef<{ splide: SplideInstance } | null>(null);
+
+
+  const [review, setReview] = useState<SplideClass | null>(null);
 
   const reviewOptions = {
     type: 'loop' as const,
@@ -35,39 +30,18 @@ const Review = ({ Reviews }: ReviewsProps) => {
     arrows: false, //removing the default library next and previous button
     pagination: false, //removing the default library dots under the slide
     breakpoints: {
-      1024: {
-        perPage: 1,
-        gap: '6rem',
-      },
-      768: {
-        perPage: 1,
-        gap: '0.5rem',
-      },
-      576: {
-        perPage: 1,
-        gap: '0.7rem',
-      },
+      1024: { perPage: 1, gap: '6rem' },
+      768: { perPage: 1, gap: '0.5rem' },
+      576: { perPage: 1, gap: '0.7rem' },
     },
   };
 
-  //set the splide instance after the component mounts
-  useEffect(() => {
-    if (splideRef.current) {
-      setSplideInstance(splideRef.current.splide);
-    }
-  }, []);
 
-  const prevBtn = () => {
-    if (splideInstance) {
-      splideInstance.go('<');
-    }
-  };
 
-  const nextBtn = () => {
-    if (splideInstance) {
-      splideInstance.go('>');
-    }
-  };
+  const prevBtn = () => review?.go('<');
+  const nextBtn = () => review?.go('>');
+
+
 
   return (
     <div className='w-full py-8 px-4 sm:px-6 lg:px-8 lg:py-16'>
@@ -82,9 +56,10 @@ const Review = ({ Reviews }: ReviewsProps) => {
           <div className='bg-[#1E242C] rounded-lg text-white flex flex-col py-6 lg:py-8 px-6 lg:px-8 w-full lg:flex-1 lg:min-h-[400px] justify-between lg:max-w-xl overflow-hidden'>
             {/* <div className='flex-1 mb-6 lg:mb-8'> */}
             <Splide
-              ref={splideRef}
+              //   ref={splideRef}
               // onSplideMount={splide => setSplideInstance(splide)}
               options={reviewOptions}
+              onSplideMount={SplideInstance => setReview(SplideInstance)}
               className='flex-1 w-full flex items-center justify-center'
             >
               {Reviews.map((item, id) => (
