@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useRef, useEffect } from 'react';
 import next from '/src/assets/next.png';
 import prev from '/src/assets/prev.png';
 import arrow from '/src/assets/arrow-right-up.png';
@@ -19,7 +19,8 @@ interface SliderProps {
 
 const Event = ({ Sliders }: SliderProps) => {
   // Hold Splide instance here
-  const [splide, setSplide] = useState<SplideClass | null>(null);
+  // const [splide, setSplide] = useState<SplideClass | null>(null);
+  const sliderRef = useRef<SplideClass | null>(null);
 
   const splideOptions = {
     type: 'loop',
@@ -36,8 +37,14 @@ const Event = ({ Sliders }: SliderProps) => {
     },
   };
 
-  const prevBtn = () => splide?.go('<');
-  const nextBtn = () => splide?.go('>');
+  useEffect(() => {
+    if (sliderRef.current) {
+      console.log('Splide Mounted:', sliderRef.current);
+    }
+  });
+
+  const prevBtn = () => sliderRef.current?.go('<');
+  const nextBtn = () => sliderRef.current?.go('>');
 
   return (
     <div className='flex flex-col justify-center items-center py-12 px-8 gap-6 min-h-screen w-full'>
@@ -65,17 +72,14 @@ const Event = ({ Sliders }: SliderProps) => {
       </div>
 
       <div className='w-[90%]'>
-        <Splide
-          options={splideOptions}
-          onSplideMount={splideInstance => setSplide(splideInstance)}
-        >
+        <Splide options={splideOptions} ref={sliderRef}>
           {Sliders.map((item, id) => (
             <SplideSlide key={id}>
               <img src={item.src} className='w-full shadow-xl rounded-md' />
-              <div className='bg-[#f5f5f5] absolute lg:w-[280px] my-[-100px] mx-[30px] z-100 flex space-x-6 py-2 px-6 rounded-md shadow-sm items-center justify-around'>
+              <div className='bg-[#f5f5f5] absolute lg:w-[280px] my-[-100px] mx-[30px] z-100 flex space-x-6 py-2 px-6 rounded-md shadow-sm items-center justify-between lg:justify-around'>
                 <div>
-                  <h3 className='font-bold'>{item.date}</h3>
-                  <p>{item.description}</p>
+                  <h3 className='font-bold text-xs'>{item.date}</h3>
+                  <p className='text-xs'>{item.description}</p>
                 </div>
                 <div>
                   <img

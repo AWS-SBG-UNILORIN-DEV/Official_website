@@ -1,4 +1,4 @@
-import { useState} from 'react';
+import { useEffect, useRef } from 'react';
 import next from '/src/assets/next.png';
 import prev from '/src/assets/prev.png';
 import reviewImg from '/src/assets/reviewImg.png';
@@ -18,9 +18,14 @@ interface ReviewsProps {
 const Review = ({ Reviews }: ReviewsProps) => {
   console.log(Reviews);
 
+  // const [review, setReview] = useState<SplideClass | null>(null);
+  const reviewRef = useRef<SplideClass | null>(null);
 
-
-  const [review, setReview] = useState<SplideClass | null>(null);
+  useEffect(() => {
+    if (reviewRef.current) {
+      console.log('Splide Mount:', reviewRef.current);
+    }
+  });
 
   const reviewOptions = {
     type: 'loop' as const,
@@ -36,12 +41,8 @@ const Review = ({ Reviews }: ReviewsProps) => {
     },
   };
 
-
-
-  const prevBtn = () => review?.go('<');
-  const nextBtn = () => review?.go('>');
-
-
+  const prevBtn = () => reviewRef.current?.go('<');
+  const nextBtn = () => reviewRef.current?.go('>');
 
   return (
     <div className='w-full py-8 px-4 sm:px-6 lg:px-8 lg:py-16'>
@@ -59,7 +60,8 @@ const Review = ({ Reviews }: ReviewsProps) => {
               //   ref={splideRef}
               // onSplideMount={splide => setSplideInstance(splide)}
               options={reviewOptions}
-              onSplideMount={SplideInstance => setReview(SplideInstance)}
+              // onSplideMount={SplideInstance => setReview(SplideInstance)}
+              ref={reviewRef}
               className='flex-1 w-full flex items-center justify-center'
             >
               {Reviews.map((item, id) => (
