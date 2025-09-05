@@ -142,7 +142,7 @@ const AboutSection = () => {
           viewport={{ once: true }}
           src='/Images/about_us/aws_females.svg'
           alt='Aws female members group picture'
-          className='w-[35rem]'
+          className='w-[32rem]'
         />
 
         <motion.img
@@ -152,7 +152,7 @@ const AboutSection = () => {
           viewport={{ once: true }}
           src='/Images/about_us/aws_group_pcture.svg'
           alt='Aws members group picture'
-          className='w-[35rem]'
+          className='w-[32rem]'
         />
       </motion.article>
     </motion.section>
