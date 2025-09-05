@@ -1,15 +1,19 @@
 import HeroSection from './components/HeroSection.tsx';
-import AboutSection from './components/About.tsx';
-import CommunitySection from './components/community.tsx';
+import Event from './components/Event';
+import { Sliders } from './assets/event.json';
+import { Reviews } from './assets/review.json';
+import Review from './components/Review';
+import '@splidejs/splide/dist/css/splide.min.css';
+import './index.css';
 
-function App() {
+const App = () => {
   return (
     <>
       <HeroSection />
-      <AboutSection />
-      <CommunitySection/>
+      <Event Sliders={Sliders} />
+      <Review Reviews={Reviews} />
     </>
   );
-}
+};
 
 export default App;

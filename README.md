@@ -2,10 +2,9 @@
 
 This project cointains the codebase that power the official Unilorin AWS CLOUD CLUB website.
 
-
 # Project Startup Guide
 
-Welcome to the project! This *README* provides a comprehensive guide to get you started with the project setup, including how to run the application locally, manage dependencies, and perform common tasks.
+Welcome to the project! This _README_ provides a comprehensive guide to get you started with the project setup, including how to run the application locally, manage dependencies, and perform common tasks.
 
 ## Table of Contents
 
@@ -24,10 +23,11 @@ Before you begin, ensure you have the following installed:
 
 1. **Clone the Repository**
 
-   ```   
+   ```
    git clone https://github.com/AWSCC-Unilorin/Official_website
    cd official_website
    ```
+
 2. Install Dependencies
 
 Make sure you have all necessary dependencies installed.
@@ -40,22 +40,28 @@ npm install
 ```
 
 ## Running the Project
-1. - To run the project on the development server 
+
+1. - To run the project on the development server
+
 ```
 
 npm run dev
 ```
+
 2. - To run the project on the staging server
+
 ```
 
 npm run staging
 ```
+
 3. - To run the project on the production server
+
 ```
 
 npm run prod
 ```
 
-
 ### Contributing
+
 We welcome contributions to the project! Please refer to our [CONTRIBUTING.md](./CONTRIBUTING.md) file for guidelines on how to contribute.

@@ -2,9 +2,9 @@ name: CI
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 concurrency:
   group: ci-${{ github.ref_name }}
@@ -39,7 +39,6 @@ jobs:
 
       - name: Type check
         run: npx tsc --noEmit
-
 
       - name: Build
         run: npm run build
