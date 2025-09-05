@@ -18,7 +18,6 @@ interface ReviewsProps {
 const Review = ({ Reviews }: ReviewsProps) => {
   console.log(Reviews);
 
-  // const [review, setReview] = useState<SplideClass | null>(null);
   const reviewRef = useRef<SplideClass | null>(null);
 
   useEffect(() => {
@@ -48,7 +47,7 @@ const Review = ({ Reviews }: ReviewsProps) => {
     <div className='w-full py-8 px-4 sm:px-6 lg:px-8 lg:py-16'>
       <div className='flex flex-col space-y-6 lg:space-y-8 max-w-8xl mx-auto'>
         <div className='title'>
-          <h1 className='text-2xl lg:text-2xl font-normal lg:pl-16 font-alexandria font-light'>
+          <h1 className='text-2xl lg:text-2xl lg:pl-16 font-alexandria font-light'>
             What Our Members Say
           </h1>
         </div>
@@ -79,7 +78,7 @@ const Review = ({ Reviews }: ReviewsProps) => {
                       </h3>
                     </div>
                     <div className=''>
-                      <p className='text-lg leading-relaxed font-medium font-alike font-light'>
+                      <p className='font-alike font-light text-2xl mb-4 md:mb-0 lg:text-3xl'>
                         {item.description}
                       </p>
                     </div>

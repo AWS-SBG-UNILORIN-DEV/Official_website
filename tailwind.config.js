@@ -4,7 +4,11 @@
         "./src/**/*.{js,jsx,ts,tsx}",
     ],
     theme: {
-        extend: {},
+        extend: {
+            fontFamily: {
+                alike: ['Alike', 'serif'],
+            }
+        },
     },
     plugins: [],
     }

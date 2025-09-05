@@ -18,8 +18,6 @@ interface SliderProps {
 }
 
 const Event = ({ Sliders }: SliderProps) => {
-  // Hold Splide instance here
-  // const [splide, setSplide] = useState<SplideClass | null>(null);
   const sliderRef = useRef<SplideClass | null>(null);
 
   const splideOptions = {
