@@ -7,7 +7,7 @@ function App() {
     <>
       <HeroSection />
       <AboutSection />
-      <CommunitySection/>
+      <CommunitySection />
     </>
   );
 }
