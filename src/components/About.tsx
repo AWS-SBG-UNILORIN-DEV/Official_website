@@ -1,4 +1,6 @@
-import { motion } from 'framer-motion';
+// import { motion } from 'framer-motion';
+// import * as motion from 'framer-motion';
+import { motion } from 'motion/react';
 
 const AboutSection = () => {
   return (
@@ -9,7 +11,7 @@ const AboutSection = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
-        className='font-normal text-[#1E242C] lg:text-[3.5rem] text-[2.8rem] lg:mb-[2.8rem} mb-[1.8rem]'
+        className='font-normal text-[#1E242C] lg:text-[3.5rem] text-[2.8rem] lg:mb-[2.8rem] mb-[1.8rem]'
       >
         About us
       </motion.h1>
@@ -25,23 +27,23 @@ const AboutSection = () => {
           whileHover={{ scale: 1.05 }}
           className='flex lg:flex-row flex-col justify-between lg:gap-[2rem] gap-[0.6rem] items-center bg-[#FFFFFF] shadow-xl shadow-[#0000004F] lg:py-[0.8rem] py-[1rem] px-[1.34rem] rounded-[0.6875rem] border-[0.5px] border-[#0000004F] w-fit mx-auto transition-transform duration-500'
         >
-          <div>
-            <img
+          <motion.div>
+            <motion.img
               src='/Images/about_us/pink_arrow.svg'
               alt='Pink Arrow'
               className='w-[4.06rem] h-[4.06rem]'
             />
-          </div>
-          <div className='text-[#000000] lg:text-start text-center'>
-            <h3 className='font-[500] lg:text-[1.19rem] text-[1.3rem] mb-[0.5rem]'>
+          </motion.div>
+          <motion.div className='text-[#000000] lg:text-start text-center'>
+            <motion.h3 className='font-[500] lg:text-[1.19rem] text-[1.3rem] mb-[0.5rem]'>
               Our Mission
-            </h3>
-            <p className='font-normal lg:text-[0.875rem] text-[0.7rem] max-w-[22.62rem]'>
+            </motion.h3>
+            <motion.p className='font-normal lg:text-[0.875rem] text-[0.7rem] max-w-[22.62rem]'>
               Our mission at AWS Cloud Club, University of Ilorin, is to equip
               students with hands-on cloud computing skills through workshops,
               mentorship, and real-world projects.
-            </p>
-          </div>
+            </motion.p>
+          </motion.div>
         </motion.div>
 
         {/* Vision Card */}
@@ -53,24 +55,24 @@ const AboutSection = () => {
           whileHover={{ scale: 1.05 }}
           className='flex lg:flex-row flex-col justify-between lg:gap-[2rem] gap-[0.6rem] items-center bg-[#FFFFFF] shadow-xl shadow-[#0000004F] lg:py-[0.8rem] py-[1rem] px-[1.34rem] rounded-[0.6875rem] border-[0.5px] border-[#0000004F] w-fit mx-auto'
         >
-          <div>
-            <img
+          <motion.div>
+            <motion.img
               src='/Images/about_us/pink_spiral.svg'
               alt='Pink Spiral'
               className='w-[4.06rem] h-[4.06rem]'
             />
-          </div>
-          <div className='text-[#000000] lg:text-start text-center'>
-            <h3 className='font-[500] lg:text-[1.19rem] text-[1.3rem] mb-[0.5rem]'>
+          </motion.div>
+          <motion.div className='text-[#000000] lg:text-start text-center'>
+            <motion.h3 className='font-[500] lg:text-[1.19rem] text-[1.3rem] mb-[0.5rem]'>
               Our Vision
-            </h3>
-            <p className='font-normal lg:text-[0.875rem] text-[0.7rem] max-w-[22.62rem]'>
+            </motion.h3>
+            <motion.p className='font-normal lg:text-[0.875rem] text-[0.7rem] max-w-[22.62rem]'>
               We envision a vibrant student community that inspires and develops
               the next generation of cloud professionals and tech leaders in
               Africa. By bridging the gap between academic learning and industry
               demands,
-            </p>
-          </div>
+            </motion.p>
+          </motion.div>
         </motion.div>
       </motion.article>
 
@@ -83,7 +85,7 @@ const AboutSection = () => {
           viewport={{ once: true }}
           className='font-semibold text-[1.6875rem] lg:w-[14.6rem]'
         >
-          <span className='text-[#6328A3]'>Introducing </span>
+          <motion.span className='text-[#6328A3]'>Introducing </motion.span>
           Aws Cloud University Of Ilorin
         </motion.h2>
 

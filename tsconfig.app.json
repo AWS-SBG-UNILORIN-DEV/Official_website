@@ -6,6 +6,7 @@
     "lib": ["ES2022", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
+    "types": ["react", "framer-motion"],
 
     /* Bundler mode */
     "moduleResolution": "bundler",
@@ -15,6 +16,10 @@
     "noEmit": true,
     "jsx": "react-jsx",
 
+    // "moduleResolution": "node",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    // "skipLibCheck": true
     /* Linting */
     "strict": true,
     "noUnusedLocals": true,
