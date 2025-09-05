@@ -1,0 +1,27 @@
+{
+  "Reviews": [
+    {
+      "name": "Zainab . ",
+      "levelCourse": " 300L Computer Science",
+      "description": "Joining this club changed how I see tech. I got my first AWS cert and internship through the community!"
+    },
+
+    {
+      "name": "Tobi .",
+      "levelCourse": "300L Computer Science",
+      "description": "Joining this club changed how I see tech. I got my first AWS cert and internship through the community!"
+    },
+
+    {
+      "name": "Habeeb .",
+      "levelCourse": "300L Computer Science",
+      "description": "Joining this club changed how I see tech. I got my first AWS cert and internship through the community!"
+    },
+
+    {
+      "name": "AntiSocial .",
+      "levelCourse": "300L Computer Science",
+      "description": "Joining this club changed how I see tech. I got my first AWS cert and internship through the community!"
+    }
+  ]
+}

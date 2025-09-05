@@ -19,8 +19,19 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Alike';
+  src: url('../src/assets/fonts/Alike-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
 @import 'tailwindcss';
 
 @theme {
   --font-alexandria: Alexandria, 'san-serif';
+}
+
+@theme {
+  --font-alike: Alike, 'san-serif';
 }
