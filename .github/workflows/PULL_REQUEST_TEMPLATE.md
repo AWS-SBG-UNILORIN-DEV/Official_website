@@ -4,7 +4,7 @@
 
 <!--- Describe your changes in detail here -->
 
- ​
+​
 
 ## Related Issue (Link to issue ticket)
 
@@ -13,11 +13,9 @@
 <!--- If fixing a bug, there should be an issue describing it with steps to reproduce -->
 <!--- Please link to the issue here: -->
 
-
 ## Context
 
 <!--- Why is this change required? What problem does it solve? -->
-
 
 ## How Has This Been Tested?
 
@@ -25,10 +23,9 @@
 <!--- Include details of your testing environment, and the tests you ran to -->
 <!--- see how your change affects other areas of the code, etc. -->
 
- ​
+​
 
 ## Screenshots (if appropriate - Postman, etc):
-
 
 ## Types of changes
 
