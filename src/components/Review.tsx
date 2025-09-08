@@ -16,13 +16,13 @@ interface ReviewsProps {
 }
 
 const Review = ({ Reviews }: ReviewsProps) => {
-  console.log(Reviews);
+  // console.log(Reviews);
 
   const reviewRef = useRef<SplideClass | null>(null);
 
   useEffect(() => {
     if (reviewRef.current) {
-      console.log('Splide Mount:', reviewRef.current);
+      // console.log('Splide Mount:', reviewRef.current);
     }
   });
 

@@ -7,6 +7,8 @@ import { Reviews } from './assets/review.json';
 import Review from './components/Review';
 import '@splidejs/splide/dist/css/splide.min.css';
 import './index.css';
+import { FaqData } from './assets/faqData.json';
+import Faq from './components/Faq';
 
 const App = () => {
   return (
@@ -16,6 +18,7 @@ const App = () => {
       <CommunitySection />
       <Event Sliders={Sliders} />
       <Review Reviews={Reviews} />
+      <Faq FaqData={FaqData} />
     </>
   );
 };
