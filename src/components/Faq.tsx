@@ -47,9 +47,13 @@ interface FaqType {
 
 const Faq = ({ FaqData }: FaqType) => {
   console.log(FaqData);
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(null);
 
-  // useEffect(() => {});
+  // useEffect(() => {}); 
+
+  const toggleOpen = (id: string) => {
+    setIsOpen(isOpen === id ? null : id)
+  }
 
   return (
     <div className=' py-12 px-8 gap-6 min-h-screen '>
