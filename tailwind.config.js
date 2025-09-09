@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       fontFamily: {
         alike: ['Alike', 'serif'],
+        manrope: ['Manrope', 'serif'],
       },
     },
   },

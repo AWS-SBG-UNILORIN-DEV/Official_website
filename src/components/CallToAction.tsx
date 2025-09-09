@@ -15,7 +15,7 @@ const CallToAction = () => {
             Join driven students and start building your cloud career with AWS
             today.
           </h2>
-          <p className='w-3/4 lg:w-2/4 text-[#000]/50'>
+          <p className='font-manrope w-3/4 lg:w-2/4 text-[#000]/50'>
             Unlock your true potential and discover a world of opportunities
             that align with your skills, interests, and aspirations
           </p>
@@ -30,11 +30,11 @@ const CallToAction = () => {
                 <input
                   type='email'
                   placeholder='Your Mail Address'
-                  className='border border-none  focus:outline-none'
+                  className='border border-none font-manrope focus:outline-none'
                 />
               </div>
 
-              <button className='text-xl text-white bg-[#9747FF] rounded-full py-1 px-6 cursor-pointer shadow-[0_4px_20px_rgba(138,185,255,0.4)]'>
+              <button className='text-xl text-white bg-[#9747FF] rounded-full py-2 font-manrope px-6 cursor-pointer shadow-[0_4px_20px_rgba(138,185,255,0.4)]'>
                 {' '}
                 Join Now
               </button>
