@@ -1,8 +1,10 @@
 import inputVector from '/Frame.png';
 
 const CallToAction = () => {
-  const handleSubmit = (e: unknown) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+    console.log(formData);
   };
   return (
     <div className='py-6 px-8 gap-6 min-h-screen flex items-center justify-center'>
@@ -25,7 +27,7 @@ const CallToAction = () => {
                   <img src={inputVector} />
                 </span>
                 <input
-                  type='text'
+                  type='email'
                   placeholder='Your Mail Address'
                   className='border border-none  focus:outline-none'
                 />

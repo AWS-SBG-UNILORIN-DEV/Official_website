@@ -9,7 +9,7 @@ import '@splidejs/splide/dist/css/splide.min.css';
 import './index.css';
 import { FaqData } from './assets/faqData.json';
 import Faq from './components/Faq';
-import CallToAction from './components/CallToAction'
+import CallToAction from './components/CallToAction';
 
 const App = () => {
   return (
