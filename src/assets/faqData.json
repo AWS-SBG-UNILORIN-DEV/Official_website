@@ -1,29 +1,29 @@
 {
-    "FaqData": [
-        {
-            "id": "01",
-            "question": "How do I create account on the job board?",
-            "answer": "Use the search bar on the homepage to enter keywords related to your skills, job title, or preferred location. You can also use the advanced search filters to narrow down results by industry, job type (full-time, part-time, freelance), and experience level."
-        },
-         {
-            "id": "02",
-            "question": "How do I apply for a job through the platform?",
-            "answer": "Use the search bar on the homepage to enter keywords related to your skills, job title, or preferred location. You can also use the advanced search filters to narrow down results by industry, job type (full-time, part-time, freelance), and experience level."
-        },
-         {
-            "id": "03",
-            "question": "How can I track the status of my job applications?",
-            "answer": "Use the search bar on the homepage to enter keywords related to your skills, job title, or preferred location. You can also use the advanced search filters to narrow down results by industry, job type (full-time, part-time, freelance), and experience level."
-        },
-         {
-            "id": "04",
-            "question": "How do I apply for a job through the platform?",
-            "answer": "Use the search bar on the homepage to enter keywords related to your skills, job title, or preferred location. You can also use the advanced search filters to narrow down results by industry, job type (full-time, part-time, freelance), and experience level."
-        },
-         {
-            "id": "05",
-            "question": "Is there a cost to use the job board, and what features are free?",
-            "answer": "Use the search bar on the homepage to enter keywords related to your skills, job title, or preferred location. You can also use the advanced search filters to narrow down results by industry, job type (full-time, part-time, freelance), and experience level."
-        }
-    ]    
+  "FaqData": [
+    {
+      "id": "01",
+      "question": "How do I create account on the job board?",
+      "answer": "Use the search bar on the homepage to enter keywords related to your skills, job title, or preferred location. You can also use the advanced search filters to narrow down results by industry, job type (full-time, part-time, freelance), and experience level."
+    },
+    {
+      "id": "02",
+      "question": "How do I apply for a job through the platform?",
+      "answer": "Use the search bar on the homepage to enter keywords related to your skills, job title, or preferred location. You can also use the advanced search filters to narrow down results by industry, job type (full-time, part-time, freelance), and experience level."
+    },
+    {
+      "id": "03",
+      "question": "How can I track the status of my job applications?",
+      "answer": "Use the search bar on the homepage to enter keywords related to your skills, job title, or preferred location. You can also use the advanced search filters to narrow down results by industry, job type (full-time, part-time, freelance), and experience level."
+    },
+    {
+      "id": "04",
+      "question": "How do I apply for a job through the platform?",
+      "answer": "Use the search bar on the homepage to enter keywords related to your skills, job title, or preferred location. You can also use the advanced search filters to narrow down results by industry, job type (full-time, part-time, freelance), and experience level."
+    },
+    {
+      "id": "05",
+      "question": "Is there a cost to use the job board, and what features are free?",
+      "answer": "Use the search bar on the homepage to enter keywords related to your skills, job title, or preferred location. You can also use the advanced search filters to narrow down results by industry, job type (full-time, part-time, freelance), and experience level."
+    }
+  ]
 }
