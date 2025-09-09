@@ -26,6 +26,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Manrope';
+  src: url('../src/assets/fonts/Manrope-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
 @import 'tailwindcss';
 
 @theme {
@@ -34,4 +41,8 @@
 
 @theme {
   --font-alike: Alike, 'san-serif';
+}
+
+@theme {
+  --font-manrope: Manrope, 'san-serif';
 }
