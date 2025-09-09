@@ -5,6 +5,7 @@ const CallToAction = () => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
     console.log(formData);
+    //   formData = ''
   };
   return (
     <div className='py-6 px-8 gap-6 min-h-screen flex items-center justify-center'>
