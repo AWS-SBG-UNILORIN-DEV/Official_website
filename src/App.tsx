@@ -10,6 +10,7 @@ import './index.css';
 import { FaqData } from './assets/faqData.json';
 import Faq from './components/Faq';
 import CallToAction from './components/CallToAction';
+import Footer from './components/Footer';
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
       <Review Reviews={Reviews} />
       <Faq FaqData={FaqData} />
       <CallToAction />
+      <Footer />
     </>
   );
 };

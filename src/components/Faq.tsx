@@ -57,7 +57,7 @@ const Faq = ({ FaqData }: FaqType) => {
                     exit={{ opacity: 0, height: 0 }}
                     transition={{ duration: 0.4, ease: 'easeInOut' }}
                   >
-                    <p className='font-alike font-light px-15 md:px-20 text-sm mb-4 md:mb-0 lg:text-md lg:px-10 pt-4 leading-loose'>
+                    <p className='font-manrope font-light px-15 md:px-20 text-sm mb-4 md:mb-0 lg:text-md lg:px-10 pt-4 leading-loose'>
                       {item.answer}
                     </p>
                   </motion.div>
