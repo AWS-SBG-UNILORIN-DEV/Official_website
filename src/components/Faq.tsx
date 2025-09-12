@@ -52,9 +52,9 @@ const Faq = ({ FaqData }: FaqType) => {
           {FaqData.map((item, id) => (
             <div key={id} onClick={() => onClick(item.id)}>
               <div
-                className={`w-full md:w-full lg:w-full opacity-100 gap-4 rounded-[20px] border border-[1px] p-6 shadow border border-gray-300 cursor-pointer ${isOpen === item.id ? 'bg-[#8AB9FF]/30 shadow-[0_4px_20px_rgba(138,185,255,0.4)]' : 'bg-[#FFFFFF]'}`}
+                className={`w-full md:w-full flex flex-col items-start justify-around lg:w-full opacity-100 gap-4 rounded-[20px] border border-[1px] p-6 shadow border border-gray-300 cursor-pointer ${isOpen === item.id ? 'bg-[#8AB9FF]/30 shadow-[0_4px_20px_rgba(138,185,255,0.4)]' : 'bg-[#FFFFFF]'}`}
               >
-                <div className='flex justify-around items-start gap-4'>
+                <div className='flex flxx-row justify-between items-center gap-4'>
                   <h1 className='w-[36px] h-[36px] bg-[#EDEEF0] rounded-full text-center flex items-center justify-center border border-[#7f00ff]/80'>
                     {item.id}
                   </h1>
