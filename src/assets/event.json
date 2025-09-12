@@ -1,0 +1,45 @@
+{
+  "Sliders": [
+    {
+      "name": "cloud skill",
+      "src": "/event1.jpg",
+      "date": "29th September, 2025",
+      "description": "Exam Slam"
+    },
+
+    {
+      "name": "Back and Ready to Build",
+      "src": "/event2.jpg",
+      "date": "6th September, 2025",
+      "description": "Exam Slam"
+    },
+
+    {
+      "name": "AWS Career Paths and Certifications",
+      "src": "/event3.jpg",
+      "date": "1st September, 2025",
+      "description": "Exam Slam"
+    },
+
+    {
+      "name": "cloud skill",
+      "src": "/event1.jpg",
+      "date": "29th September, 2025",
+      "description": "Exam Slam"
+    },
+
+    {
+      "name": "Back and Ready to Build",
+      "src": "/event2.jpg",
+      "date": "6th September, 2025",
+      "description": "Exam Slam"
+    },
+
+    {
+      "name": "AWS Career Paths and Certifications",
+      "src": "/event3.jpg",
+      "date": "1st September, 2025",
+      "description": "Exam Slam"
+    }
+  ]
+}

@@ -38,10 +38,10 @@ const HeroSection = () => {
       </div>
 
       <div className='flex flex-col md:flex-row gap-4 md:gap-12 w-3/4 items-center justify-center'>
-        <button className='bg-[#9747FF] py-2 px-5 rounded-full text-white flex gap-3'>
+        <button className='bg-[#9747FF] py-2 px-5 rounded-full text-white flex gap-3 transition hover hover:bg-[#7F00FF]'>
           Join Meet Up <img className='bg-white rounded-full' src={arrow} />
         </button>
-        <button className='bg-[#9747FF] py-2 px-5 rounded-full text-white flex gap-3'>
+        <button className='bg-[#9747FF] py-2 px-5 rounded-full text-white flex gap-3 transition hover hover:bg-[#7F00FF]'>
           Join Community <img className='bg-white rounded-full' src={arrow} />
         </button>
       </div>
