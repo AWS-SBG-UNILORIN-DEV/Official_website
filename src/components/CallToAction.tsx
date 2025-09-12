@@ -44,7 +44,7 @@ const CallToAction = () => {
                 />
               </div>
 
-              <button className='text-xl text-white bg-[#9747FF] rounded-full py-2 font-manrope px-6 cursor-pointer shadow-[0_4px_20px_rgba(138,185,255,0.4)]'>
+              <button className='text-lg text-white bg-[#9747FF] rounded-full py-1 font-manrope px-6 cursor-pointer shadow-[0_4px_20px_rgba(138,185,255,0.4)] border hover:text-[#7f00ff] hover:bg-[#f5f5f5] hover:border-[#7f00ff]/80 transition duration-500 ease-in-out cursor-pointer hover:scale-105'>
                 {' '}
                 Join Now
               </button>

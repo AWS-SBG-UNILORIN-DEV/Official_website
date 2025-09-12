@@ -39,10 +39,11 @@ const Faq = ({ FaqData }: FaqType) => {
           </motion.h2>
         </div>
         <motion.div
-          initial={{ opacity: 0 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{
             opacity: 1,
-            transition: { duration: 1.2, delay: 0.25 },
+            y: 0,
+            transition: { duration: 2, delay: 0.25 },
           }}
           viewport={{ once: true }}
           className='w-full grid grid-cols-1 lg:grid-cols-2 gap-4'
@@ -53,8 +54,8 @@ const Faq = ({ FaqData }: FaqType) => {
               <div
                 className={`w-full md:w-full lg:w-full opacity-100 gap-4 rounded-[20px] border border-[1px] p-6 shadow border border-gray-300 cursor-pointer ${isOpen === item.id ? 'bg-[#8AB9FF]/30 shadow-[0_4px_20px_rgba(138,185,255,0.4)]' : 'bg-[#FFFFFF]'}`}
               >
-                <div className='flex justify-around items-start gap-6'>
-                  <h1 className='w-[36px] h-[36px] bg-[#EDEEF0] rounded-full text-center flex items-center justify-center'>
+                <div className='flex justify-around items-start gap-4'>
+                  <h1 className='w-[36px] h-[36px] bg-[#EDEEF0] rounded-full text-center flex items-center justify-center border border-[#7f00ff]/80'>
                     {item.id}
                   </h1>
                   <h3 className='font-alike font-light text-md mb-4 md:mb-0 lg:text-xl flex itemx-center justify-center'>
@@ -62,7 +63,7 @@ const Faq = ({ FaqData }: FaqType) => {
                   </h3>
                   <img
                     src={accordionBtn}
-                    className={`pt-2 cursor-pointer ${isOpen === item.id ? 'rotate-24' : ''}`}
+                    className={`pt-2 cursor-pointer ${isOpen === item.id ? 'rotate-24 transition-all duration-300 ease-in-out' : ''}`}
                   />
                 </div>
                 {isOpen === item.id && (

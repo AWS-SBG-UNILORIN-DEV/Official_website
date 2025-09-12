@@ -56,7 +56,7 @@ const Review = ({ Reviews }: ReviewsProps) => {
               transition: { duration: 1.2, delay: 0.25 },
             }}
             viewport={{ once: true }}
-            className='text-2xl lg:text-2xl lg:pl-16 font-alexandria font-light'
+            className='text-2xl lg:pl-16 font-alexandria font-light'
           >
             What Our Members Say
           </motion.h1>
@@ -110,13 +110,13 @@ const Review = ({ Reviews }: ReviewsProps) => {
             <div className='flex gap-3 items-center justify-center'>
               <button
                 onClick={prevBtn}
-                className='prev bg-[#f5f5f5] p-2 rounded-full border border-[#9747FF] hover:bg-[#fff] cursor-pointer transition-colors'
+                className='prev bg-[#f5f5f5] p-2 rounded-full border border-[#9747FF] hover:bg-[#fff] cursor-pointer hover:scale-120 transition-all duration-700 ease-in-out'
               >
                 <img src={prev} alt='previous-btn-image' />
               </button>
               <button
                 onClick={nextBtn}
-                className='next bg-[#9747FF] p-2 rounded-full hover:bg-[#7F00FF] cursor-pointer transition-colors'
+                className='next bg-[#9747FF] p-2 rounded-full hover:bg-[#7F00FF] cursor-pointer hover:scale-120 transition-all duration-700 ease-in-out'
               >
                 <img src={next} alt='next-btn-image' />
               </button>

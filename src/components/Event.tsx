@@ -45,7 +45,7 @@ const Event = ({ Sliders }: SliderProps) => {
   const nextBtn = () => sliderRef.current?.go('>');
 
   return (
-    <div className='flex flex-col justify-center items-center py-6 px-8 gap-6 min-h-screen w-full'>
+    <div className='flex flex-col justify-center items-center py-6 px-2 lg:px-8 gap-6 min-h-screen w-full'>
       <div>
         <motion.h1
           initial={{ opacity: 0, y: -40 }}
@@ -58,7 +58,7 @@ const Event = ({ Sliders }: SliderProps) => {
         </motion.h1>
       </div>
 
-      <div className='flex items-center md:w-[90%] justify-between'>
+      <div className='flex sm:gap-60 items-start md:w-[90%] justify-between'>
         <motion.h2
           initial={{ opacity: 0, y: -40 }}
           whileInView={{
@@ -79,12 +79,12 @@ const Event = ({ Sliders }: SliderProps) => {
         >
           <img
             src={prev}
-            className='prev bg-[#f5f5f5] p-2 rounded-full border border-[#9747FF] hover hover:bg-[#fff]'
+            className='prev w-2/4 h-2/4 md:w-full md:h-full bg-[#f5f5f5] p-2 rounded-full border border-[#9747FF] hover hover:bg-[#fff] hover:scale-120 transition-all duration-700 ease-in-out'
             onClick={prevBtn}
           />
           <img
             src={next}
-            className='next bg-[#9747FF] p-2 rounded-full hover hover:bg-[#7F00FF]'
+            className='next w-2/4 h-2/4 md:w-full md:h-full bg-[#9747FF] p-2 rounded-full hover hover:bg-[#7F00FF] hover:scale-120 transition-all duration-700 ease-in-out'
             onClick={nextBtn}
           />
         </motion.div>
@@ -111,7 +111,7 @@ const Event = ({ Sliders }: SliderProps) => {
                   <img
                     src={arrow}
                     alt='view Event'
-                    className='bg-[#9747FF] p-1 rounded-full hover hover:bg-[#7F00FF]'
+                    className='bg-[#9747FF] p-1 rounded-full hover hover:bg-[#7F00FF] hover:bg-[#f5f5f5] cursor-pointer border border-[#f5f5f5] hover:border-[#7F00FF]/80 hover:scale-120 transition-all duration-700 ease-in-out'
                   />
                 </div>
               </div>

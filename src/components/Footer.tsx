@@ -78,16 +78,28 @@ const Footer = () => {
             <p>&copy; 2025. All Rights Reserved</p>
           </div>
           <div className='flex gap-4'>
-            <a href='' className='cursor-pointer'>
+            <a
+              href=''
+              className='cursor-pointer hover hover:scale-115 transition-all duration-500'
+            >
               <img src={instagram} />
             </a>
-            <a href='' className='cursor-pointer'>
+            <a
+              href=''
+              className='cursor-pointer cursor-pointer hover hover:scale-115 transition-all duration-500'
+            >
               <img src={skype} />
             </a>
-            <a href='' className='cursor-pointer'>
+            <a
+              href=''
+              className='cursor-pointer cursor-pointer hover hover:scale-115 transition-all duration-500'
+            >
               <img src={tiktok} />
             </a>
-            <a href='' className='cursor-pointer'>
+            <a
+              href=''
+              className='cursor-pointer cursor-pointer hover hover:scale-115 transition-all duration-500'
+            >
               <img src={youtube} />
             </a>
           </div>
