@@ -25,11 +25,28 @@ const Faq = ({ FaqData }: FaqType) => {
     <div className=' py-12 px-8 gap-6 min-h-screen flex items-center justify-center'>
       <div className='flex flex-col justify-center items-start gap-8 w-full lg:w-[90%]'>
         <div>
-          <h2 className='w-full text-left font-normal text-2xl'>
+          <motion.h2
+            initial={{ opacity: 0, y: -40 }}
+            whileInView={{
+              opacity: 1,
+              y: 1,
+              transition: { duration: 1.2, delay: 0.25 },
+            }}
+            viewport={{ once: true }}
+            className='w-full text-left font-normal text-2xl'
+          >
             Frequently Asked Questions
-          </h2>
+          </motion.h2>
         </div>
-        <div className='w-full grid grid-cols-1 lg:grid-cols-2 gap-4'>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{
+            opacity: 1,
+            transition: { duration: 1.2, delay: 0.25 },
+          }}
+          viewport={{ once: true }}
+          className='w-full grid grid-cols-1 lg:grid-cols-2 gap-4'
+        >
           {/* <div className='w-full flex  gap-4 lg:w-[40%] lg:flex-row'> */}
           {FaqData.map((item, id) => (
             <div key={id} onClick={() => onClick(item.id)}>
@@ -65,7 +82,7 @@ const Faq = ({ FaqData }: FaqType) => {
               </div>
             </div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </div>
   );

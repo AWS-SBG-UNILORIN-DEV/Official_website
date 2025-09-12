@@ -1,4 +1,5 @@
 import inputVector from '/Frame.png';
+import { motion } from 'motion/react';
 
 const CallToAction = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -9,7 +10,16 @@ const CallToAction = () => {
   };
   return (
     <div className='py-6 px-8 gap-6 min-h-screen flex items-center justify-center'>
-      <div className='flex flex-col justify-center items-center gap-8 w-full lg:w-[90%] border border-3 border-[#D0B6F2]/60 rounded-xl py-30 shadow-[0_4px_20px_rgba(138,185,255,0.4)] bg-gradient-to-b from-[#D0B6F2] to-[#fff]'>
+      <motion.div
+        initial={{ opacity: 0, scale: 0.7 }}
+        whileInView={{
+          opacity: 1,
+          scale: 1,
+          transition: { duration: 1.2, delay: 0.25 },
+        }}
+        viewport={{ once: true }}
+        className='flex flex-col justify-center items-center gap-8 w-full lg:w-[90%] border border-3 border-[#D0B6F2]/60 rounded-xl py-30 shadow-[0_4px_20px_rgba(138,185,255,0.4)] bg-gradient-to-b from-[#D0B6F2] to-[#fff]'
+      >
         <div className='text-center flex items-center justify-center flex-col gap-6 w-full'>
           <h2 className='font-alike text-3xl lg:text-3xl w-3/4 lg:w-2/4'>
             Join driven students and start building your cloud career with AWS
@@ -41,7 +51,7 @@ const CallToAction = () => {
             </div>
           </form>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

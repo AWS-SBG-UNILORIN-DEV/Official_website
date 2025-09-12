@@ -60,9 +60,12 @@ const Event = ({ Sliders }: SliderProps) => {
 
       <div className='flex items-center md:w-[90%] justify-between'>
         <motion.h2
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1, transition: { duration: 1.6 } }}
-          viewport={{ once: true }}
+          initial={{ opacity: 0, y: -40 }}
+          whileInView={{
+            opacity: 1,
+            y: 1,
+            transition: { duration: 1.2, delay: 0.25 },
+          }}
           className='w-full text-left font-normal text-2xl'
         >
           Our Upcoming Events
@@ -87,7 +90,14 @@ const Event = ({ Sliders }: SliderProps) => {
         </motion.div>
       </div>
 
-      <div className='w-[90%]'>
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{
+          opacity: 1,
+          transition: { duration: 1, delay: 0.75 },
+        }}
+        className='w-[90%]'
+      >
         <Splide options={splideOptions} ref={sliderRef}>
           {Sliders.map((item, id) => (
             <SplideSlide key={id}>
@@ -108,7 +118,7 @@ const Event = ({ Sliders }: SliderProps) => {
             </SplideSlide>
           ))}
         </Splide>
-      </div>
+      </motion.div>
     </div>
   );
 };
