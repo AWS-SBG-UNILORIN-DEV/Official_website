@@ -4,6 +4,7 @@ import prev from '/src/assets/prev.png';
 import arrow from '/src/assets/arrow-right-up.png';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import type { Splide as SplideClass } from '@splidejs/splide';
+import { motion } from 'motion/react';
 
 interface SliderReview {
   name: string;
@@ -44,17 +45,35 @@ const Event = ({ Sliders }: SliderProps) => {
   const nextBtn = () => sliderRef.current?.go('>');
 
   return (
-    <div className='flex flex-col justify-center items-center py-12 px-8 gap-6 min-h-screen w-full'>
+    <div className='flex flex-col justify-center items-center py-6 px-8 gap-6 min-h-screen w-full'>
       <div>
-        <h1 className='text-[60px] font-normal'>Events</h1>
+        <motion.h1
+          initial={{ opacity: 0, y: -40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className='text-[60px] font-normal'
+        >
+          Events
+        </motion.h1>
       </div>
 
       <div className='flex items-center md:w-[90%] justify-between'>
-        <h2 className='w-full text-left font-normal text-2xl'>
+        <motion.h2
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1, transition: { duration: 1.6 } }}
+          viewport={{ once: true }}
+          className='w-full text-left font-normal text-2xl'
+        >
           Our Upcoming Events
-        </h2>
+        </motion.h2>
 
-        <div className='flex justify-between gap-4'>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1, transition: { duration: 1.6 } }}
+          viewport={{ once: true }}
+          className='flex justify-between gap-4'
+        >
           <img
             src={prev}
             className='prev bg-[#f5f5f5] p-2 rounded-full border border-[#9747FF] hover hover:bg-[#fff]'
@@ -65,7 +84,7 @@ const Event = ({ Sliders }: SliderProps) => {
             className='next bg-[#9747FF] p-2 rounded-full hover hover:bg-[#7F00FF]'
             onClick={nextBtn}
           />
-        </div>
+        </motion.div>
       </div>
 
       <div className='w-[90%]'>
