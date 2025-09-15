@@ -96,7 +96,7 @@ const HeroSection = () => {
         viewport={{ once: true }}
         className='w-[90%] md:w-3/4'
       >
-        <img src={hero_image} />
+        <img loading='lazy' src={hero_image} />
       </motion.div>
     </div>
   );

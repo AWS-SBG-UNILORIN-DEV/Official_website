@@ -1,10 +1,12 @@
-// import React from 'react'
-import instagram from '/instagram.png';
-import skype from '/skype.png';
-import tiktok from '/tiktok.png';
-import youtube from '/youtube.png';
 import icon from '/Icon.png';
 import { motion } from 'motion/react';
+import { IoLogoInstagram } from 'react-icons/io';
+import { PiTiktokLogoLight } from 'react-icons/pi';
+import { AiOutlineYoutube } from 'react-icons/ai';
+import { LiaTelegram } from 'react-icons/lia';
+import { FaXTwitter } from 'react-icons/fa6';
+import { IoLogoLinkedin } from 'react-icons/io5';
+import { MdWhatsapp } from 'react-icons/md';
 
 const Footer = () => {
   return (
@@ -79,28 +81,47 @@ const Footer = () => {
           </div>
           <div className='flex gap-4'>
             <a
-              href=''
+              href='https://www.instagram.com/awsunilorin'
               className='cursor-pointer hover hover:scale-115 transition-all duration-500'
             >
-              <img src={instagram} />
+              <IoLogoInstagram size={25} />
+            </a>
+            <a
+              href='https://chat.whatsapp.com/JGnoPIJHMS4H7pi4mIE3RQ'
+              className='cursor-pointer hover hover:scale-115 transition-all duration-500'
+            >
+              <MdWhatsapp size={25} />
             </a>
             <a
               href=''
               className='cursor-pointer cursor-pointer hover hover:scale-115 transition-all duration-500'
             >
-              <img src={skype} />
+              <LiaTelegram size={25} />
             </a>
             <a
               href=''
               className='cursor-pointer cursor-pointer hover hover:scale-115 transition-all duration-500'
             >
-              <img src={tiktok} />
+              <PiTiktokLogoLight size={25} />
+            </a>
+            <a
+              href='https://x.com/AwsUniloriN'
+              className='cursor-pointer cursor-pointer hover hover:scale-115 transition-all duration-500'
+            >
+              <FaXTwitter size={25} />
+            </a>
+
+            <a
+              href='https://youtube.com/@awsunilorin'
+              className='cursor-pointer cursor-pointer hover hover:scale-115 transition-all duration-500'
+            >
+              <AiOutlineYoutube size={25} />
             </a>
             <a
               href=''
               className='cursor-pointer cursor-pointer hover hover:scale-115 transition-all duration-500'
             >
-              <img src={youtube} />
+              <IoLogoLinkedin size={25} />
             </a>
           </div>
         </motion.div>

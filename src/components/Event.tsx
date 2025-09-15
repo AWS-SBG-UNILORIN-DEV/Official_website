@@ -101,20 +101,22 @@ const Event = ({ Sliders }: SliderProps) => {
         <Splide options={splideOptions} ref={sliderRef}>
           {Sliders.map((item, id) => (
             <SplideSlide key={id}>
-              <img src={item.src} className='w-full shadow-xl rounded-md' />
-              <div className='bg-[#f5f5f5] absolute lg:w-[280px] my-[-100px] mx-[30px] z-100 flex space-x-6 py-2 px-6 rounded-md shadow-sm items-center justify-between lg:justify-around'>
-                <div>
-                  <h3 className='font-bold text-xs'>{item.date}</h3>
-                  <p className='text-xs'>{item.description}</p>
+              <a href=''>
+                <img src={item.src} className='w-full shadow-xl rounded-md' />
+                <div className='bg-[#f5f5f5] absolute lg:w-[280px] my-[-100px] mx-[30px] z-100 flex space-x-6 py-2 px-6 rounded-md shadow-sm items-center justify-between lg:justify-around'>
+                  <div>
+                    <h3 className='font-bold text-xs'>{item.date}</h3>
+                    <p className='text-xs'>{item.description}</p>
+                  </div>
+                  <div>
+                    <img
+                      src={arrow}
+                      alt='view Event'
+                      className='bg-[#9747FF] p-1 rounded-full hover cursor-pointer border border-[#f5f5f5] hover:border-[#7F00FF]/80 hover:scale-120 transition-all duration-700 ease-in-out'
+                    />
+                  </div>
                 </div>
-                <div>
-                  <img
-                    src={arrow}
-                    alt='view Event'
-                    className='bg-[#9747FF] p-1 rounded-full hover hover:bg-[#7F00FF] hover:bg-[#f5f5f5] cursor-pointer border border-[#f5f5f5] hover:border-[#7F00FF]/80 hover:scale-120 transition-all duration-700 ease-in-out'
-                  />
-                </div>
-              </div>
+              </a>
             </SplideSlide>
           ))}
         </Splide>
