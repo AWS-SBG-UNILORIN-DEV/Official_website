@@ -63,16 +63,7 @@ const Review = ({ Reviews }: ReviewsProps) => {
         </div>
 
         <div className=' flex flex-col lg:flex-row gap-6 lg:gap-6 items-center justify-start lg:pl-16 lg:items-stretch lg:w-6xl'>
-          <motion.div
-            initial={{ opacity: 0, scale: 0.7 }}
-            whileInView={{
-              opacity: 1,
-              scale: 1,
-              transition: { duration: 1, delay: 0.25 },
-            }}
-            viewport={{ once: true }}
-            className='bg-[#1E242C] rounded-lg text-white flex flex-col py-6 lg:py-8 px-6 lg:px-8 w-full lg:flex-1 lg:min-h-[400px] justify-between lg:max-w-xl overflow-hidden'
-          >
+          <div className='bg-[#1E242C] rounded-lg text-white flex flex-col py-6 lg:py-8 px-6 lg:px-8 w-full lg:flex-1 lg:min-h-[400px] justify-between lg:max-w-xl overflow-hidden'>
             {/* <div className='flex-1 mb-6 lg:mb-8'> */}
             <Splide
               //   ref={splideRef}
@@ -121,7 +112,7 @@ const Review = ({ Reviews }: ReviewsProps) => {
                 <img src={next} alt='next-btn-image' />
               </button>
             </div>
-          </motion.div>
+          </div>
 
           <motion.div
             initial={{ opacity: 0, scale: 0.7 }}

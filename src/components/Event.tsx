@@ -66,6 +66,7 @@ const Event = ({ Sliders }: SliderProps) => {
             y: 1,
             transition: { duration: 1.2, delay: 0.25 },
           }}
+          viewport={{ once: true }}
           className='w-full text-left font-normal text-2xl'
         >
           Our Upcoming Events
@@ -96,6 +97,7 @@ const Event = ({ Sliders }: SliderProps) => {
           opacity: 1,
           transition: { duration: 1, delay: 0.75 },
         }}
+        viewport={{ once: true }}
         className='w-[90%]'
       >
         <Splide options={splideOptions} ref={sliderRef}>

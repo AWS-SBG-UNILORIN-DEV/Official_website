@@ -19,6 +19,7 @@ const Footer = () => {
             y: 1,
             transition: { duration: 1, delay: 0.25 },
           }}
+          viewport={{ once: true }}
           className='flex flex-col md:flex-row justify-between'
         >
           {/* <h1>This is Footer Section</h1> */}
@@ -74,6 +75,7 @@ const Footer = () => {
             y: 1,
             transition: { duration: 1.2, delay: 0.25 },
           }}
+          viewport={{ once: true }}
           className='flex items-start justify-between flex-col gap-4 lg:flex-row'
         >
           <div>
