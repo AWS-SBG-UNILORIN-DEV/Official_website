@@ -4,6 +4,7 @@ import prev from '/src/assets/prev.png';
 import reviewImg from '/src/assets/reviewImg.png';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import type { Splide as SplideClass } from '@splidejs/splide'; // Splide core type
+import { motion } from 'motion/react';
 
 interface Review {
   name: string;
@@ -47,9 +48,18 @@ const Review = ({ Reviews }: ReviewsProps) => {
     <div className='w-full py-8 px-4 sm:px-6 lg:px-8 lg:py-16'>
       <div className='flex flex-col space-y-6 lg:space-y-8 max-w-8xl mx-auto'>
         <div className='title'>
-          <h1 className='text-2xl lg:text-2xl lg:pl-16 font-alexandria font-light'>
+          <motion.h1
+            initial={{ opacity: 0, y: -40 }}
+            whileInView={{
+              opacity: 1,
+              y: 1,
+              transition: { duration: 1.2, delay: 0.25 },
+            }}
+            viewport={{ once: true }}
+            className='text-2xl lg:pl-16 font-alexandria font-light'
+          >
             What Our Members Say
-          </h1>
+          </motion.h1>
         </div>
 
         <div className=' flex flex-col lg:flex-row gap-6 lg:gap-6 items-center justify-start lg:pl-16 lg:items-stretch lg:w-6xl'>
@@ -91,25 +101,34 @@ const Review = ({ Reviews }: ReviewsProps) => {
             <div className='flex gap-3 items-center justify-center'>
               <button
                 onClick={prevBtn}
-                className='prev bg-[#f5f5f5] p-2 rounded-full border border-[#9747FF] hover:bg-[#fff] cursor-pointer transition-colors'
+                className='prev bg-[#f5f5f5] p-2 rounded-full border border-[#9747FF] hover:bg-[#fff] cursor-pointer hover:scale-120 transition-all duration-700 ease-in-out'
               >
                 <img src={prev} alt='previous-btn-image' />
               </button>
               <button
                 onClick={nextBtn}
-                className='next bg-[#9747FF] p-2 rounded-full hover:bg-[#7F00FF] cursor-pointer transition-colors'
+                className='next bg-[#9747FF] p-2 rounded-full hover:bg-[#7F00FF] cursor-pointer hover:scale-120 transition-all duration-700 ease-in-out'
               >
                 <img src={next} alt='next-btn-image' />
               </button>
             </div>
           </div>
 
-          <div className='image-container lg:w-96 xl:w-[450px] w-full'>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.7 }}
+            whileInView={{
+              opacity: 1,
+              scale: 1,
+              transition: { duration: 1.2, delay: 0.5 },
+            }}
+            viewport={{ once: true }}
+            className='image-container lg:w-96 xl:w-[450px] w-full'
+          >
             <img
               src={reviewImg}
               className='rounded-lg w-full h-64 sm:h-80 lg:h-[400px] object-cover'
             />
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>

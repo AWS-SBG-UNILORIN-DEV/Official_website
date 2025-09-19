@@ -2,6 +2,7 @@ import hero_image from '/src/assets/hero-image.png';
 // import hero_btn_arrow from "
 import arrow from '/src/assets/arrow.png';
 import group from '/src/assets/Group.png';
+import { motion } from 'motion/react';
 
 const HeroSection = () => {
   return (
@@ -13,14 +14,27 @@ const HeroSection = () => {
                         rgba(151, 71, 255, 0.2) 50%, transparent 70%), white`,
       }}
     >
-      <div className='bg-white rounded-full shadow-[0 4px 20px rgba(0, 0, 0, 0.05)] px-4 py-1'>
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1, transition: { duration: 1.6 } }}
+        viewport={{ once: true }}
+        className='bg-white rounded-full shadow-[0 4px 20px rgba(0, 0, 0, 0.05)] px-4 py-1'
+      >
         <h3 className='font-alexandria font-light text-[#002B6B] py-1 px-2 flex gap-4'>
           <img src={group} />
           Where Cloud Builders Unite
         </h3>
-      </div>
+      </motion.div>
 
-      <div>
+      <motion.div
+        initial={{ opacity: 0, scale: 0.7 }}
+        whileInView={{
+          opacity: 1,
+          scale: 1,
+          transition: { duration: 1.2, delay: 0.25 },
+        }}
+        viewport={{ once: true }}
+      >
         <h1 className='font-alexandria font-bold text-3xl md:text-5xl text-center text-[#002B6B]'>
           {' '}
           AWS CLOUD CLUB
@@ -29,26 +43,61 @@ const HeroSection = () => {
           {' '}
           UNIVERSITY OF ILORIN
         </h1>
-      </div>
+      </motion.div>
 
-      <div>
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+          transition: { duration: 0.5, delay: 0.5 },
+        }}
+        viewport={{ once: true }}
+      >
         <p className='text-[#414D60] text-center'>
           Empowering Students With AWS Technology
         </p>
-      </div>
+      </motion.div>
 
       <div className='flex flex-col md:flex-row gap-4 md:gap-12 w-3/4 items-center justify-center'>
-        <button className='bg-[#9747FF] py-2 px-5 rounded-full text-white flex gap-3 transition hover hover:bg-[#7F00FF]'>
+        <motion.button
+          initial={{ opacity: 0 }}
+          whileInView={{
+            opacity: 1,
+            transition: { duration: 1, delay: 0.75 },
+          }}
+          viewport={{ once: true }}
+          className='bg-[#9747FF] py-2 px-5 rounded-full text-white flex gap-3 transition hover hover:bg-[#f5f5f5] border hover:text-[#7f00ff] hover:border-[#7f00ff]/80 transition duration-500 ease-in-out cursor-pointer hover:scale-105'
+        >
           Join Meet Up <img className='bg-white rounded-full' src={arrow} />
-        </button>
-        <button className='bg-[#9747FF] py-2 px-5 rounded-full text-white flex gap-3 transition hover hover:bg-[#7F00FF]'>
+        </motion.button>
+        <motion.button
+          initial={{ opacity: 0 }}
+          whileInView={{
+            opacity: 1,
+            transition: { duration: 1, delay: 0.75 },
+          }}
+          viewport={{ once: true }}
+          className='bg-[#9747FF] py-2 px-5 rounded-full text-white flex gap-3 transition hover hover:bg-[#f5f5f5] border hover:text-[#7f00ff] hover:border-[#7f00ff]/80 transition duration-500 ease-in-out cursor-pointer hover:scale-105'
+        >
           Join Community <img className='bg-white rounded-full' src={arrow} />
-        </button>
+        </motion.button>
       </div>
 
-      <div className='w-3/4'>
-        <img src={hero_image} />
-      </div>
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{
+          opacity: 1,
+          scale: 1.05,
+          transition: {
+            duration: 0.5,
+          },
+        }}
+        viewport={{ once: true }}
+        className='w-[90%] md:w-3/4'
+      >
+        <img loading='lazy' src={hero_image} />
+      </motion.div>
     </div>
   );
 };
