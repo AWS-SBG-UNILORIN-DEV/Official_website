@@ -2,7 +2,6 @@ import { useRef, useEffect } from 'react';
 import next from '/src/assets/next.png';
 import prev from '/src/assets/prev.png';
 import arrow from '/src/assets/arrow-right-up.png';
-// import '@splidejs/react-splide/css';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import type { Splide as SplideClass } from '@splidejs/splide';
 
@@ -37,7 +36,7 @@ const Event = ({ Sliders }: SliderProps) => {
 
   useEffect(() => {
     if (sliderRef.current) {
-      console.log('Splide Mounted:', sliderRef.current);
+      // console.log('Splide Mounted:', sliderRef.current);
     }
   });
 
