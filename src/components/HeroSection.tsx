@@ -67,8 +67,15 @@ const HeroSection = () => {
             transition: { duration: 1, delay: 0.75 },
           }}
           viewport={{ once: true }}
+          onClick={() =>
+            window.open(
+              'https://www.meetup.com/aws-cloud-club-at-the-university-of-ilorin/',
+              '_blank'
+            )
+          }
           className='bg-[#9747FF] py-2 px-5 rounded-full text-white flex gap-3 transition hover hover:bg-[#f5f5f5] border hover:text-[#7f00ff] hover:border-[#7f00ff]/80 transition duration-500 ease-in-out cursor-pointer hover:scale-105'
         >
+          {' '}
           Join Meet Up <img className='bg-white rounded-full' src={arrow} />
         </motion.button>
         <motion.button
@@ -94,7 +101,7 @@ const HeroSection = () => {
           },
         }}
         viewport={{ once: true }}
-        className='w-[90%] md:w-3/4'
+        className='w-[90%] md:w-3/4 flex items-center justify-center'
       >
         <img loading='lazy' src={hero_image} />
       </motion.div>

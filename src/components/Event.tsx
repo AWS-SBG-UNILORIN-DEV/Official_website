@@ -11,6 +11,7 @@ interface SliderReview {
   src: string;
   description: string;
   date: string;
+  link: string;
 }
 
 interface SliderProps {
@@ -103,7 +104,7 @@ const Event = ({ Sliders }: SliderProps) => {
         <Splide options={splideOptions} ref={sliderRef}>
           {Sliders.map((item, id) => (
             <SplideSlide key={id}>
-              <a href=''>
+              <a href={item.link}>
                 <img src={item.src} className='w-full shadow-xl rounded-md' />
                 <div className='bg-[#f5f5f5] absolute lg:w-[280px] my-[-100px] mx-[30px] z-100 flex space-x-6 py-2 px-6 rounded-md shadow-sm items-center justify-between lg:justify-around'>
                   <div>
