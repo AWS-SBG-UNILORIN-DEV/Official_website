@@ -1,4 +1,4 @@
-import { motion } from 'motion/react';
+import { motion } from 'framer-motion';
 
 const AboutSection = () => {
   return (
@@ -23,7 +23,7 @@ const AboutSection = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           whileHover={{ scale: 1.05 }}
-          className='flex lg:flex-row flex-col justify-between lg:gap-[2rem] gap-[0.6rem] items-center bg-[#FFFFFF] shadow-xl shadow-[#0000004F] lg:py-[0.8rem] py-[1rem] px-[1.34rem] rounded-[0.6875rem] border-[0.5px] border-[#0000004F] w-fit mx-auto transition-transform duration-500'
+          className='flex lg:flex-row flex-col justify-between lg:gap-[2rem] gap-[0.6rem] items-center bg-[#FFFFFF] shadow-sm shadow-[#0000004F] lg:py-[0.8rem] py-[1rem] px-[1.34rem] rounded-[0.6875rem] border-[0.5px] border-[#0000004F] w-fit mx-auto transition-transform duration-500'
         >
           <div>
             <img
@@ -51,7 +51,7 @@ const AboutSection = () => {
           transition={{ duration: 0.9, delay: 0.2 }}
           viewport={{ once: true }}
           whileHover={{ scale: 1.05 }}
-          className='flex lg:flex-row flex-col justify-between lg:gap-[2rem] gap-[0.6rem] items-center bg-[#FFFFFF] shadow-xl shadow-[#0000004F] lg:py-[0.8rem] py-[1rem] px-[1.34rem] rounded-[0.6875rem] border-[0.5px] border-[#0000004F] w-fit mx-auto'
+          className='flex lg:flex-row flex-col justify-between lg:gap-[2rem] gap-[0.6rem] items-center bg-[#FFFFFF] shadow-sm shadow-[#0000004F] lg:py-[0.8rem] py-[1rem] px-[1.34rem] rounded-[0.6875rem] border-[0.5px] border-[#0000004F] w-fit mx-auto'
         >
           <div>
             <img
@@ -81,7 +81,7 @@ const AboutSection = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className='font-semibold text-[1.6875rem] lg:w-[14.6rem]'
+          className='font-semibold text-[1.6875rem] lg:w-[14.6rem] lg:mt-0 mt-[3.5rem]'
         >
           <span className='text-[#6328A3]'>Introducing </span>
           Aws Cloud University Of Ilorin
