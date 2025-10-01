@@ -2,8 +2,7 @@ import { motion } from 'framer-motion';
 
 const CommunitySection = () => {
   return (
-    <section className='bg-[#FFFFFF] lg:mt-[5rem] mt-[3rem] font-alexandria text-center items-center gap-[2.8rem]'
-    >
+    <section className='bg-[#FFFFFF] lg:mt-[5rem] mt-[3rem] font-alexandria text-center items-center gap-[2.8rem]'>
       <motion.h1
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -14,7 +13,7 @@ const CommunitySection = () => {
         Our Community at a Glance
       </motion.h1>
 
-      <article className="bg-[url('/Images/community/bg.svg')] bg-cover bg-center h-screen w-full lg:flex hidden items-center justify-center gap-[3.5rem] relative "> 
+      <article className="bg-[url('/Images/community/bg.svg')] bg-cover bg-center h-screen w-full lg:flex hidden items-center justify-center gap-[3.5rem] relative ">
         <div className='flex flex-col font-normal text-[#414D60] text-[0.75rem] text-center gap-[1.25rem]'>
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
