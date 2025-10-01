@@ -7,7 +7,8 @@ import { motion } from 'motion/react';
 
 const HeroSection = () => {
   return (
-    <div id='Home'
+    <div
+      id='Home'
       className='flex flex-col justify-center items-center py-12 px-4 gap-6'
       style={{
         background: `radial-gradient(ellipse 100% 200% at center 97%,
@@ -15,7 +16,7 @@ const HeroSection = () => {
                         rgba(151, 71, 255, 0.2) 50%, transparent 70%), white`,
       }}
     >
-      <Header/>
+      <Header />
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1, transition: { duration: 1.6 } }}
