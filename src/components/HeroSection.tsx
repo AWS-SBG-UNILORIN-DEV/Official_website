@@ -2,18 +2,20 @@ import hero_image from '/src/assets/hero-image.png';
 // import hero_btn_arrow from "
 import arrow from '/src/assets/arrow.png';
 import group from '/src/assets/Group.png';
+import Header from './Header';
 import { motion } from 'motion/react';
 
 const HeroSection = () => {
   return (
-    <div
-      className='flex flex-col justify-center items-center py-12 px-4 gap-6 min-h-screen'
+    <div id='Home'
+      className='flex flex-col justify-center items-center py-12 px-4 gap-6'
       style={{
         background: `radial-gradient(ellipse 100% 200% at center 97%,
                         #d8caeaff 0%, rgba(216, 209, 224, 0.6) 25%,
                         rgba(151, 71, 255, 0.2) 50%, transparent 70%), white`,
       }}
     >
+      <Header/>
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1, transition: { duration: 1.6 } }}
