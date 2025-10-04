@@ -49,8 +49,11 @@ const Event = ({ Sliders }: SliderProps) => {
   const nextBtn = () => sliderRef.current?.go('>');
 
   return (
-    <div className='flex flex-col justify-center items-center py-6 px-2 lg:px-8 gap-6 min-h-screen w-full'>
-      <div className='flex items-center justify-center'>
+    <div
+      id='Event'
+      className='flex flex-col justify-center items-center py-6 px-2 lg:px-8 gap-6 min-h-screen w-full'
+    >
+      <div>
         <motion.h1
           initial={{ opacity: 0, y: -40 }}
           whileInView={{ opacity: 1, y: 0 }}
