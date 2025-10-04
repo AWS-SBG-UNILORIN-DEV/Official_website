@@ -81,12 +81,14 @@ const TeamLead: TeamLeads[] = [
 
 const Team = () => {
   return (
-    <div className='w-full pt-24 pb-24 px-12 bg-[#F5F5F5]'>
-      <div className="py-6">
-        <h2 className="text-center font-medium text-5xl font-alexandria"> Our Team </h2>
+    <div className='w-full pt-20 pb-24 px-12 bg-[#F5F5F5]'>
+      <div className=''>
+        <h2 className='text-center text-4xl font-alexandria'> Our Team </h2>
       </div>
       <div>
-        <p className="font-medium text-3xl py-6 font-alexandria">Meet Our Core Team Leads</p>
+        <p className=' text-3xl py-16 font-alexandria lg:ml-20'>
+          Meet Our Core Team Leads
+        </p>
       </div>
 
       <div className='team-leads-section flex flex-col items-center justify-around gap-12'>
