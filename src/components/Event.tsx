@@ -29,12 +29,15 @@ const Event = ({ Sliders }: SliderProps) => {
     padding: '1rem',
     arrows: false,
     pagination: false,
+
     breakpoints: {
       1024: { perPage: 2, gap: '4em' },
       768: { perPage: 2, gap: '0.5rem' },
       576: { perPage: 1, gap: '0.5rem' },
     },
   };
+
+  // splideOptions.mount();
 
   useEffect(() => {
     if (sliderRef.current) {
@@ -47,7 +50,7 @@ const Event = ({ Sliders }: SliderProps) => {
 
   return (
     <div className='flex flex-col justify-center items-center py-6 px-2 lg:px-8 gap-6 min-h-screen w-full'>
-      <div>
+      <div className='flex items-center justify-center'>
         <motion.h1
           initial={{ opacity: 0, y: -40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -59,7 +62,7 @@ const Event = ({ Sliders }: SliderProps) => {
         </motion.h1>
       </div>
 
-      <div className='flex sm:gap-60 items-start md:w-[90%] justify-between'>
+      <div className='flex sm:gap-60 items-start text-left md:w-[90%] justify-between'>
         <motion.h2
           initial={{ opacity: 0, y: -40 }}
           whileInView={{
@@ -77,11 +80,11 @@ const Event = ({ Sliders }: SliderProps) => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1, transition: { duration: 1.6 } }}
           viewport={{ once: true }}
-          className='flex justify-between gap-4'
+          className='hidden md:flex justify-between gap-4'
         >
           <img
             src={prev}
-            className='prev w-2/4 h-2/4 md:w-full md:h-full bg-[#f5f5f5] p-2 rounded-full border border-[#9747FF] hover hover:bg-[#fff] hover:scale-120 transition-all duration-700 ease-in-out'
+            className=' prev w-2/4 h-2/4 md:w-full md:h-full bg-[#f5f5f5] p-2 rounded-full border border-[#9747FF] hover hover:bg-[#fff] hover:scale-120 transition-all duration-700 ease-in-out'
             onClick={prevBtn}
           />
           <img
