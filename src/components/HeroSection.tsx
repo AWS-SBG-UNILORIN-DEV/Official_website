@@ -1,4 +1,4 @@
-import hero_image from '/src/assets/hero-image.png';
+import hero_image from '/src/assets/hero-image-hq.png';
 // import hero_btn_arrow from "
 import arrow from '/src/assets/arrow.png';
 import group from '/src/assets/Group.png';
