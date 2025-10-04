@@ -1,6 +1,7 @@
 import HeroSection from './components/HeroSection';
 import About from './components/About.tsx';
 import CommunitySection from './components/CommunitySection';
+import Team from './components/Team';
 import Event from './components/Event';
 import { Sliders } from './assets/event.json';
 import { Reviews } from './assets/review.json';
@@ -18,6 +19,7 @@ const App = () => {
       <HeroSection />
       <About />
       <CommunitySection />
+      <Team />
       <Event Sliders={Sliders} />
       <Review Reviews={Reviews} />
       <Faq FaqData={FaqData} />
