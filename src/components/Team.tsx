@@ -8,7 +8,6 @@ import managementLead from '/src/assets/tobi-management-lead.png';
 import socialLead from '/src/assets/lateefat-social-lead.png';
 import contentLead from '/src/assets/victor-content-lead.png';
 
-
 import { FaXTwitter } from 'react-icons/fa6';
 import { FaInstagram } from 'react-icons/fa';
 // import { FaLinkedinIn } from 'react-icons/fa6'; <FaLinkedinIn />
