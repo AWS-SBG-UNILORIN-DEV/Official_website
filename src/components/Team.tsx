@@ -1,6 +1,12 @@
 // import React from 'react';
 // import
 import cloudCaptain from '/src/assets/abdulrahman-Team_lead.png';
+import coCaptain from '/src/assets/co-captain.png';
+import techLead from '/src/assets/toheeb-tech-lead.png';
+import designLead from '/src/assets/yusuf-design-lead.png';
+import managementLead from '/src/assets/tobi-management-lead.png';
+import socialLead from '/src/assets/lateefat-social-lead.png';
+import contentLead from '/src/assets/victor-content-lead.png';
 
 import { FaXTwitter } from 'react-icons/fa6';
 import { FaInstagram } from 'react-icons/fa';
@@ -24,8 +30,8 @@ const TeamLead: TeamLeads[] = [
     description: 'Co-Cloud Captain',
     xIconLink: '',
     instagramLink: '',
-    linkedInLink: '',
-    src: '/src/assets/co-captain.png',
+    linkedInLink: 'https://linkedin.com/in/rufilboss',
+    src: coCaptain,
   },
 
   {
@@ -34,18 +40,18 @@ const TeamLead: TeamLeads[] = [
     description: 'Technical and Operations Lead',
     xIconLink: '',
     instagramLink: '',
-    linkedInLink: '',
-    src: '/src/assets/toheeb-tech-lead.png',
+    linkedInLink: 'https://www.linkedin.com/in/akande-olalekan-2a69a0221/',
+    src: techLead,
   },
 
   {
     id: 3,
     name: 'ABDULKABIR YUSUF',
     description: 'Design Team Lead',
-    xIconLink: '',
+    xIconLink: 'https://x.com/kabiryusuf24?s=21',
     instagramLink: '',
     linkedInLink: '',
-    src: '/src/assets/yusuf-design-lead.png',
+    src: designLead,
   },
 
   {
@@ -54,8 +60,8 @@ const TeamLead: TeamLeads[] = [
     description: 'Management Team Lead',
     xIconLink: '',
     instagramLink: '',
-    linkedInLink: '',
-    src: '/src/assets/tobi-management-lead.png',
+    linkedInLink: 'https://linkedIn.com/in/tobiloba-adebisi',
+    src: managementLead,
   },
 
   {
@@ -65,7 +71,7 @@ const TeamLead: TeamLeads[] = [
     xIconLink: '',
     instagramLink: '',
     linkedInLink: '',
-    src: '/src/assets/lateefat-social-lead.png',
+    src: socialLead,
   },
 
   {
@@ -74,8 +80,8 @@ const TeamLead: TeamLeads[] = [
     description: 'Content Team Lead',
     xIconLink: '',
     instagramLink: '',
-    linkedInLink: '',
-    src: '/src/assets/victor-content-lead.png',
+    linkedInLink: 'https://www.linkedin.com/in/victor-agbayekhai-a210b3238/',
+    src: contentLead,
   },
 ];
 
@@ -101,18 +107,28 @@ const Team = () => {
               <p className='text-[13px] font-light'> Cloud Captain</p>
             </div>
             <div className='icons flex item-center justify-around space-x-4'>
-              <FaXTwitter
-                size={35}
-                className=' border border-black-400 rounded-full p-1 cursor-pointer hover hover:scale-110 transition duration-400'
-              />
-              <FaInstagram
-                size={35}
-                className=' border border-black-400 rounded-full p-1 cursor-pointer hover hover:scale-110 transition duration-400'
-              />
-              <RiLinkedinLine
-                size={35}
-                className=' border border-black-400 rounded-full p-1 cursor-pointer hover hover:scale-110 transition duration-400'
-              />
+              <a>
+                <FaXTwitter
+                  size={35}
+                  className=' border border-black-400 rounded-full p-1 cursor-pointer hover hover:scale-110 transition duration-400'
+                />
+              </a>
+              <a>
+                <FaInstagram
+                  size={35}
+                  className=' border border-black-400 rounded-full p-1 cursor-pointer hover hover:scale-110 transition duration-400'
+                />
+              </a>
+              <a
+                href='https://www.linkedin.com/in/abolaji-abdulrahman'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                <RiLinkedinLine
+                  size={35}
+                  className=' border border-black-400 rounded-full p-1 cursor-pointer hover hover:scale-110 transition duration-400'
+                />
+              </a>
             </div>
           </div>
         </div>
@@ -130,18 +146,37 @@ const Team = () => {
                 <p className='text-[13px] font-light'> {item.description}</p>
               </div>
               <div className='icons flex item-center justify-around gap-4'>
-                <FaXTwitter
-                  size={35}
-                  className='border border-black-400 rounded-full p-1 cursor-pointer hover hover:scale-110 transition duration-400'
-                />
-                <FaInstagram
-                  size={35}
-                  className='border border-black-400 rounded-full p-1 cursor-pointer hover hover:scale-110 transition duration-400'
-                />
-                <RiLinkedinLine
-                  size={35}
-                  className='border border-black-400 rounded-full p-1 cursor-pointer hover hover:scale-110 transition duration-400'
-                />
+                <a
+                  href={item.xIconLink}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  <FaXTwitter
+                    size={35}
+                    className='border border-black-400 rounded-full p-1 cursor-pointer hover hover:scale-110 transition duration-400'
+                  />
+                </a>
+
+                <a
+                  href={item.instagramLink}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  <FaInstagram
+                    size={35}
+                    className='border border-black-400 rounded-full p-1 cursor-pointer hover hover:scale-110 transition duration-400'
+                  />
+                </a>
+                <a
+                  href={item.linkedInLink}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  <RiLinkedinLine
+                    size={35}
+                    className='border border-black-400 rounded-full p-1 cursor-pointer hover hover:scale-110 transition duration-400'
+                  />
+                </a>
               </div>
             </div>
           ))}

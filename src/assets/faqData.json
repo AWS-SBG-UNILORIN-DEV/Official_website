@@ -2,28 +2,59 @@
   "FaqData": [
     {
       "id": "01",
-      "question": "How do I create account on the job board?",
-      "answer": "Use the search bar on the homepage to enter keywords related to your skills, job title, or preferred location. You can also use the advanced search filters to narrow down results by industry, job type (full-time, part-time, freelance), and experience level."
+      "question": "What is the AWS Cloud Club Unilorin?",
+      "answer": "The AWS Cloud Club Unilorin is a student-led community recognized by Amazon Web Services (AWS) that brings together students passionate about cloud computing, artificial intelligence, and emerging technologies. The club provides training, mentorship, and hands-on opportunities to build real-world skills in cloud technologies.  "
     },
     {
       "id": "02",
-      "question": "How do I apply for a job through the platform?",
-      "answer": "Use the search bar on the homepage to enter keywords related to your skills, job title, or preferred location. You can also use the advanced search filters to narrow down results by industry, job type (full-time, part-time, freelance), and experience level."
+      "question": "Who can join the AWS Cloud Club Unilorin?",
+      "answer": "The club is open to all students of the University of Ilorin regardless of faculty, department, or level of study. Whether you are a beginner or an advanced learner, you are welcome to join. "
     },
     {
       "id": "03",
-      "question": "How can I track the status of my job applications?",
-      "answer": "Use the search bar on the homepage to enter keywords related to your skills, job title, or preferred location. You can also use the advanced search filters to narrow down results by industry, job type (full-time, part-time, freelance), and experience level."
+      "question": "How do I become a member?",
+      "answer":"Membership is free. Interested students can join by registering through the official meetup channel (https://bit.ly/join-aws-unilorin), which will also be shared during events or on the club’s social  media platforms. After registration, members are added to the official communication channels for updates and opportunities.  "
     },
     {
       "id": "04",
-      "question": "How do I apply for a job through the platform?",
-      "answer": "Use the search bar on the homepage to enter keywords related to your skills, job title, or preferred location. You can also use the advanced search filters to narrow down results by industry, job type (full-time, part-time, freelance), and experience level."
+      "question": "What are the benefits of joining the AWS Cloud Club Unilorin?",
+      "answer": "• Access to exclusive AWS resources, credits, and learning paths.\n•Participation in hands-on workshops, bootcamps, and hackathons.\n•Mentorship opportunities with AWS experts and professionals.\n• Networking with peers and industry leaders.\n•Support in preparing for AWS Certifications.\n•Real-world project building and portfolio development. "
     },
     {
       "id": "05",
-      "question": "Is there a cost to use the job board, and what features are free?",
-      "answer": "Use the search bar on the homepage to enter keywords related to your skills, job title, or preferred location. You can also use the advanced search filters to narrow down results by industry, job type (full-time, part-time, freelance), and experience level."
+      "question": "Do I need prior knowledge of cloud computing before joining?",
+      "answer": "No. The club welcomes beginners and provides structured learning resources to help members  get started. Training sessions are designed to cater to all levels – from foundational concepts to  advanced cloud solutions."
+    },
+     {
+      "id": "06",
+      "question": "What types of activities does the club organize? ",
+      "answer": "The club organizes:\n•Cloud computing workshops and bootcamps.\n•AWS training programs and certification study groups.\n• Mentorship and career guidance sessions.\n• Hackathons and innovation challenges.\n• Community service projects leveraging technology to solve real-world problems. "
+    },
+     {
+      "id": "07",
+      "question": "Are there opportunities for leadership within the club?",
+      "answer": "Yes. The club has a structured leadership system, including team leads and coordinators for various focus areas (technical, publicity, logistics, training, etc.). Members who demonstrate commitment and leadership qualities may be invited to take up leadership roles."
+    },
+    {
+      "id": "08",
+      "question": "Does the club support AWS certifications?",
+      "answer": "Yes. The club provides guidance, study materials, and sometimes access to discounted or sponsored exam vouchers for members preparing for AWS certifications. "
+    },
+    {
+      "id": "09",
+      "question": "How can I stay updated on club activities?",
+      "answer": "You can stay connected by:\n• Following the official social media handles of the club.\n• Joining the official WhatsApp group after registration.\n• Attending regular club meetings and events."
+    },
+     {
+      "id": "10",
+      "question": "What career opportunities can I gain from being a member?",
+      "answer": "Membership provides access to AWS career resources, industry connections, internship and job opportunities, and skill-building programs that prepare students for roles such as Cloud Engineer, Solutions Architect, Data Engineer, and DevOps Engineer."
+    },
+     {
+      "id": "11",
+      "question": "How can I contribute to the club?",
+      "answer": "Members can contribute by actively participating in activities, volunteering during events, sharing knowledge with peers, and proposing or leading projects that align with the club’s mission."
     }
+    
   ]
 }
