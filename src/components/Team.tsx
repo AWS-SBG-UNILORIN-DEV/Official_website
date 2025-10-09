@@ -1,6 +1,13 @@
 // import React from 'react';
 // import
 import cloudCaptain from '/src/assets/abdulrahman-Team_lead.png';
+import coCaptain from '/src/assets/co-captain.png';
+import techLead from '/src/assets/toheeb-tech-lead.png';
+import designLead from '/src/assets/yusuf-design-lead.png';
+import managementLead from '/src/assets/tobi-management-lead.png';
+import socialLead from '/src/assets/lateefat-social-lead.png';
+import contentLead from '/src/assets/victor-content-lead.png';
+
 
 import { FaXTwitter } from 'react-icons/fa6';
 import { FaInstagram } from 'react-icons/fa';
@@ -25,7 +32,7 @@ const TeamLead: TeamLeads[] = [
     xIconLink: '',
     instagramLink: '',
     linkedInLink: 'https://linkedin.com/in/rufilboss',
-    src: '/src/assets/co-captain.png',
+    src: coCaptain,
   },
 
   {
@@ -35,7 +42,7 @@ const TeamLead: TeamLeads[] = [
     xIconLink: '',
     instagramLink: '',
     linkedInLink: 'https://www.linkedin.com/in/akande-olalekan-2a69a0221/',
-    src: '/src/assets/toheeb-tech-lead.png',
+    src: techLead,
   },
 
   {
@@ -45,7 +52,7 @@ const TeamLead: TeamLeads[] = [
     xIconLink: 'https://x.com/kabiryusuf24?s=21',
     instagramLink: '',
     linkedInLink: '',
-    src: '/src/assets/yusuf-design-lead.png',
+    src: designLead,
   },
 
   {
@@ -55,7 +62,7 @@ const TeamLead: TeamLeads[] = [
     xIconLink: '',
     instagramLink: '',
     linkedInLink: 'https://linkedIn.com/in/tobiloba-adebisi',
-    src: '/src/assets/tobi-management-lead.png',
+    src: managementLead,
   },
 
   {
@@ -65,7 +72,7 @@ const TeamLead: TeamLeads[] = [
     xIconLink: '',
     instagramLink: '',
     linkedInLink: '',
-    src: '/src/assets/lateefat-social-lead.png',
+    src: socialLead,
   },
 
   {
@@ -75,7 +82,7 @@ const TeamLead: TeamLeads[] = [
     xIconLink: '',
     instagramLink: '',
     linkedInLink: 'https://www.linkedin.com/in/victor-agbayekhai-a210b3238/',
-    src: '/src/assets/victor-content-lead.png',
+    src: contentLead,
   },
 ];
 
