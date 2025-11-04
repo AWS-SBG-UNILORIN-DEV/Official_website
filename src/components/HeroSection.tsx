@@ -19,7 +19,7 @@ const HeroSection = () => {
       <Header />
       <motion.div
         initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1, transition: { duration: 1.6 } }}
+        whileInView={{ opacity: 1, transition: { duration: 1 } }}
         viewport={{ once: true }}
         className='bg-white rounded-full shadow-[0 4px 20px rgba(0, 0, 0, 0.05)] px-4 py-1'
       >
@@ -30,11 +30,10 @@ const HeroSection = () => {
       </motion.div>
 
       <motion.div
-        initial={{ opacity: 0, scale: 0.7 }}
+        initial={{ opacity: 0 }}
         whileInView={{
           opacity: 1,
-          scale: 1,
-          transition: { duration: 1.2, delay: 0.25 },
+          transition: { duration: 1, delay: 0.1 },
         }}
         viewport={{ once: true }}
       >
@@ -49,11 +48,10 @@ const HeroSection = () => {
       </motion.div>
 
       <motion.div
-        initial={{ opacity: 0, y: 40 }}
+        initial={{ opacity: 0 }}
         whileInView={{
           opacity: 1,
-          y: 0,
-          transition: { duration: 0.5, delay: 0.5 },
+          transition: { duration: 0.5 },
         }}
         viewport={{ once: true }}
       >
@@ -67,7 +65,7 @@ const HeroSection = () => {
           initial={{ opacity: 0 }}
           whileInView={{
             opacity: 1,
-            transition: { duration: 1, delay: 0.75 },
+            transition: { duration: 1 },
           }}
           viewport={{ once: true }}
           onClick={() =>
@@ -85,7 +83,7 @@ const HeroSection = () => {
           initial={{ opacity: 0 }}
           whileInView={{
             opacity: 1,
-            transition: { duration: 1, delay: 0.75 },
+            transition: { duration: 1 },
           }}
           viewport={{ once: true }}
           className='bg-[#9747FF] py-2 px-5 rounded-full text-white flex gap-3 transition hover hover:bg-[#f5f5f5] border hover:text-[#7f00ff] hover:border-[#7f00ff]/80 transition duration-500 ease-in-out cursor-pointer hover:scale-105'
@@ -98,7 +96,6 @@ const HeroSection = () => {
         initial={{ opacity: 0 }}
         whileInView={{
           opacity: 1,
-          scale: 1.05,
           transition: {
             duration: 0.5,
           },
