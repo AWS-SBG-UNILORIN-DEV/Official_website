@@ -88,7 +88,7 @@ const TeamLead: TeamLeads[] = [
 
 const Team = () => {
   return (
-    <div className='w-full pt-20 pb-24 px-12 bg-[#F5F5F5]'>
+    <div className='w-full pt-20 pb-24 px-12 bg-[#F5F5F5]' id='Team'>
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0, transition: { duration: 1 } }}
@@ -121,6 +121,7 @@ const Team = () => {
             y: 0,
             transition: { duration: 1, delay: 0.7 },
           }}
+          viewport={{ once: true }}
         >
           <div className='w-full flex flex-col pb-12 shadow-md rounded-3xl gap-6 items-center'>
             <img src={cloudCaptain} className='w-full' />
