@@ -12,6 +12,7 @@ import { FaXTwitter } from 'react-icons/fa6';
 import { FaInstagram } from 'react-icons/fa';
 // import { FaLinkedinIn } from 'react-icons/fa6'; <FaLinkedinIn />
 import { RiLinkedinLine } from 'react-icons/ri';
+import { motion } from 'motion/react';
 
 interface TeamLeads {
   id: number;
@@ -66,7 +67,7 @@ const TeamLead: TeamLeads[] = [
 
   {
     id: 5,
-    name: 'Lateefat Bello',
+    name: 'LATEEFAT BELLO',
     description: 'Social Media Lead',
     xIconLink: '',
     instagramLink: '',
@@ -88,22 +89,43 @@ const TeamLead: TeamLeads[] = [
 const Team = () => {
   return (
     <div className='w-full pt-20 pb-24 px-12 bg-[#F5F5F5]'>
-      <div className=''>
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0, transition: { duration: 1 } }}
+        viewport={{ once: true }}
+        className=''
+      >
         <h2 className='text-center text-4xl font-alexandria'> Our Team </h2>
-      </div>
-      <div>
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+          transition: { duration: 1, delay: 0.5 },
+        }}
+        viewport={{ once: true }}
+      >
         <p className=' text-3xl py-16 font-alexandria lg:ml-20'>
           Meet Our Core Team Leads
         </p>
-      </div>
+      </motion.div>
 
       <div className='team-leads-section flex flex-col items-center justify-around gap-12'>
         {/* Cloud Captain Be in a section alone */}
-        <div className='captain sm:w-full md:w-[30%]'>
+        <motion.div
+          className='captain sm:w-full md:w-[30%]'
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: { duration: 1, delay: 0.7 },
+          }}
+        >
           <div className='w-full flex flex-col pb-12 shadow-md rounded-3xl gap-6 items-center'>
             <img src={cloudCaptain} className='w-full' />
             <div className='name-card bg-[#9747FF] rounded-lg mt-[-40px] text-white w-2/3 flex flex-col items-center p-4'>
-              <h3 className='text-[19px] font-light'>Abolaji Abdulrahman</h3>
+              <h3 className='text-[18px] font-light'>ABOLAJI ABDULRAHMAN</h3>
               <p className='text-[13px] font-light'> Cloud Captain</p>
             </div>
             <div className='icons flex item-center justify-around space-x-4'>
@@ -131,12 +153,19 @@ const Team = () => {
               </a>
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Other Cloud leads in a container with flex */}
         <div className='container flex flex-col md:flex-row items-center justify-center gap-16 md:flex-wrap'>
           {TeamLead.map((item, id) => (
-            <div
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                transition: { duration: 1, delay: id * 0.3 },
+              }}
+              viewport={{ once: true }}
               key={id}
               className=' w-full md:w-1/4 flex flex-col shadow-sm rounded-3xl gap-6 items-center pb-12'
             >
@@ -178,7 +207,7 @@ const Team = () => {
                   />
                 </a>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
