@@ -16,8 +16,8 @@ const Header = () => {
   ];
 
   return (
-    <header className='w-full md:px-[2rem] '>
-      <nav className='flex justify-between items-center h-fit mb-[2rem] bg-[#fff] py-2 px-4 rounded-full shadow-[0_2px_10px_rgba(0,0,0,0.08)]'>
+    <header className='w-[90%] md:px-[2rem] fixed z-50 top-4'>
+      <nav className='flex justify-between items-center h-fit mb-[2rem] bg-[#fff] py-2 px-4 rounded-full shadow-[0_2px_10px_rgba(0,0,0,0.08)] '>
         <a href='/'>
           <img src='/Images/header/logo.svg' alt='Logo' />
         </a>
