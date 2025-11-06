@@ -15,7 +15,7 @@ import Footer from './components/Footer';
 
 const App = () => {
   return (
-    <>
+    <div className="font-alexandria ">
       <HeroSection />
       <About />
       <CommunitySection />
@@ -25,7 +25,7 @@ const App = () => {
       <Faq FaqData={FaqData} />
       <CallToAction />
       <Footer />
-    </>
+    </div>
   );
 };
 
