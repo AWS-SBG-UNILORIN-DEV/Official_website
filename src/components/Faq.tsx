@@ -58,7 +58,7 @@ const Faq = ({ FaqData }: FaqType) => {
                   <h1 className='w-[36px] h-[36px] bg-[#EDEEF0] rounded-full text-center flex items-center justify-center border border-[#7f00ff]/80'>
                     {item.id}
                   </h1>
-                  <h3 className='font-alike font-light text-md mb-4 md:mb-0 lg:text-xl flex itemx-center justify-center'>
+                  <h3 className='font-light text-md mb-4 md:mb-0 lg:text-xl flex itemx-center justify-center'>
                     {item.question}
                   </h3>
                   <img
@@ -75,7 +75,7 @@ const Faq = ({ FaqData }: FaqType) => {
                     exit={{ opacity: 0, height: 0 }}
                     transition={{ duration: 0.4, ease: 'easeInOut' }}
                   >
-                    <p className='font-manrope font-light px-15 md:px-20 text-sm mb-4 md:mb-0 lg:text-md lg:px-10 pt-4 leading-loose'>
+                    <p className='font-light px-15 md:px-20 text-sm mb-4 md:mb-0 lg:text-md lg:px-10 pt-4 leading-loose'>
                       {item.answer}
                     </p>
                   </motion.div>

@@ -16,15 +16,15 @@ const Header = () => {
   ];
 
   return (
-    <header className='w-full px-[2rem]'>
-      <nav className='flex justify-between items-center h-fit mb-[2rem]'>
+    <header className='w-[90%] md:px-[2rem] fixed z-50 top-4 md:top-12'>
+      <nav className='flex justify-between items-center h-fit mb-[2rem] bg-[#fff] py-2 px-4 rounded-full shadow-[0_2px_10px_rgba(0,0,0,0.08)] '>
         <a href='/'>
           <img src='/Images/header/logo.svg' alt='Logo' />
         </a>
 
         {/* Desktop Navigation */}
         <div className='hidden lg:flex items-center justify-between w-[65%]'>
-          <ul className='flex gap-[2.5rem] font-[500] text-[1rem] text-[#272F3A]'>
+          <ul className='flex gap-[2.5rem] font-normal text-[1rem] text-[#272F3A]'>
             {navItems.map(item => (
               <motion.li
                 key={item.name}
@@ -44,18 +44,14 @@ const Header = () => {
             ))}
           </ul>
           <a href='#Register'>
-            <motion.button
-              className='flex items-center gap-[1rem] font-[500] text-[#272F3A] text-[1rem] rounded-full border-[1px] border-white p-[0.5rem] pl-[1.25rem] transition-colors'
-              whileHover={{ backgroundColor: '#9747FF' }}
-              transition={{ duration: 0.2 }}
-            >
+            <button className='flex items-center gap-[1rem] font-normal text-[#fff] text-[1rem] rounded-full border-[1px] border-white p-[0.5rem] pl-[1.25rem] transition-colors bg-[#9747FF] hover hover:bg-[#fff] hover:border-purple-300 hover:text-[#9747FF] cursor-pointer transition duration-400 ease-in-out'>
               Register Now
               <img
                 src='/Images/header/arrow.svg'
                 alt='Arrow up'
                 className='w-[1rem] h-[1rem]'
               />
-            </motion.button>
+            </button>
           </a>
         </div>
 
@@ -121,7 +117,7 @@ const Header = () => {
                 className='mt-[2rem]'
               >
                 <motion.button
-                  className='flex items-center gap-[1rem] font-[700] text-[#272F3A] text-[1rem] rounded-full border-[1px] border-[#EDEEF0] p-[0.5rem] pl-[1.5rem] transition-colors'
+                  className='flex items-center gap-[1rem] font-normal text-[#272F3A] text-[1rem] rounded-full border-[1px] border-[#EDEEF0] p-[0.5rem] pl-[1.5rem] transition-colors'
                   whileHover={{ backgroundColor: '#F3F4F6' }}
                   transition={{ duration: 0.2 }}
                 >

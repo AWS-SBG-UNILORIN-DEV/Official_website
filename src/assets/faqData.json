@@ -13,7 +13,7 @@
     {
       "id": "03",
       "question": "How do I become a member?",
-      "answer":"Membership is free. Interested students can join by registering through the official meetup channel (https://bit.ly/join-aws-unilorin), which will also be shared during events or on the club’s social  media platforms. After registration, members are added to the official communication channels for updates and opportunities.  "
+      "answer": "Membership is free. Interested students can join by registering through the official meetup channel (https://bit.ly/join-aws-unilorin), which will also be shared during events or on the club’s social  media platforms. After registration, members are added to the official communication channels for updates and opportunities.  "
     },
     {
       "id": "04",
@@ -25,12 +25,12 @@
       "question": "Do I need prior knowledge of cloud computing before joining?",
       "answer": "No. The club welcomes beginners and provides structured learning resources to help members  get started. Training sessions are designed to cater to all levels – from foundational concepts to  advanced cloud solutions."
     },
-     {
+    {
       "id": "06",
       "question": "What types of activities does the club organize? ",
       "answer": "The club organizes:\n•Cloud computing workshops and bootcamps.\n•AWS training programs and certification study groups.\n• Mentorship and career guidance sessions.\n• Hackathons and innovation challenges.\n• Community service projects leveraging technology to solve real-world problems. "
     },
-     {
+    {
       "id": "07",
       "question": "Are there opportunities for leadership within the club?",
       "answer": "Yes. The club has a structured leadership system, including team leads and coordinators for various focus areas (technical, publicity, logistics, training, etc.). Members who demonstrate commitment and leadership qualities may be invited to take up leadership roles."
@@ -45,16 +45,15 @@
       "question": "How can I stay updated on club activities?",
       "answer": "You can stay connected by:\n• Following the official social media handles of the club.\n• Joining the official WhatsApp group after registration.\n• Attending regular club meetings and events."
     },
-     {
+    {
       "id": "10",
       "question": "What career opportunities can I gain from being a member?",
       "answer": "Membership provides access to AWS career resources, industry connections, internship and job opportunities, and skill-building programs that prepare students for roles such as Cloud Engineer, Solutions Architect, Data Engineer, and DevOps Engineer."
     },
-     {
+    {
       "id": "11",
       "question": "How can I contribute to the club?",
       "answer": "Members can contribute by actively participating in activities, volunteering during events, sharing knowledge with peers, and proposing or leading projects that align with the club’s mission."
     }
-    
   ]
 }

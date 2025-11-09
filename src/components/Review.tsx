@@ -56,7 +56,7 @@ const Review = ({ Reviews }: ReviewsProps) => {
               transition: { duration: 1.2, delay: 0.25 },
             }}
             viewport={{ once: true }}
-            className='text-2xl lg:pl-16 font-alexandria font-light'
+            className='text-2xl lg:pl-16 font-alexandria font-normal'
           >
             What Our Members Say
           </motion.h1>
@@ -88,7 +88,7 @@ const Review = ({ Reviews }: ReviewsProps) => {
                       </h3>
                     </div>
                     <div className=''>
-                      <p className='font-alike font-light text-2xl mb-4 md:mb-0 lg:text-3xl'>
+                      <p className='font-light text-sm mb-4 md:mb-0 lg:text-lg'>
                         {item.description}
                       </p>
                     </div>

@@ -9,7 +9,7 @@ const HeroSection = () => {
   return (
     <div
       id='Home'
-      className='flex flex-col justify-center items-center py-12 px-4 gap-6'
+      className='flex flex-col justify-center items-center py-30 md:pt-30 px-4 gap-6 '
       style={{
         background: `radial-gradient(ellipse 100% 200% at center 97%,
                         #d8caeaff 0%, rgba(216, 209, 224, 0.6) 25%,
@@ -19,41 +19,39 @@ const HeroSection = () => {
       <Header />
       <motion.div
         initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1, transition: { duration: 1.6 } }}
+        whileInView={{ opacity: 1, transition: { duration: 1 } }}
         viewport={{ once: true }}
-        className='bg-white rounded-full shadow-[0 4px 20px rgba(0, 0, 0, 0.05)] px-4 py-1'
+        className='bg-white rounded-full shadow-[0 4px 20px rgba(0, 0, 0, 0.05)] px-4 py-1 mt-16'
       >
-        <h3 className='font-alexandria font-light text-[#002B6B] py-1 px-2 flex gap-4'>
+        <h3 className='font-light text-[#002B6B] py-1 px-2 flex gap-4'>
           <img src={group} />
           Where Cloud Builders Unite
         </h3>
       </motion.div>
 
       <motion.div
-        initial={{ opacity: 0, scale: 0.7 }}
+        initial={{ opacity: 0 }}
         whileInView={{
           opacity: 1,
-          scale: 1,
-          transition: { duration: 1.2, delay: 0.25 },
+          transition: { duration: 1, delay: 0.1 },
         }}
         viewport={{ once: true }}
       >
-        <h1 className='font-alexandria font-bold text-3xl md:text-5xl text-center text-[#002B6B]'>
+        <h1 className='font-alexandria font-bold text-3xl md:text-5xl lg:text-6xl text-center text-[#002B6B]'>
           {' '}
           AWS CLOUD CLUB
         </h1>
-        <h1 className='font-alexandria font-bold text-3xl md:text-5xl text-center text-[#002B6B]'>
+        <h1 className='font-alexandria font-bold text-3xl md:text-5xl lg:text-6xl  text-center text-[#002B6B]'>
           {' '}
           UNIVERSITY OF ILORIN
         </h1>
       </motion.div>
 
       <motion.div
-        initial={{ opacity: 0, y: 40 }}
+        initial={{ opacity: 0 }}
         whileInView={{
           opacity: 1,
-          y: 0,
-          transition: { duration: 0.5, delay: 0.5 },
+          transition: { duration: 0.5 },
         }}
         viewport={{ once: true }}
       >
@@ -67,7 +65,7 @@ const HeroSection = () => {
           initial={{ opacity: 0 }}
           whileInView={{
             opacity: 1,
-            transition: { duration: 1, delay: 0.75 },
+            transition: { duration: 1 },
           }}
           viewport={{ once: true }}
           onClick={() =>
@@ -76,7 +74,7 @@ const HeroSection = () => {
               '_blank'
             )
           }
-          className='bg-[#9747FF] py-2 px-5 rounded-full text-white flex gap-3 transition hover hover:bg-[#f5f5f5] border hover:text-[#7f00ff] hover:border-[#7f00ff]/80 transition duration-500 ease-in-out cursor-pointer hover:scale-105'
+          className='bg-[#9747FF] py-2 px-5 rounded-full text-white flex gap-3 transition hover hover:bg-[#f5f5f5] border hover:text-[#7f00ff] hover:border-[#7f00ff]/80 transition duration-400 ease-in-out cursor-pointer'
         >
           {' '}
           Join Meet Up <img className='bg-white rounded-full' src={arrow} />
@@ -85,10 +83,10 @@ const HeroSection = () => {
           initial={{ opacity: 0 }}
           whileInView={{
             opacity: 1,
-            transition: { duration: 1, delay: 0.75 },
+            transition: { duration: 1 },
           }}
           viewport={{ once: true }}
-          className='bg-[#9747FF] py-2 px-5 rounded-full text-white flex gap-3 transition hover hover:bg-[#f5f5f5] border hover:text-[#7f00ff] hover:border-[#7f00ff]/80 transition duration-500 ease-in-out cursor-pointer hover:scale-105'
+          className='bg-[#9747FF] py-2 px-5 rounded-full text-white flex gap-3 transition hover hover:bg-[#f5f5f5] border hover:text-[#7f00ff] hover:border-[#7f00ff]/80 transition duration-400 ease-in-out cursor-pointer'
         >
           Join Community <img className='bg-white rounded-full' src={arrow} />
         </motion.button>
@@ -98,7 +96,6 @@ const HeroSection = () => {
         initial={{ opacity: 0 }}
         whileInView={{
           opacity: 1,
-          scale: 1.05,
           transition: {
             duration: 0.5,
           },

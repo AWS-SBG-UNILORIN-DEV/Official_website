@@ -25,7 +25,7 @@ const CommunitySection = () => {
             }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true, amount: 0.5 }}
-            className='bg-[#FFFFFF] p-[1.8rem] flex flex-col lg:max-w-[16.25rem] rounded-[1.25rem] border-[1px] border-[#EDEEF0] shadow-2xl shadow-[#002B6B40] items-center'
+            className='bg-[#FFFFFF] p-[1.8rem] max-w-full flex flex-col lg:max-w-[16.25rem] rounded-[1.25rem] border-[1px] border-[#EDEEF0] shadow-2xl shadow-[#002B6B40] items-center'
           >
             <img
               src='/Images/community/project_icon.svg'
