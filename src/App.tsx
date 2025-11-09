@@ -15,7 +15,7 @@ import Footer from './components/Footer';
 
 const App = () => {
   return (
-    <div className="font-alexandria ">
+    <div className='font-alexandria '>
       <HeroSection />
       <About />
       <CommunitySection />
