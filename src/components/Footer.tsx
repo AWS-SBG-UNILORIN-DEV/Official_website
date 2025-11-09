@@ -6,7 +6,7 @@ import { AiOutlineYoutube } from 'react-icons/ai';
 import { LiaTelegram } from 'react-icons/lia';
 import { FaXTwitter } from 'react-icons/fa6';
 import { IoLogoLinkedin } from 'react-icons/io5';
-import { MdWhatsapp } from 'react-icons/md';
+// import { MdWhatsapp } from 'react-icons/md';
 
 const Footer = () => {
   return (
@@ -88,12 +88,12 @@ const Footer = () => {
             >
               <IoLogoInstagram size={25} />
             </a>
-            <a
+            {/* <a
               href='https://chat.whatsapp.com/JGnoPIJHMS4H7pi4mIE3RQ'
               className='cursor-pointer hover hover:scale-115 transition-all duration-500'
             >
               <MdWhatsapp size={25} />
-            </a>
+            </a> */}
             <a
               href=''
               className='cursor-pointer cursor-pointer hover hover:scale-115 transition-all duration-500'
