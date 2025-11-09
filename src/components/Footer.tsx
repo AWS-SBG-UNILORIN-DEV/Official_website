@@ -1,9 +1,9 @@
 import icon from '/Icon.png';
 import { motion } from 'motion/react';
 import { IoLogoInstagram } from 'react-icons/io';
-import { PiTiktokLogoLight } from 'react-icons/pi';
+// import { PiTiktokLogoLight } from 'react-icons/pi';
 import { AiOutlineYoutube } from 'react-icons/ai';
-import { LiaTelegram } from 'react-icons/lia';
+// import { LiaTelegram } from 'react-icons/lia';
 import { FaXTwitter } from 'react-icons/fa6';
 import { IoLogoLinkedin } from 'react-icons/io5';
 // import { MdWhatsapp } from 'react-icons/md';
@@ -94,18 +94,18 @@ const Footer = () => {
             >
               <MdWhatsapp size={25} />
             </a> */}
-            <a
+            {/* <a
               href=''
               className='cursor-pointer cursor-pointer hover hover:scale-115 transition-all duration-500'
             >
               <LiaTelegram size={25} />
-            </a>
-            <a
+            </a> */}
+            {/* <a
               href=''
               className='cursor-pointer cursor-pointer hover hover:scale-115 transition-all duration-500'
             >
               <PiTiktokLogoLight size={25} />
-            </a>
+            </a> */}
             <a
               href='https://x.com/AwsUniloriN'
               className='cursor-pointer cursor-pointer hover hover:scale-115 transition-all duration-500'
@@ -120,7 +120,7 @@ const Footer = () => {
               <AiOutlineYoutube size={25} />
             </a>
             <a
-              href=''
+              href='https://www.linkedin.com/in/aws-cloud-club-unilorin-a9095a270'
               className='cursor-pointer cursor-pointer hover hover:scale-115 transition-all duration-500'
             >
               <IoLogoLinkedin size={25} />

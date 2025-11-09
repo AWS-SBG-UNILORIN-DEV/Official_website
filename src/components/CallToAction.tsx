@@ -4,7 +4,7 @@ const CallToAction = () => {
   return (
     <div
       id='Register'
-      className='py-6 px-8 gap-6 min-h-screen flex items-center justify-center'
+      className='py-12 px-8 gap-6 flex items-center justify-center'
     >
       <motion.div
         initial={{ opacity: 0, scale: 0.7 }}

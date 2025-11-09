@@ -51,7 +51,7 @@ const Event = ({ Sliders }: SliderProps) => {
   return (
     <div
       id='Event'
-      className='flex flex-col justify-center items-center py-6 px-2 lg:px-8 gap-6 min-h-screen w-full'
+      className='flex flex-col justify-center items-center py-10 px-2 lg:px-8 gap-6  w-full'
     >
       <div>
         <motion.h1
