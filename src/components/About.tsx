@@ -97,7 +97,7 @@ const AboutSection = () => {
           viewport={{ once: true }}
           src='/Images/about_us/aws_females.svg'
           alt='Aws female members group picture'
-          className='w-[35rem] lg:hidden'
+          className='w-full md:hidden lg:hidden'
         />
 
         <motion.p
@@ -119,7 +119,7 @@ const AboutSection = () => {
           viewport={{ once: true }}
           src='/Images/about_us/aws_group_pcture.svg'
           alt='Aws members group picture'
-          className='w-[35rem] lg:hidden'
+          className='w-full md:hidden lg:hidden'
         />
 
         <motion.p
@@ -135,7 +135,7 @@ const AboutSection = () => {
       </article>
 
       {/* Bottom Images (Desktop) */}
-      <article className='lg:flex hidden flex-row flex-wrap justify-between lg:gap-0 gap-[2.43rem]'>
+      <article className='md:flex hidden flex-row flex-wrap justify-between lg:gap-0 gap-[2.43rem]'>
         <motion.img
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -143,7 +143,7 @@ const AboutSection = () => {
           viewport={{ once: true }}
           src='/Images/about_us/aws_females.svg'
           alt='Aws female members group picture'
-          className='w-[32rem]'
+          className='w-[45%]'
         />
 
         <motion.img
@@ -153,7 +153,7 @@ const AboutSection = () => {
           viewport={{ once: true }}
           src='/Images/about_us/aws_group_pcture.svg'
           alt='Aws members group picture'
-          className='w-[32rem]'
+          className='w-[45%]'
         />
       </article>
     </section>
