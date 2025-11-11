@@ -9,7 +9,7 @@ const HeroSection = () => {
   return (
     <div
       id='Home'
-      className='flex flex-col justify-center items-center py-30 md:pt-30 px-4 gap-6 '
+      className='flex flex-col justify-center items-center py-15 md:pt-30 px-4 gap-6 w-full'
       style={{
         background: `radial-gradient(ellipse 100% 200% at center 97%,
                         #d8caeaff 0%, rgba(216, 209, 224, 0.6) 25%,

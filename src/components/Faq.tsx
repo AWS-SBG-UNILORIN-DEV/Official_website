@@ -22,7 +22,7 @@ const Faq = ({ FaqData }: FaqType) => {
   };
 
   return (
-    <div className=' py-12 px-8 gap-6 min-h-screen flex items-center justify-center'>
+    <div className=' py-12 px-8 gap-6 flex items-center justify-center'>
       <div className='flex flex-col justify-center items-start gap-8 w-full lg:w-[90%]'>
         <div>
           <motion.h2
