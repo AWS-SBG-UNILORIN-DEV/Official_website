@@ -2,7 +2,10 @@ import { motion } from 'framer-motion';
 
 const CommunitySection = () => {
   return (
-    <section className='bg-[#FFFFFF] lg:mt-[5rem] mt-[3rem] font-alexandria text-center items-center gap-[2.8rem]'>
+    <section
+      className='bg-[#FFFFFF] lg:mt-[5rem] mt-[3rem] font-alexandria text-center items-center gap-[2.8rem]'
+      id='Community'
+    >
       <motion.h1
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -58,7 +61,7 @@ const CommunitySection = () => {
               className='mb-[0.75rem] size-[3rem]'
             />
             <h2 className='font-[700] text-[#1E242C] text-[1.25rem]'>
-              100K + Active Member
+              1K+ Active Member
             </h2>
             <p className='mt-[0.6rem]'>
               A growing community of passionate students learning and building

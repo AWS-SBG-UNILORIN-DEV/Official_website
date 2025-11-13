@@ -125,7 +125,7 @@ const Team = () => {
         >
           <div className='w-full flex flex-col pb-12 shadow-md rounded-3xl gap-6 items-center'>
             <img src={cloudCaptain} className='w-full' />
-            <div className='name-card bg-[#9747FF] rounded-lg mt-[-40px] text-white w-2/3 flex flex-col items-center p-4'>
+            <div className='name-card bg-[#9747FF] rounded-lg mt-[-40px] text-white w-[90%] flex flex-col items-center p-4'>
               <h3 className='text-[18px] font-light'>ABOLAJI ABDULRAHMAN</h3>
               <p className='text-[13px] font-light'> Cloud Captain</p>
             </div>

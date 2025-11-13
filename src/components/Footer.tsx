@@ -7,6 +7,7 @@ import { AiOutlineYoutube } from 'react-icons/ai';
 import { FaXTwitter } from 'react-icons/fa6';
 import { IoLogoLinkedin } from 'react-icons/io5';
 // import { MdWhatsapp } from 'react-icons/md';
+import { FaMeetup } from 'react-icons/fa6';
 
 const Footer = () => {
   return (
@@ -40,29 +41,29 @@ const Footer = () => {
           <div className='mb-12'>
             <h4 className='mb-4 font-bold'>Quick Links</h4>
             <div className='flex flex-col gap-3'>
-              <a href=''>Home</a>
-              <a href=''>About Us</a>
-              <a href=''>Community</a>
-              <a href=''>Contact Us</a>
+              <a href='#Home'>Home</a>
+              <a href='#About'>About Us</a>
+              <a href='#Community'>Community</a>
+              <a href='#contact'>Contact Us</a>
             </div>
           </div>
 
           <div className='mb-12'>
             <h4 className='mb-4 font-bold'>Others</h4>
             <div className='flex flex-col gap-3'>
-              <a href=''>Community</a>
-              <a href=''>Meet Up</a>
-              <a href=''>Our Team</a>
-              <a href=''>About Us</a>
+              <a href='#Community'>Community</a>
+              <a href='https://www.meetup.com/aws-cloud-club-the-university-of-ilorin/'>Meet Up</a>
+              <a href='#Team'>Our Team</a>
+              {/* <a href=''>About Us</a> */}
             </div>
           </div>
 
           <div className='mb-12'>
             <h4 className='mb-4 font-bold'>About Us</h4>
             <div className='flex flex-col gap-3'>
-              <a href=''>Our Mission</a>
-              <a href=''>What Members Say</a>
-              <a href=''>Our Impact</a>
+              <a href='#About'>Our Mission</a>
+              {/* <a href='#Review'>What Members Say</a> */}
+              <a href='#Review'>Our Impact</a>
             </div>
           </div>
         </motion.div>
@@ -83,6 +84,12 @@ const Footer = () => {
           </div>
           <div className='flex gap-4'>
             <a
+              href='https://www.meetup.com/aws-cloud-club-the-university-of-ilorin/'
+              className='cursor-pointer cursor-pointer hover hover:scale-115 transition-all duration-500'
+            >
+              <FaMeetup size={25} />
+            </a>
+            <a
               href='https://www.instagram.com/awsunilorin'
               className='cursor-pointer hover hover:scale-115 transition-all duration-500'
             >
@@ -100,12 +107,7 @@ const Footer = () => {
             >
               <LiaTelegram size={25} />
             </a> */}
-            {/* <a
-              href=''
-              className='cursor-pointer cursor-pointer hover hover:scale-115 transition-all duration-500'
-            >
-              <PiTiktokLogoLight size={25} />
-            </a> */}
+
             <a
               href='https://x.com/AwsUniloriN'
               className='cursor-pointer cursor-pointer hover hover:scale-115 transition-all duration-500'
