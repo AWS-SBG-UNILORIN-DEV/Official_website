@@ -3,7 +3,7 @@
 import cloudCaptain from '/src/assets/abdulrahman-Team_lead.png';
 import coCaptain from '/src/assets/co-captain.png';
 import techLead from '/src/assets/toheeb-tech-lead.png';
-import designLead from '/src/assets/yusuf-design-lead.png';
+import designLead from '/design-lead-2.jpg';
 import managementLead from '/src/assets/tobi-management-lead.png';
 import socialLead from '/src/assets/lateefat-social-lead.png';
 import contentLead from '/src/assets/victor-content-lead.png';
@@ -171,9 +171,12 @@ const Team = () => {
               key={id}
               className=' w-full md:w-1/4 flex flex-col shadow-sm rounded-3xl gap-6 items-center pb-12'
             >
-              <img src={item.src} className='w-full' />
+              <img
+                src={item.src}
+                className='w-full rounded-tl-xl rounded-tr-xl'
+              />
               <div className='name-card bg-[#9747FF] rounded-lg mt-[-40px] text-white w-[90%] flex flex-col items-center p-2'>
-                <h3 className='text-[19px] font-light'>{item.name}</h3>
+                <h3 className='text-[17px] font-light'>{item.name}</h3>
                 <p className='text-[13px] font-light'> {item.description}</p>
               </div>
               <div className='icons flex item-center justify-around gap-4'>

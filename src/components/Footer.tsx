@@ -1,4 +1,4 @@
-import icon from '/Icon.png';
+import icon from '/icon-2.png';
 import { motion } from 'motion/react';
 import { IoLogoInstagram } from 'react-icons/io';
 // import { PiTiktokLogoLight } from 'react-icons/pi';
@@ -25,15 +25,14 @@ const Footer = () => {
         >
           {/* <h1>This is Footer Section</h1> */}
           <div className='flex flex-col items-start mb-16'>
-            <div>
-              <img src={icon} />
+            <div className='mb-4'>
+              <img src={icon} className='w-50' />
             </div>
             <div>
               <p className='font-manrope'>
                 P.M.B. 1515, Ilorin, kwara state, Nigeria <br />
-                <span className='font-bold'>Phone: </span>843-496-7759 <br />
-                <span className='font-bold'>Fax: </span>02-222264303 <br />
-                <span className='font-bold'>Email: </span> info@mastershub.com
+                <span className='font-bold'>Phone: </span>08026724015 <br />
+                <span className='font-bold'>Email: </span> awsunilorin@gmail.com
               </p>
             </div>
           </div>
