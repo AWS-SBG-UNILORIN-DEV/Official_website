@@ -11,9 +11,9 @@ const CommunitySection = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
-        className='font-normal text-[#1E242C] lg:text-[3rem] text-[1.875rem] lg:mb-[2.8rem} mb-[1.8rem] '
+        className='font-normal text-[#1E242C] lg:text-[3.5rem] text-[2.8rem] lg:mb-[2.8rem} mb-[1.8rem]'
       >
-        Our Community at a Glance
+        Our Community Offers
       </motion.h1>
 
       <article className="bg-[url('/Images/community/bg.svg')] bg-cover bg-center h-screen w-full lg:flex hidden items-center justify-center gap-[3.5rem] relative ">

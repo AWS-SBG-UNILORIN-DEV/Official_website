@@ -95,7 +95,10 @@ const Team = () => {
         viewport={{ once: true }}
         className=''
       >
-        <h2 className='text-center text-4xl font-alexandria'> Our Team </h2>
+        <h2 className='font-normal text-[#1E242C] lg:text-[3.5rem] text-[2.8rem] lg:mb-[2.8rem} mb-[1rem] text-center'>
+          {' '}
+          Our Team{' '}
+        </h2>
       </motion.div>
       <motion.div
         initial={{ opacity: 0, y: 40 }}
@@ -106,9 +109,7 @@ const Team = () => {
         }}
         viewport={{ once: true }}
       >
-        <p className=' text-3xl py-16 font-alexandria lg:ml-20'>
-          Meet Our Core Team Leads
-        </p>
+        <p className=' text-3xl text-center pb-8'>Meet Our Core Team Leads</p>
       </motion.div>
 
       <div className='team-leads-section flex flex-col items-center justify-around gap-12'>

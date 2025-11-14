@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import next from '/src/assets/next.png';
 import prev from '/src/assets/prev.png';
-import reviewImg from '/src/assets/reviewImg.png';
+import reviewImg from '/review-image.jpg';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import type { Splide as SplideClass } from '@splidejs/splide'; // Splide core type
 import { motion } from 'motion/react';
@@ -75,16 +75,16 @@ const Review = ({ Reviews }: ReviewsProps) => {
                   className='text-center text-white h-full flex items-center justify-center'
                 >
                   <div className='flex flex-col gap-4 lg:gap-6 w-full justify-center items-center'>
-                    <div className=''>
-                      <p className='font-light text-sm mb-4 md:mb-0 lg:text-lg'>
+                    <div className='text-left'>
+                      <p className='font-light text-sm mb-4 md:mb-0 lg:text-lg '>
                         {item.description}
                       </p>
                     </div>
                     <div className=' items-center justify-center gap-4 w-full'>
-                      <h3 className='font-semibold text-lg my-2'>
+                      <h3 className='font-semibold text-lg my-2 text-left'>
                         {item.name}{' '}
                       </h3>
-                      <p className='text-sm text-gray-300 font-normal italic'>
+                      <p className='text-sm text-gray-300 font-normal italic text-left'>
                         {item.levelCourse}
                       </p>
                     </div>

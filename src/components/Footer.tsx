@@ -52,7 +52,9 @@ const Footer = () => {
             <h4 className='mb-4 font-bold'>Others</h4>
             <div className='flex flex-col gap-3'>
               <a href='#Community'>Community</a>
-              <a href='https://www.meetup.com/aws-cloud-club-the-university-of-ilorin/'>Meet Up</a>
+              <a href='https://www.meetup.com/aws-cloud-club-the-university-of-ilorin/'>
+                Meet Up
+              </a>
               <a href='#Team'>Our Team</a>
               {/* <a href=''>About Us</a> */}
             </div>
