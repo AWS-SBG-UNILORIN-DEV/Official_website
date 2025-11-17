@@ -80,7 +80,7 @@ const HeroSection = () => {
           {' '}
           Join Meet Up <img className='bg-white rounded-full' src={arrow} />
         </motion.button>
-        <motion.button
+        <motion.a
           initial={{ opacity: 0 }}
           whileInView={{
             opacity: 1,
@@ -88,9 +88,10 @@ const HeroSection = () => {
           }}
           viewport={{ once: true }}
           className='bg-[#9747FF] py-2 px-5 rounded-full text-white flex gap-3 transition hover hover:bg-[#f5f5f5] border hover:text-[#7f00ff] hover:border-[#7f00ff]/80 transition duration-400 ease-in-out cursor-pointer'
+          href='#Register'
         >
           Join Community <img className='bg-white rounded-full' src={arrow} />
-        </motion.button>
+        </motion.a>
       </div>
 
       <motion.div

@@ -31,8 +31,14 @@ const Footer = () => {
             <div>
               <p className='font-manrope'>
                 P.M.B. 1515, Ilorin, kwara state, Nigeria <br />
-                <span className='font-bold'>Phone: </span>08026724015 <br />
-                <span className='font-bold'>Email: </span> awsunilorin@gmail.com
+                <a href='tel:+2348026724015'>
+                  <span className='font-bold'>Phone: </span>08026724015
+                </a>{' '}
+                <br />
+                <a href='mailto:awsunilorin@gmail.com'>
+                  <span className='font-bold'>Email: </span>
+                  awsunilorin@gmail.com
+                </a>
               </p>
             </div>
           </div>
