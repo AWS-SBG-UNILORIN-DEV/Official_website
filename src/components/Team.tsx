@@ -144,7 +144,7 @@ const Team = () => {
                 />
               </a>
               <a
-                href='https://www.linkedin.com/in/abolaji-abdulrahman'
+                href='https://www.linkedin.com/in/abolaji-abdulrahman-2a83a0232/'
                 target='_blank'
                 rel='noopener noreferrer'
               >
