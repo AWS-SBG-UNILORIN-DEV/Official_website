@@ -95,8 +95,9 @@ const AboutSection = () => {
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1 }}
           viewport={{ once: true }}
-          src='/Images/about_us/aws_females.svg'
-          alt='Aws female members group picture'
+          // src='/Images/about_us/aws_females.svg'
+          src='/cloud.jpg'
+          alt='Cloud Session'
           className='w-full md:hidden lg:hidden'
         />
 
@@ -135,25 +136,25 @@ const AboutSection = () => {
       </article>
 
       {/* Bottom Images (Desktop) */}
-      <article className='md:flex hidden flex-row flex-wrap justify-between lg:gap-0 gap-[2.43rem]'>
+      <article className='md:flex hidden flex-row flex-wrap justify-between lg:gap-5 gap-[2.43rem]'>
         <motion.img
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9 }}
           viewport={{ once: true }}
-          src='/Images/about_us/aws_females.svg'
+          src='/cloud.JPG'
           alt='Aws female members group picture'
-          className='w-[45%]'
+          className='w-[47%] rounded-xl'
         />
 
         <motion.img
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 47 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.2 }}
           viewport={{ once: true }}
-          src='/Images/about_us/aws_group_pcture.svg'
+          src='/img1.jpg'
           alt='Aws members group picture'
-          className='w-[45%]'
+          className='w-[50%] rounded-xl'
         />
       </article>
     </section>

@@ -59,7 +59,7 @@ const Event = ({ Sliders }: SliderProps) => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className='text-[60px] font-normal'
+          className='font-normal text-[#1E242C] lg:text-[3.5rem] text-[2.8rem] lg:mb-[2.8rem}'
         >
           Events
         </motion.h1>

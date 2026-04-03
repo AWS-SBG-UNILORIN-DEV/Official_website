@@ -1,4 +1,5 @@
-import hero_image from '/src/assets/hero-image-hq.png';
+// import hero_image from '/src/assets/hero-image-hq.png';
+import hero_image from '/aws-cloud-2.jpg';
 // import hero_btn_arrow from "
 import arrow from '/src/assets/arrow.png';
 import group from '/src/assets/Group.png';
@@ -9,7 +10,7 @@ const HeroSection = () => {
   return (
     <div
       id='Home'
-      className='flex flex-col justify-center items-center py-15 md:pt-30 px-4 gap-6 w-full'
+      className='flex flex-col justify-center items-center py-15 md:pt-18 px-4 gap-6 w-full'
       style={{
         background: `radial-gradient(ellipse 100% 200% at center 97%,
                         #d8caeaff 0%, rgba(216, 209, 224, 0.6) 25%,
@@ -79,7 +80,7 @@ const HeroSection = () => {
           {' '}
           Join Meet Up <img className='bg-white rounded-full' src={arrow} />
         </motion.button>
-        <motion.button
+        <motion.a
           initial={{ opacity: 0 }}
           whileInView={{
             opacity: 1,
@@ -87,9 +88,10 @@ const HeroSection = () => {
           }}
           viewport={{ once: true }}
           className='bg-[#9747FF] py-2 px-5 rounded-full text-white flex gap-3 transition hover hover:bg-[#f5f5f5] border hover:text-[#7f00ff] hover:border-[#7f00ff]/80 transition duration-400 ease-in-out cursor-pointer'
+          href='#Register'
         >
           Join Community <img className='bg-white rounded-full' src={arrow} />
-        </motion.button>
+        </motion.a>
       </div>
 
       <motion.div
@@ -103,7 +105,7 @@ const HeroSection = () => {
         viewport={{ once: true }}
         className='w-[90%] md:w-3/4 flex items-center justify-center'
       >
-        <img loading='lazy' src={hero_image} />
+        <img loading='lazy' src={hero_image} className='rounded-2xl' />
       </motion.div>
     </div>
   );

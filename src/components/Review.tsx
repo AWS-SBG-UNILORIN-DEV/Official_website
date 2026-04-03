@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import next from '/src/assets/next.png';
 import prev from '/src/assets/prev.png';
-import reviewImg from '/src/assets/reviewImg.png';
+import reviewImg from '/review-image.jpg';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import type { Splide as SplideClass } from '@splidejs/splide'; // Splide core type
 import { motion } from 'motion/react';
@@ -45,8 +45,8 @@ const Review = ({ Reviews }: ReviewsProps) => {
   const nextBtn = () => reviewRef.current?.go('>');
 
   return (
-    <div className='w-full py-8 px-4 sm:px-6 lg:px-8 lg:py-16'>
-      <div className='flex flex-col space-y-6 lg:space-y-8 max-w-8xl mx-auto'>
+    <div className='w-full py-8 px-4 sm:px-6 lg:px-8 lg:py-16' id='Review'>
+      <div className='w-full flex flex-col space-y-6 lg:space-y-8 '>
         <div className='title'>
           <motion.h1
             initial={{ opacity: 0, y: -40 }}
@@ -56,40 +56,36 @@ const Review = ({ Reviews }: ReviewsProps) => {
               transition: { duration: 1.2, delay: 0.25 },
             }}
             viewport={{ once: true }}
-            className='text-2xl lg:pl-16 font-alexandria font-normal'
+            className='text-2xl lg:pl-16 lg:w-[70%] font-alexandria font-normal'
           >
             What Our Members Say
           </motion.h1>
         </div>
 
-        <div className=' flex flex-col lg:flex-row gap-6 lg:gap-6 items-center justify-start lg:pl-16 lg:items-stretch lg:w-6xl'>
-          <div className='bg-[#1E242C] rounded-lg text-white flex flex-col py-6 lg:py-8 px-6 lg:px-8 w-full lg:flex-1 lg:min-h-[400px] justify-between lg:max-w-xl overflow-hidden'>
-            {/* <div className='flex-1 mb-6 lg:mb-8'> */}
+        <div className='w-full flex flex-col lg:flex-row gap-6 items-center justify-center'>
+          <div className='bg-[#1E242C] rounded-lg text-white flex flex-col py-6 lg:py-8 px-6 lg:px-8 w-full lg:w-[50%] lg:min-h-[400px] justify-between  overflow-hidden'>
             <Splide
-              //   ref={splideRef}
-              // onSplideMount={splide => setSplideInstance(splide)}
               options={reviewOptions}
-              // onSplideMount={SplideInstance => setReview(SplideInstance)}
               ref={reviewRef}
               className='flex-1 w-full flex items-center justify-center'
             >
               {Reviews.map((item, id) => (
                 <SplideSlide
                   key={id}
-                  className='text-center text-white h-full flex items-center'
+                  className='text-center text-white h-full flex items-center justify-center'
                 >
-                  <div className='flex flex-col gap-4 lg:gap-6 w-full'>
-                    <div className='flex items-center justify-center gap-4 w-full'>
-                      <h3 className='font-semibold text-lg'>
-                        {item.name}{' '}
-                        <span className='text-sm text-gray-300 font-normal'>
-                          {item.levelCourse}
-                        </span>
-                      </h3>
-                    </div>
-                    <div className=''>
-                      <p className='font-light text-sm mb-4 md:mb-0 lg:text-lg'>
+                  <div className='flex flex-col gap-4 lg:gap-6 w-full justify-center items-center'>
+                    <div className='text-left'>
+                      <p className='font-light text-sm mb-4 md:mb-0 lg:text-lg '>
                         {item.description}
+                      </p>
+                    </div>
+                    <div className=' items-center justify-center gap-4 w-full'>
+                      <h3 className='font-semibold text-lg my-2 text-left'>
+                        {item.name}{' '}
+                      </h3>
+                      <p className='text-sm text-gray-300 font-normal italic text-left'>
+                        {item.levelCourse}
                       </p>
                     </div>
                   </div>
