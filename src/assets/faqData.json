@@ -2,12 +2,12 @@
   "FaqData": [
     {
       "id": "01",
-      "question": "What is the AWS Cloud Club Unilorin?",
-      "answer": "The AWS Cloud Club Unilorin is a student-led community recognized by Amazon Web Services (AWS) that brings together students passionate about cloud computing, artificial intelligence, and emerging technologies. The club provides training, mentorship, and hands-on opportunities to build real-world skills in cloud technologies.  "
+      "question": "What is the AWS Student Builder Group, Unilorin?",
+      "answer": "The AWS Student Builder Group, University of Ilorin, is a student-led community recognized by Amazon Web Services (AWS) that brings together students passionate about cloud computing, artificial intelligence, and emerging technologies. The group provides training, mentorship, and hands-on opportunities to build real-world skills in cloud technologies.  "
     },
     {
       "id": "02",
-      "question": "Who can join the AWS Cloud Club Unilorin?",
+      "question": "Who can join the AWS Student Builder Group, Unilorin?",
       "answer": "The club is open to all students of the University of Ilorin regardless of faculty, department, or level of study. Whether you are a beginner or an advanced learner, you are welcome to join. "
     },
     {
@@ -17,7 +17,7 @@
     },
     {
       "id": "04",
-      "question": "What are the benefits of joining the AWS Cloud Club Unilorin?",
+      "question": "What are the benefits of joining the AWS Student Builder Group, University of Ilorin?",
       "answer": "• Access to exclusive AWS resources, credits, and learning paths.\n•Participation in hands-on workshops, bootcamps, and hackathons.\n•Mentorship opportunities with AWS experts and professionals.\n• Networking with peers and industry leaders.\n•Support in preparing for AWS Certifications.\n•Real-world project building and portfolio development. "
     },
     {

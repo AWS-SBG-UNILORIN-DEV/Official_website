@@ -1,4 +1,4 @@
-import icon from '/icon-2.png';
+import icon from '/icon-3.png';
 import { motion } from 'motion/react';
 import { IoLogoInstagram } from 'react-icons/io';
 // import { PiTiktokLogoLight } from 'react-icons/pi';
@@ -102,19 +102,7 @@ const Footer = () => {
             >
               <IoLogoInstagram size={25} />
             </a>
-            {/* <a
-              href='https://chat.whatsapp.com/JGnoPIJHMS4H7pi4mIE3RQ'
-              className='cursor-pointer hover hover:scale-115 transition-all duration-500'
-            >
-              <MdWhatsapp size={25} />
-            </a> */}
-            {/* <a
-              href=''
-              className='cursor-pointer cursor-pointer hover hover:scale-115 transition-all duration-500'
-            >
-              <LiaTelegram size={25} />
-            </a> */}
-
+         
             <a
               href='https://x.com/AwsUniloriN'
               className='cursor-pointer cursor-pointer hover hover:scale-115 transition-all duration-500'

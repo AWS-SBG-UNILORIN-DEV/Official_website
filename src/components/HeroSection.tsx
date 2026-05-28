@@ -1,6 +1,4 @@
-// import hero_image from '/src/assets/hero-image-hq.png';
-import hero_image from '/aws-cloud-2.jpg';
-// import hero_btn_arrow from "
+import hero_image from '/img-1.jpg';
 import arrow from '/src/assets/arrow.png';
 import group from '/src/assets/Group.png';
 import Header from './Header';
@@ -38,11 +36,11 @@ const HeroSection = () => {
         }}
         viewport={{ once: true }}
       >
-        <h1 className='font-alexandria font-bold text-3xl md:text-5xl lg:text-6xl text-center text-[#002B6B]'>
+        <h1 className='font-alexandria font-bold text-3xl md:text-5xl lg:text-5xl text-center text-[#002B6B]'>
           {' '}
-          AWS CLOUD CLUB
+          AWS STUDENT BUILDERS GROUP 
         </h1>
-        <h1 className='font-alexandria font-bold text-3xl md:text-5xl lg:text-6xl  text-center text-[#002B6B]'>
+        <h1 className='font-alexandria font-bold text-3xl md:text-5xl lg:text-5xl  text-center text-[#002B6B]'>
           {' '}
           UNIVERSITY OF ILORIN
         </h1>
@@ -88,7 +86,8 @@ const HeroSection = () => {
           }}
           viewport={{ once: true }}
           className='bg-[#9747FF] py-2 px-5 rounded-full text-white flex gap-3 transition hover hover:bg-[#f5f5f5] border hover:text-[#7f00ff] hover:border-[#7f00ff]/80 transition duration-400 ease-in-out cursor-pointer'
-          href='#Register'
+          // href='#Register'
+          href='"https://chat.whatsapp.com/GE6GMiixowLBGQfvsrUDOE"'
         >
           Join Community <img className='bg-white rounded-full' src={arrow} />
         </motion.a>

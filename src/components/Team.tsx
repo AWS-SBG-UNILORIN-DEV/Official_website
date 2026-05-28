@@ -27,8 +27,8 @@ interface TeamLeads {
 const TeamLead: TeamLeads[] = [
   {
     id: 1,
-    name: 'ILYAS AYODEJI RUFAI',
-    description: 'Co-Cloud Captain',
+    name: 'HABBEB BABANSULAIMON ',
+    description: 'Program Lead',
     xIconLink: '',
     instagramLink: '',
     linkedInLink: 'https://linkedin.com/in/rufilboss',
@@ -128,7 +128,7 @@ const Team = () => {
             <img src={cloudCaptain} className='w-full' />
             <div className='name-card bg-[#9747FF] rounded-lg mt-[-40px] text-white w-[90%] flex flex-col items-center p-4'>
               <h3 className='text-[18px] font-light'>ABOLAJI ABDULRAHMAN</h3>
-              <p className='text-[13px] font-light'> Cloud Captain</p>
+              <p className='text-[19px] font-light'> Leader </p>
             </div>
             <div className='icons flex item-center justify-around space-x-4'>
               <a>

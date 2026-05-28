@@ -61,7 +61,7 @@ const CommunitySection = () => {
               className='mb-[0.75rem] size-[3rem]'
             />
             <h2 className='font-[700] text-[#1E242C] text-[1.25rem]'>
-              1500+ Active Member
+              3000+ Active Member
             </h2>
             <p className='mt-[0.6rem]'>
               A growing community of passionate students learning and building
@@ -70,11 +70,11 @@ const CommunitySection = () => {
           </motion.div>
         </div>
 
-        <div>
+        <div className="w-[25rem] h-[17rem] ">
           <img
-            src='/Images/community/view.svg'
+            src='/community.jpg'
             alt='Event view'
-            className='rounded-[1rem] h-[32rem]'
+            className='rounded-[1rem] h-full w-full'
           />
         </div>
 
