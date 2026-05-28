@@ -1,12 +1,9 @@
 import icon from '/icon-3.png';
 import { motion } from 'motion/react';
 import { IoLogoInstagram } from 'react-icons/io';
-// import { PiTiktokLogoLight } from 'react-icons/pi';
 import { AiOutlineYoutube } from 'react-icons/ai';
-// import { LiaTelegram } from 'react-icons/lia';
 import { FaXTwitter } from 'react-icons/fa6';
 import { IoLogoLinkedin } from 'react-icons/io5';
-// import { MdWhatsapp } from 'react-icons/md';
 import { FaMeetup } from 'react-icons/fa6';
 
 const Footer = () => {
@@ -23,6 +20,7 @@ const Footer = () => {
           viewport={{ once: true }}
           className='flex flex-col md:flex-row justify-between'
         >
+          {/* And Footer section */}
           {/* <h1>This is Footer Section</h1> */}
           <div className='flex flex-col items-start mb-16'>
             <div className='mb-4'>
