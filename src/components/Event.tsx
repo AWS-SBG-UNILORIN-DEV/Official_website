@@ -113,7 +113,11 @@ const Event = ({ Sliders }: SliderProps) => {
           {Sliders.map((item, id) => (
             <SplideSlide key={id}>
               <a href={item.link}>
-                <img src={item.src} loading='lazy' className='w-full shadow-xl rounded-md' />
+                <img
+                  src={item.src}
+                  loading='lazy'
+                  className='w-full shadow-xl rounded-md'
+                />
                 <div className='bg-[#f5f5f5] absolute lg:w-[280px] my-[-100px] mx-[30px] z-100 flex space-x-6 py-2 px-6 rounded-md shadow-sm items-center justify-between lg:justify-around'>
                   <div>
                     <h3 className='font-bold text-xs'>{item.date}</h3>

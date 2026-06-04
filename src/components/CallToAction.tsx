@@ -33,7 +33,7 @@ const CallToAction = () => {
               window.open(
                 // 'https://www.meetup.com/aws-cloud-club-at-the-university-of-ilorin/',
                 // '_blank'
-                "https://chat.whatsapp.com/GE6GMiixowLBGQfvsrUDOE"
+                'https://chat.whatsapp.com/GE6GMiixowLBGQfvsrUDOE'
               )
             }
           >

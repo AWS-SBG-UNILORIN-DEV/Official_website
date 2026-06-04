@@ -17,8 +17,7 @@ const AboutSection = () => {
         About us
       </motion.h1>
 
-
-        {/* Intro Section */}
+      {/* Intro Section */}
       <article className='grid lg:grid-cols-2 grid-cols-1 gap-[3rem] lg:gap-[4rem] lg:py-[3rem] py-[2rem] text-[#1E242C] items-start'>
         {/* Left Column - Subtitle */}
         <motion.h2
@@ -41,13 +40,16 @@ const AboutSection = () => {
           className='bg-[#FFFFFF] p-[2rem] rounded-lg lg:pt-0'
         >
           <p className='font-normal lg:text-[1rem] text-[0.95rem] text-[#4A5568] leading-relaxed mb-[1.5rem]'>
-            AWS Student Builder Group, University of Ilorin, is a student-led community that empowers students to learn, build, 
-            and grow their skills in cloud computing using Amazon Web Services (AWS). We organize workshops, bootcamps, hackathons, and speaker sessions to help members develop both technical and soft skills.
+            AWS Student Builder Group, University of Ilorin, is a student-led
+            community that empowers students to learn, build, and grow their
+            skills in cloud computing using Amazon Web Services (AWS). We
+            organize workshops, bootcamps, hackathons, and speaker sessions to
+            help members develop both technical and soft skills.
           </p>
 
           <p className='font-normal lg:text-[1rem] text-[0.95rem] text-[#4A5568] leading-relaxed'>
-            We organize workshops, bootcamps, hackathons, and speaker sessions to
-            help members develop both technical and soft skills.
+            We organize workshops, bootcamps, hackathons, and speaker sessions
+            to help members develop both technical and soft skills.
           </p>
         </motion.div>
       </article>
@@ -75,9 +77,9 @@ const AboutSection = () => {
               Our Mission
             </h3>
             <p className='font-normal lg:text-[0.95rem] text-[0.9rem] leading-relaxed text-[#4A5568]'>
-              Our mission at AWS Student Builder Group University of Ilorin 
-              is to equip students with hands-on cloud computing skills 
-              through workshops, mentorship, and real-world projects.
+              Our mission at AWS Student Builder Group University of Ilorin is
+              to equip students with hands-on cloud computing skills through
+              workshops, mentorship, and real-world projects.
             </p>
           </div>
         </motion.div>
@@ -111,8 +113,6 @@ const AboutSection = () => {
           </div>
         </motion.div>
       </article>
-
-    
 
       {/* Bottom Images (Desktop) */}
       <article className='md:flex hidden flex-row flex-wrap justify-between lg:gap-[2rem] gap-[1.5rem]'>

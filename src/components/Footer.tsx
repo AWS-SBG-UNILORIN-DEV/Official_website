@@ -100,7 +100,7 @@ const Footer = () => {
             >
               <IoLogoInstagram size={25} />
             </a>
-         
+
             <a
               href='https://x.com/AwsUniloriN'
               className='cursor-pointer cursor-pointer hover hover:scale-115 transition-all duration-500'

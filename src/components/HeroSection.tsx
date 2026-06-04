@@ -38,7 +38,7 @@ const HeroSection = () => {
       >
         <h1 className='font-alexandria font-bold text-3xl md:text-5xl lg:text-5xl text-center text-[#002B6B]'>
           {' '}
-          AWS STUDENT BUILDERS GROUP 
+          AWS STUDENT BUILDERS GROUP
         </h1>
         <h1 className='font-alexandria font-bold text-3xl md:text-5xl lg:text-5xl  text-center text-[#002B6B]'>
           {' '}

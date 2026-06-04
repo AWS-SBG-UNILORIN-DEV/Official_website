@@ -70,7 +70,7 @@ const CommunitySection = () => {
           </motion.div>
         </div>
 
-        <div className="w-[25rem] h-[17rem] ">
+        <div className='w-[25rem] h-[17rem] '>
           <img
             src='/community.jpg'
             loading='lazy'

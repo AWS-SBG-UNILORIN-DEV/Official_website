@@ -1,6 +1,6 @@
 import cloudCaptain from '/src/assets/abdulrahman-Team_lead.png';
 import coCaptain from '/src/assets/habeeb.jpg';
-// import techLead from '/src/assets/toheeb-tech-lead.png';x  
+// import techLead from '/src/assets/toheeb-tech-lead.png';x
 import designLead from '/design-lead-2.jpg';
 import managementLead from '/src/assets/tobi-management-lead.png';
 import socialLead from '/src/assets/bello_madiya-2.jpg';
@@ -63,7 +63,8 @@ const TeamLead: TeamLeads[] = [
     description: 'Social Media Lead',
     xIconLink: '',
     instagramLink: '',
-    linkedInLink: 'https://www.linkedin.com/in/bello-mardiyat-2575762ba?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+    linkedInLink:
+      'https://www.linkedin.com/in/bello-mardiyat-2575762ba?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
     src: socialLead,
   },
 
@@ -81,8 +82,10 @@ const TeamLead: TeamLeads[] = [
     name: 'OBEKPA PETER.',
     description: 'Communication Lead',
     xIconLink: '',
-    instagramLink: 'https://www.instagram.com/peter__obekpa?igsh=MXR3Y3A1bTMzNDQzNQ==',
-    linkedInLink: 'https://www.linkedin.com/in/peter-obekpa-the-solutions-guy-54926b21b?utm_source=share_via&utm_content=profile&utm_medium=member_android',
+    instagramLink:
+      'https://www.instagram.com/peter__obekpa?igsh=MXR3Y3A1bTMzNDQzNQ==',
+    linkedInLink:
+      'https://www.linkedin.com/in/peter-obekpa-the-solutions-guy-54926b21b?utm_source=share_via&utm_content=profile&utm_medium=member_android',
     src: communicationLead,
   },
   {
@@ -91,7 +94,8 @@ const TeamLead: TeamLeads[] = [
     description: 'Communication Lead',
     xIconLink: '',
     instagramLink: 'https://x.com/0xDera_24',
-    linkedInLink: 'https://www.linkedin.com/in/chukwunta-joshua?utm_source=share_via&utm_content=profile&utm_medium=member_android',
+    linkedInLink:
+      'https://www.linkedin.com/in/chukwunta-joshua?utm_source=share_via&utm_content=profile&utm_medium=member_android',
     src: sponsorshipLead,
   },
   {
@@ -100,14 +104,18 @@ const TeamLead: TeamLeads[] = [
     description: 'Logistics & Operations Lead',
     xIconLink: '',
     instagramLink: 'https://x.com/0xDera_24',
-    linkedInLink: 'https://www.linkedin.com/in/chukwunta-joshua?utm_source=share_via&utm_content=profile&utm_medium=member_android',
+    linkedInLink:
+      'https://www.linkedin.com/in/chukwunta-joshua?utm_source=share_via&utm_content=profile&utm_medium=member_android',
     src: logisticsLead,
   },
 ];
 
 const Team = () => {
   return (
-    <div className='w-full pt-20 pb-24 px-4 sm:px-6 md:px-8 lg:px-12 bg-[#F5F5F5]' id='Team'>
+    <div
+      className='w-full pt-20 pb-24 px-4 sm:px-6 md:px-8 lg:px-12 bg-[#F5F5F5]'
+      id='Team'
+    >
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0, transition: { duration: 1 } }}
@@ -144,7 +152,11 @@ const Team = () => {
           viewport={{ once: true }}
         >
           <div className='w-full flex flex-col pb-12 shadow-md rounded-3xl gap-6 items-center h-full justify-between'>
-            <img src={cloudCaptain} loading='lazy' className='w-full h-64 object-cover rounded-tl-3xl rounded-tr-3xl' />
+            <img
+              src={cloudCaptain}
+              loading='lazy'
+              className='w-full h-64 object-cover rounded-tl-3xl rounded-tr-3xl'
+            />
             <div className='name-card bg-[#9747FF] rounded-lg mt-[-40px] text-white w-[90%] flex flex-col items-center p-4'>
               <h3 className='text-[18px] font-light'>ABOLAJI ABDULRAHMAN</h3>
               <p className='text-[19px] font-light'> Leader </p>
@@ -196,8 +208,13 @@ const Team = () => {
                 className='w-full h-64 object-cover rounded-tl-xl rounded-tr-xl'
               />
               <div className='name-card bg-[#9747FF] rounded-lg mt-[-40px] text-white w-[90%] flex flex-col items-center p-2'>
-                <h3 className='text-[17px] font-light text-center'>{item.name}</h3>
-                <p className='text-[13px] font-light text-center'> {item.description}</p>
+                <h3 className='text-[17px] font-light text-center'>
+                  {item.name}
+                </h3>
+                <p className='text-[13px] font-light text-center'>
+                  {' '}
+                  {item.description}
+                </p>
               </div>
               <div className='icons flex item-center justify-around gap-4'>
                 <a
