@@ -1,16 +1,19 @@
-// import React from 'react';
-// import
 import cloudCaptain from '/src/assets/abdulrahman-Team_lead.png';
-import coCaptain from '/src/assets/co-captain.png';
-import techLead from '/src/assets/toheeb-tech-lead.png';
+import coCaptain from '/src/assets/habeeb.jpg';
+// import techLead from '/src/assets/toheeb-tech-lead.png';x  
 import designLead from '/design-lead-2.jpg';
 import managementLead from '/src/assets/tobi-management-lead.png';
-import socialLead from '/src/assets/lateefat-social-lead.png';
+import socialLead from '/src/assets/bello_madiya-2.jpg';
 import contentLead from '/src/assets/victor-content-lead.png';
+
+// New inputs
+import sponsorshipLead from '/src/assets/chukwunta-2.jpg';
+import communicationLead from '/src/assets/obekpa-2.jpg';
+import logisticsLead from '/src/assets/abdulrahman-logistics-2.jpg';
 
 import { FaXTwitter } from 'react-icons/fa6';
 import { FaInstagram } from 'react-icons/fa';
-// import { FaLinkedinIn } from 'react-icons/fa6'; <FaLinkedinIn />
+
 import { RiLinkedinLine } from 'react-icons/ri';
 import { motion } from 'motion/react';
 
@@ -28,23 +31,12 @@ const TeamLead: TeamLeads[] = [
   {
     id: 1,
     name: 'HABBEB BABANSULAIMON ',
-    description: 'Program Lead',
-    xIconLink: '',
+    description: 'Technical Lead',
+    xIconLink: 'https://x.com/@iyanda2234',
     instagramLink: '',
-    linkedInLink: 'https://linkedin.com/in/rufilboss',
+    linkedInLink: 'https://www.linkedin.com/in/habeeb-babasulaiman',
     src: coCaptain,
   },
-
-  {
-    id: 2,
-    name: 'AKANDE TOHEEB',
-    description: 'Technical and Operations Lead',
-    xIconLink: '',
-    instagramLink: '',
-    linkedInLink: 'https://www.linkedin.com/in/akande-olalekan-2a69a0221/',
-    src: techLead,
-  },
-
   {
     id: 3,
     name: 'ABDULKABIR YUSUF',
@@ -67,11 +59,11 @@ const TeamLead: TeamLeads[] = [
 
   {
     id: 5,
-    name: 'LATEEFAT BELLO',
+    name: 'BELLO ABAKE MARDIYAH',
     description: 'Social Media Lead',
     xIconLink: '',
     instagramLink: '',
-    linkedInLink: '',
+    linkedInLink: 'https://www.linkedin.com/in/bello-mardiyat-2575762ba?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
     src: socialLead,
   },
 
@@ -84,11 +76,38 @@ const TeamLead: TeamLeads[] = [
     linkedInLink: 'https://www.linkedin.com/in/victor-agbayekhai-a210b3238/',
     src: contentLead,
   },
+  {
+    id: 8,
+    name: 'OBEKPA PETER.',
+    description: 'Communication Lead',
+    xIconLink: '',
+    instagramLink: 'https://www.instagram.com/peter__obekpa?igsh=MXR3Y3A1bTMzNDQzNQ==',
+    linkedInLink: 'https://www.linkedin.com/in/peter-obekpa-the-solutions-guy-54926b21b?utm_source=share_via&utm_content=profile&utm_medium=member_android',
+    src: communicationLead,
+  },
+  {
+    id: 8,
+    name: 'CHUKWUNTA CHIDERA JOSHUA',
+    description: 'Communication Lead',
+    xIconLink: '',
+    instagramLink: 'https://x.com/0xDera_24',
+    linkedInLink: 'https://www.linkedin.com/in/chukwunta-joshua?utm_source=share_via&utm_content=profile&utm_medium=member_android',
+    src: sponsorshipLead,
+  },
+  {
+    id: 8,
+    name: 'ABDULRAHMAN ADEBAYO',
+    description: 'Logistics & Operations Lead',
+    xIconLink: '',
+    instagramLink: 'https://x.com/0xDera_24',
+    linkedInLink: 'https://www.linkedin.com/in/chukwunta-joshua?utm_source=share_via&utm_content=profile&utm_medium=member_android',
+    src: logisticsLead,
+  },
 ];
 
 const Team = () => {
   return (
-    <div className='w-full pt-20 pb-24 px-12 bg-[#F5F5F5]' id='Team'>
+    <div className='w-full pt-20 pb-24 px-4 sm:px-6 md:px-8 lg:px-12 bg-[#F5F5F5]' id='Team'>
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0, transition: { duration: 1 } }}
@@ -115,7 +134,7 @@ const Team = () => {
       <div className='team-leads-section flex flex-col items-center justify-around gap-12'>
         {/* Cloud Captain Be in a section alone */}
         <motion.div
-          className='captain sm:w-full md:w-[30%]'
+          className='captain w-full sm:w-3/4 md:w-1/2 lg:w-[30%] h-[400px] flex flex-col justify-between'
           initial={{ opacity: 0, y: 40 }}
           whileInView={{
             opacity: 1,
@@ -124,13 +143,13 @@ const Team = () => {
           }}
           viewport={{ once: true }}
         >
-          <div className='w-full flex flex-col pb-12 shadow-md rounded-3xl gap-6 items-center'>
-            <img src={cloudCaptain} className='w-full' />
+          <div className='w-full flex flex-col pb-12 shadow-md rounded-3xl gap-6 items-center h-full justify-between'>
+            <img src={cloudCaptain} loading='lazy' className='w-full h-64 object-cover rounded-tl-3xl rounded-tr-3xl' />
             <div className='name-card bg-[#9747FF] rounded-lg mt-[-40px] text-white w-[90%] flex flex-col items-center p-4'>
               <h3 className='text-[18px] font-light'>ABOLAJI ABDULRAHMAN</h3>
               <p className='text-[19px] font-light'> Leader </p>
             </div>
-            <div className='icons flex item-center justify-around space-x-4'>
+            <div className='icons flex item-center justify-around space-x-4 mb-6'>
               <a>
                 <FaXTwitter
                   size={35}
@@ -158,7 +177,7 @@ const Team = () => {
         </motion.div>
 
         {/* Other Cloud leads in a container with flex */}
-        <div className='container flex flex-col md:flex-row items-center justify-center gap-16 md:flex-wrap'>
+        <div className='container flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 lg:gap-16 md:flex-wrap'>
           {TeamLead.map((item, id) => (
             <motion.div
               initial={{ opacity: 0, y: 40 }}
@@ -169,15 +188,16 @@ const Team = () => {
               }}
               viewport={{ once: true }}
               key={id}
-              className=' w-full md:w-1/4 flex flex-col shadow-sm rounded-3xl gap-6 items-center pb-12'
+              className='w-full sm:w-[90%] md:w-[60%] lg:w-1/4 h-[400px] flex flex-col shadow-sm rounded-3xl gap-6 items-center pb-12 justify-between'
             >
               <img
                 src={item.src}
-                className='w-full rounded-tl-xl rounded-tr-xl'
+                loading='lazy'
+                className='w-full h-64 object-cover rounded-tl-xl rounded-tr-xl'
               />
               <div className='name-card bg-[#9747FF] rounded-lg mt-[-40px] text-white w-[90%] flex flex-col items-center p-2'>
-                <h3 className='text-[17px] font-light'>{item.name}</h3>
-                <p className='text-[13px] font-light'> {item.description}</p>
+                <h3 className='text-[17px] font-light text-center'>{item.name}</h3>
+                <p className='text-[13px] font-light text-center'> {item.description}</p>
               </div>
               <div className='icons flex item-center justify-around gap-4'>
                 <a

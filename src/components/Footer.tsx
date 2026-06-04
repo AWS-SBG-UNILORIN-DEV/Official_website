@@ -8,7 +8,7 @@ import { FaMeetup } from 'react-icons/fa6';
 
 const Footer = () => {
   return (
-    <div className='font-manrope py-8 px-8 gap-6 min-h-90 flex items-center justify-center bg-[#1e242c] text-white'>
+    <div className='font-manrope py-8 sm:py-10 md:py-12 px-4 sm:px-6 md:px-8 gap-6 min-h-90 flex items-center justify-center bg-[#1e242c] text-white'>
       <div className='flex flex-col justify-between gap-8 w-full lg:w-[90%] '>
         <motion.div
           initial={{ opacity: 0, y: 40 }}

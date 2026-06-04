@@ -19,7 +19,7 @@ const Header = () => {
     <header className='w-[90%] md:px-[2rem] fixed z-50 top-4 md:top-4'>
       <nav className='flex justify-between items-center h-fit mb-[2rem] bg-[#fff] py-2 px-4 rounded-full shadow-[0_2px_10px_rgba(0,0,0,0.08)] '>
         <a href='/'>
-          <img src='/icon-3.png' alt='Logo' className='w-36 md:w-36' />
+          <img src='/icon-3.png' alt='AWS Student Builders Logo' className='w-24 sm:w-28 md:w-32 lg:w-36' />
           {/* <img src='/Images/header/logo.svg' alt='Logo' /> */}
         </a>
 

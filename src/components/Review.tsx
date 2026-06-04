@@ -122,6 +122,7 @@ const Review = ({ Reviews }: ReviewsProps) => {
           >
             <img
               src={reviewImg}
+              loading='lazy'
               className='rounded-lg w-full h-64 sm:h-80 lg:h-[400px] object-cover'
             />
           </motion.div>

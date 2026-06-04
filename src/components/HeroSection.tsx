@@ -23,7 +23,7 @@ const HeroSection = () => {
         className='bg-white rounded-full shadow-[0 4px 20px rgba(0, 0, 0, 0.05)] px-4 py-1 mt-16'
       >
         <h3 className='font-light text-[#002B6B] py-1 px-2 flex gap-4'>
-          <img src={group} />
+          <img src={group} alt='Community icon' />
           Where Cloud Builders Unite
         </h3>
       </motion.div>
@@ -59,7 +59,7 @@ const HeroSection = () => {
         </p>
       </motion.div>
 
-      <div className='flex flex-col md:flex-row gap-4 md:gap-12 w-3/4 items-center justify-center'>
+      <div className='flex flex-col md:flex-row gap-3 md:gap-8 w-full sm:w-3/4 md:w-auto items-center justify-center'>
         <motion.button
           initial={{ opacity: 0 }}
           whileInView={{

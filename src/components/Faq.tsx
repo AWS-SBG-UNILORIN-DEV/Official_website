@@ -22,7 +22,7 @@ const Faq = ({ FaqData }: FaqType) => {
   };
 
   return (
-    <div className=' py-12 px-8 gap-6 flex items-center justify-center'>
+    <div className='py-8 sm:py-10 md:py-12 px-4 sm:px-6 md:px-8 gap-6 flex items-center justify-center'>
       <div className='flex flex-col justify-center items-start gap-8 w-full lg:w-[90%]'>
         <div>
           <motion.h2
@@ -63,6 +63,8 @@ const Faq = ({ FaqData }: FaqType) => {
                   </h3>
                   <img
                     src={accordionBtn}
+                    loading='lazy'
+                    alt='Expand/Collapse'
                     className={`pt-2 cursor-pointer ${isOpen === item.id ? 'rotate-24 transition-all duration-300 ease-in-out' : ''}`}
                   />
                 </div>

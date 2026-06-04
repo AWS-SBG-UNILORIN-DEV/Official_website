@@ -4,7 +4,7 @@ const AboutSection = () => {
   return (
     <section
       id='About'
-      className='bg-[#FFFFFF] lg:my-[5rem] my-[3rem] lg:mx-[6.4rem] mx-[1.5rem] font-alexandria'
+      className='bg-[#FFFFFF] lg:my-[5rem] my-[2rem] sm:my-[2.5rem] lg:mx-[6.4rem] mx-[1rem] sm:mx-[1.5rem] font-alexandria'
     >
       {/* Title */}
       <motion.h1
@@ -125,6 +125,7 @@ const AboutSection = () => {
         >
           <img
             src='/about-img-1.jpg'
+            loading='lazy'
             alt='Aws female members group picture'
             className='w-full h-[350px] object-cover rounded-xl shadow-md'
           />
@@ -139,6 +140,7 @@ const AboutSection = () => {
         >
           <img
             src='/about-img-2.jpg'
+            loading='lazy'
             alt='Aws members group picture'
             className='w-full h-[350px] object-cover rounded-xl shadow-md'
           />
