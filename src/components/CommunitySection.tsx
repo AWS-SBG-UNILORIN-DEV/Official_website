@@ -11,7 +11,7 @@ const CommunitySection = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
-        className='font-normal text-[#1E242C] lg:text-[3.5rem] text-[2.8rem] lg:mb-[2.8rem} mb-[1.8rem]'
+        className=' text-[#1E242C]lg:text-[3.5rem] font-bold text-[2rem] lg:mb-[2.8rem} mb-[1.8rem] leading-tight'
       >
         Our Community Offers
       </motion.h1>
@@ -145,7 +145,7 @@ const CommunitySection = () => {
             }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true, amount: 0.5 }}
-            className='bg-[#FFFFFF] p-[1.8rem] flex flex-col w-[16.25rem] rounded-[1.25rem] border-[1px] border-[#EDEEF0] shadow-2xl shadow-[#002B6B40] items-center'
+            className='bg-[#FFFFFF] p-[1.8rem] flex flex-col w-[20.25rem] rounded-[1.25rem] border-[1px] border-[#EDEEF0] shadow-2xl shadow-[#002B6B40] items-center'
           >
             <img
               src='/Images/community/project_icon.svg'
@@ -170,7 +170,7 @@ const CommunitySection = () => {
             }}
             transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true, amount: 0.5 }}
-            className='bg-[#FFFFFF] p-[1.9rem] flex flex-col w-[16.25rem] rounded-[1.25rem] border-[1px] border-[#EDEEF0] shadow-2xl shadow-[#002B6B40] items-center'
+            className='bg-[#FFFFFF] p-[1.9rem] flex flex-col w-[20.25rem] rounded-[1.25rem] border-[1px] border-[#EDEEF0] shadow-2xl shadow-[#002B6B40] items-center'
           >
             <img
               src='/Images/community/member_icon.svg'
@@ -178,7 +178,7 @@ const CommunitySection = () => {
               className='mb-[0.75rem] size-[3rem]'
             />
             <h2 className='font-[700] text-[#1E242C] text-[1.25rem]'>
-              100K + Active Member
+              3000+ Active Member
             </h2>
             <p className='mt-[0.6rem]'>
               A growing community of passionate students learning and building
@@ -195,7 +195,7 @@ const CommunitySection = () => {
             }}
             transition={{ duration: 0.5, delay: 0.4 }}
             viewport={{ once: true, amount: 0.5 }}
-            className='bg-[#FFFFFF] p-[1rem] flex flex-col w-[16.25rem] rounded-[1.25rem] border-[1px] border-[#EDEEF0] shadow-2xl shadow-[#002B6B40] items-center'
+            className='bg-[#FFFFFF] p-[1rem] flex flex-col w-[20.25rem] rounded-[1.25rem] border-[1px] border-[#EDEEF0] shadow-2xl shadow-[#002B6B40] items-center'
           >
             <img
               src='/Images/community/cloud_icon.svg'
@@ -220,7 +220,7 @@ const CommunitySection = () => {
             }}
             transition={{ duration: 0.5, delay: 0.6 }}
             viewport={{ once: true, amount: 0.5 }}
-            className='bg-[#FFFFFF] p-[1.2rem] flex flex-col w-[16.25rem] rounded-[1.25rem] border-[1px] border-[#EDEEF0] shadow-2xl shadow-[#002B6B40] items-center'
+            className='bg-[#FFFFFF] p-[1.2rem] flex flex-col w-[20.25rem] rounded-[1.25rem] border-[1px] border-[#EDEEF0] shadow-2xl shadow-[#002B6B40] items-center'
           >
             <img
               src='/Images/community/community_icon.svg'
