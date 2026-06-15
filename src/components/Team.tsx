@@ -2,9 +2,9 @@ import cloudCaptain from '/src/assets/abdulrahman-Team_lead.png';
 import coCaptain from '/src/assets/habeeb.jpg';
 // import techLead from '/src/assets/toheeb-tech-lead.png';x
 import designLead from '/design-lead-2.jpg';
-import managementLead from '/src/assets/tobi-management-lead.png';
+// import managementLead from '/src/assets/tobi-management-lead.png';
 import socialLead from '/src/assets/bello_madiya-2.jpg';
-import contentLead from '/src/assets/victor-content-lead.png';
+// import contentLead from '/src/assets/victor-content-lead.png';
 
 // New inputs
 import sponsorshipLead from '/src/assets/chukwunta-2.jpg';
@@ -47,15 +47,15 @@ const TeamLead: TeamLeads[] = [
     src: designLead,
   },
 
-  {
-    id: 4,
-    name: 'TOBILOBA ISAIAH ADEBISI',
-    description: 'Management Team Lead',
-    xIconLink: '',
-    instagramLink: '',
-    linkedInLink: 'https://linkedIn.com/in/tobiloba-adebisi',
-    src: managementLead,
-  },
+  // {
+  //   id: 4,
+  //   name: 'TOBILOBA ISAIAH ADEBISI',
+  //   description: 'Management Team Lead',
+  //   xIconLink: '',
+  //   instagramLink: '',
+  //   linkedInLink: 'https://linkedIn.com/in/tobiloba-adebisi',
+  //   src: managementLead,
+  // },
 
   {
     id: 5,
@@ -68,15 +68,15 @@ const TeamLead: TeamLeads[] = [
     src: socialLead,
   },
 
-  {
-    id: 6,
-    name: 'VICTOR AGBAYEKHAI O.',
-    description: 'Content Team Lead',
-    xIconLink: '',
-    instagramLink: '',
-    linkedInLink: 'https://www.linkedin.com/in/victor-agbayekhai-a210b3238/',
-    src: contentLead,
-  },
+  // {
+  //   id: 6,
+  //   name: 'VICTOR AGBAYEKHAI O.',
+  //   description: 'Content Team Lead',
+  //   xIconLink: '',
+  //   instagramLink: '',
+  //   linkedInLink: 'https://www.linkedin.com/in/victor-agbayekhai-a210b3238/',
+  //   src: contentLead,
+  // },
   {
     id: 8,
     name: 'OBEKPA PETER.',

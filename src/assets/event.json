@@ -2,14 +2,14 @@
   "Sliders": [
     {
       "name": "cloud skill",
-      "src": "/aws-meetup.jpg",
+      "src": "/new-event-images/aws-bootcamp.jpeg",
       "date": "13th December, 2025",
-      "description": "AWS Student Community Day",
+      "description": "AWS Cloud Club Unilorin Bootcamp",
       "link": "https://bit.ly/AWSCDILORIN2025"
     },
     {
       "name": "Back and Ready to Build",
-      "src": "/event2.jpg",
+      "src": "/new-event-images/cloud-bootcamp.jpeg",
       "date": "6th September, 2025",
       "description": "Exam Slam",
       "link": "https://www.meetup.com/aws-cloud-club-the-university-of-ilorin/events/310616721/"
@@ -17,7 +17,7 @@
 
     {
       "name": "AWS Career Paths and Certifications",
-      "src": "/event3.jpg",
+      "src": "/new-event-images/cloud-fundamentals.jpeg",
       "date": "1st September, 2025",
       "description": "Exam Slam",
       "link": "https://www.meetup.com/aws-cloud-club-the-university-of-ilorin/events/310616721/"
@@ -25,7 +25,7 @@
 
     {
       "name": "cloud skill",
-      "src": "/event1.jpg",
+      "src": "/new-event-images/community-day-2025.jpeg",
       "date": "29th September, 2025",
       "description": "Exam Slam",
       "link": "https://www.meetup.com/aws-cloud-club-the-university-of-ilorin/events/310616721/"
@@ -33,7 +33,7 @@
 
     {
       "name": "Back and Ready to Build",
-      "src": "/event2.jpg",
+      "src": "/new-event-images/community-day-reminder.jfif",
       "date": "6th September, 2025",
       "description": "Exam Slam",
       "link": "https://www.meetup.com/aws-cloud-club-the-university-of-ilorin/events/310616721/"
@@ -41,7 +41,21 @@
 
     {
       "name": "AWS Career Paths and Certifications",
-      "src": "/event3.jpg",
+      "src": "/new-event-images/football-match.jfif",
+      "date": "1st September, 2025",
+      "description": "Exam Slam",
+      "link": "https://www.meetup.com/aws-cloud-club-the-university-of-ilorin/events/310616721/"
+    },
+    {
+      "name": "AWS Career Paths and Certifications",
+      "src": "/new-event-images/smarter-cloud.jfif",
+      "date": "1st September, 2025",
+      "description": "Exam Slam",
+      "link": "https://www.meetup.com/aws-cloud-club-the-university-of-ilorin/events/310616721/"
+    },
+    {
+      "name": "AWS Career Paths and Certifications",
+      "src": "/new-event-images/what-is-aws-cloud-club.jpeg",
       "date": "1st September, 2025",
       "description": "Exam Slam",
       "link": "https://www.meetup.com/aws-cloud-club-the-university-of-ilorin/events/310616721/"
