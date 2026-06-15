@@ -85,7 +85,7 @@ const Footer = () => {
           className='flex items-start justify-between flex-col gap-4 lg:flex-row'
         >
           <div>
-            <p>&copy; 2025. All Rights Reserved</p>
+            <p>&copy; 2026. All Rights Reserved</p>
           </div>
           <div className='flex gap-4'>
             <a
