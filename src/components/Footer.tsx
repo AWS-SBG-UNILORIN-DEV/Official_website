@@ -1,17 +1,14 @@
-import icon from '/icon-2.png';
+import icon from '/icon-3.png';
 import { motion } from 'motion/react';
 import { IoLogoInstagram } from 'react-icons/io';
-// import { PiTiktokLogoLight } from 'react-icons/pi';
 import { AiOutlineYoutube } from 'react-icons/ai';
-// import { LiaTelegram } from 'react-icons/lia';
 import { FaXTwitter } from 'react-icons/fa6';
 import { IoLogoLinkedin } from 'react-icons/io5';
-// import { MdWhatsapp } from 'react-icons/md';
 import { FaMeetup } from 'react-icons/fa6';
 
 const Footer = () => {
   return (
-    <div className='font-manrope py-8 px-8 gap-6 min-h-90 flex items-center justify-center bg-[#1e242c] text-white'>
+    <div className='font-manrope py-8 sm:py-10 md:py-12 px-4 sm:px-6 md:px-8 gap-6 min-h-90 flex items-center justify-center bg-[#1e242c] text-white'>
       <div className='flex flex-col justify-between gap-8 w-full lg:w-[90%] '>
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -23,6 +20,7 @@ const Footer = () => {
           viewport={{ once: true }}
           className='flex flex-col md:flex-row justify-between'
         >
+          {/* And Footer section */}
           {/* <h1>This is Footer Section</h1> */}
           <div className='flex flex-col items-start mb-16'>
             <div className='mb-4'>
@@ -87,7 +85,7 @@ const Footer = () => {
           className='flex items-start justify-between flex-col gap-4 lg:flex-row'
         >
           <div>
-            <p>&copy; 2025. All Rights Reserved</p>
+            <p>&copy; 2026. All Rights Reserved</p>
           </div>
           <div className='flex gap-4'>
             <a
@@ -102,18 +100,6 @@ const Footer = () => {
             >
               <IoLogoInstagram size={25} />
             </a>
-            {/* <a
-              href='https://chat.whatsapp.com/JGnoPIJHMS4H7pi4mIE3RQ'
-              className='cursor-pointer hover hover:scale-115 transition-all duration-500'
-            >
-              <MdWhatsapp size={25} />
-            </a> */}
-            {/* <a
-              href=''
-              className='cursor-pointer cursor-pointer hover hover:scale-115 transition-all duration-500'
-            >
-              <LiaTelegram size={25} />
-            </a> */}
 
             <a
               href='https://x.com/AwsUniloriN'

@@ -4,7 +4,7 @@ const CallToAction = () => {
   return (
     <div
       id='Register'
-      className='py-12 px-8 gap-6 flex items-center justify-center'
+      className='py-8 sm:py-10 md:py-12 px-4 sm:px-6 md:px-8 gap-6 flex items-center justify-center'
     >
       <motion.div
         initial={{ opacity: 0, scale: 0.7 }}
@@ -31,8 +31,9 @@ const CallToAction = () => {
             className='text-lg text-white bg-[#9747FF] rounded-full py-3 font-manrope px-12 cursor-pointer shadow-[0_4px_20px_rgba(138,185,255,0.4)] border hover:text-[#7f00ff] hover:bg-[#f5f5f5] hover:border-[#7f00ff]/80 transition duration-400 ease-in-out cursor-pointer '
             onClick={() =>
               window.open(
-                'https://www.meetup.com/aws-cloud-club-at-the-university-of-ilorin/',
-                '_blank'
+                // 'https://www.meetup.com/aws-cloud-club-at-the-university-of-ilorin/',
+                // '_blank'
+                'https://chat.whatsapp.com/GE6GMiixowLBGQfvsrUDOE'
               )
             }
           >

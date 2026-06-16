@@ -65,7 +65,7 @@ const Event = ({ Sliders }: SliderProps) => {
         </motion.h1>
       </div>
 
-      <div className='flex sm:gap-60 items-start text-left md:w-[90%] justify-between'>
+      <div className='flex flex-col md:flex-row md:gap-32 lg:gap-60 items-start text-left md:w-[90%] justify-between'>
         <motion.h2
           initial={{ opacity: 0, y: -40 }}
           whileInView={{
@@ -87,11 +87,13 @@ const Event = ({ Sliders }: SliderProps) => {
         >
           <img
             src={prev}
+            loading='lazy'
             className=' prev w-2/4 h-2/4 md:w-full md:h-full bg-[#f5f5f5] p-2 rounded-full border border-[#9747FF] hover hover:bg-[#fff] hover:scale-120 transition-all duration-700 ease-in-out'
             onClick={prevBtn}
           />
           <img
             src={next}
+            loading='lazy'
             className='next w-2/4 h-2/4 md:w-full md:h-full bg-[#9747FF] p-2 rounded-full hover hover:bg-[#7F00FF] hover:scale-120 transition-all duration-700 ease-in-out'
             onClick={nextBtn}
           />
@@ -105,13 +107,17 @@ const Event = ({ Sliders }: SliderProps) => {
           transition: { duration: 1, delay: 0.75 },
         }}
         viewport={{ once: true }}
-        className='w-[90%]'
+        className='w-full px-2 sm:px-4 md:px-6 lg:w-[90%]'
       >
         <Splide options={splideOptions} ref={sliderRef}>
           {Sliders.map((item, id) => (
             <SplideSlide key={id}>
               <a href={item.link}>
-                <img src={item.src} className='w-full shadow-xl rounded-md' />
+                <img
+                  src={item.src}
+                  loading='lazy'
+                  className='w-full shadow-xl rounded-md'
+                />
                 <div className='bg-[#f5f5f5] absolute lg:w-[280px] my-[-100px] mx-[30px] z-100 flex space-x-6 py-2 px-6 rounded-md shadow-sm items-center justify-between lg:justify-around'>
                   <div>
                     <h3 className='font-bold text-xs'>{item.date}</h3>

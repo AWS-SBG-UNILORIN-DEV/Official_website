@@ -46,3 +46,20 @@
 @theme {
   --font-manrope: Manrope, 'san-serif';
 }
+
+/* Performance optimizations for animations */
+[data-motion] {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Optimize Splide carousel performance */
+.splide {
+  will-change: transform;
+}
+
+.splide__slide {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
