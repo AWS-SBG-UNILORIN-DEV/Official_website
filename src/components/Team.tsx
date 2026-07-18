@@ -55,7 +55,6 @@ const TeamLead: TeamLeads[] = [
     src: socialLead,
   },
 
-
   {
     id: 8,
     name: 'OBEKPA PETER.',

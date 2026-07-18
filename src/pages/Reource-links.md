@@ -38,6 +38,4 @@ Title: AWS Certified Cloud Practitioner CLF-C02 Lite Edition • 3 Full-Length E
 Link: https://drive.google.com/file/d/1oJzEwjS7BekhF_I017LWnM9bWqIyWLae/view
 
 Title: AWS Cloud Practitioner Essentials Seminar
-Link:  https://drive.google.com/file/d/14blAXX64D0-j1ncg6_ERY7146JSCgKkt/view
-
-
+Link: https://drive.google.com/file/d/14blAXX64D0-j1ncg6_ERY7146JSCgKkt/view

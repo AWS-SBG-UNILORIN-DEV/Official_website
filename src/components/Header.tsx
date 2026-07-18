@@ -8,7 +8,9 @@ const Header = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const isResources = typeof window !== 'undefined' && window.location.hash.startsWith('#/resources');
+  const isResources =
+    typeof window !== 'undefined' &&
+    window.location.hash.startsWith('#/resources');
 
   const navItems = [
     { name: 'Home', href: isResources ? '/#Home' : '#Home' },
@@ -35,15 +37,22 @@ const Header = () => {
         <div className='hidden lg:flex justify-center items-center'>
           <ul className='flex gap-[1.25rem] xl:gap-[2.5rem] font-normal text-[0.95rem] xl:text-[1rem] text-[#272F3A]'>
             {navItems.map(item => {
-              const isActive = item.name === 'Resources' 
-                ? isResources 
-                : (!isResources && (window.location.hash === item.href || (item.name === 'Home' && (!window.location.hash || window.location.hash === '#Home'))));
-              
+              const isActive =
+                item.name === 'Resources'
+                  ? isResources
+                  : !isResources &&
+                    (window.location.hash === item.href ||
+                      (item.name === 'Home' &&
+                        (!window.location.hash ||
+                          window.location.hash === '#Home')));
+
               return (
                 <motion.li
                   key={item.name}
                   className={`relative cursor-pointer transition-colors duration-200 ${
-                    isActive ? 'text-[#6B46C1] font-semibold' : 'text-[#272F3A] hover:text-[#6B46C1]'
+                    isActive
+                      ? 'text-[#6B46C1] font-semibold'
+                      : 'text-[#272F3A] hover:text-[#6B46C1]'
                   }`}
                 >
                   <a href={item.href}>
@@ -122,16 +131,27 @@ const Header = () => {
           >
             <ul className='flex flex-col items-center gap-[1.5rem] font-[500] text-[1.2rem] text-[#272F3A] w-full px-6'>
               {navItems.map(item => {
-                const isActive = item.name === 'Resources' 
-                  ? isResources 
-                  : (!isResources && (window.location.hash === item.href || (item.name === 'Home' && (!window.location.hash || window.location.hash === '#Home'))));
-                
+                const isActive =
+                  item.name === 'Resources'
+                    ? isResources
+                    : !isResources &&
+                      (window.location.hash === item.href ||
+                        (item.name === 'Home' &&
+                          (!window.location.hash ||
+                            window.location.hash === '#Home')));
+
                 return (
-                  <li key={item.name} onClick={() => setIsMenuOpen(false)} className='w-full text-center'>
+                  <li
+                    key={item.name}
+                    onClick={() => setIsMenuOpen(false)}
+                    className='w-full text-center'
+                  >
                     <a
                       href={item.href}
                       className={`block py-[0.75rem] px-[1.5rem] transition-colors duration-200 rounded-xl ${
-                        isActive ? 'text-[#6B46C1] font-semibold bg-[#F3E8FF]/60' : 'text-[#272F3A] hover:text-[#6B46C1] hover:bg-gray-50'
+                        isActive
+                          ? 'text-[#6B46C1] font-semibold bg-[#F3E8FF]/60'
+                          : 'text-[#272F3A] hover:text-[#6B46C1] hover:bg-gray-50'
                       }`}
                     >
                       {item.name}
