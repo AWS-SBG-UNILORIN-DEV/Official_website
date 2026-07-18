@@ -1,6 +1,13 @@
 {
   "Sliders": [
     {
+      "name": "AWS Cloud Bootcamp Grand Finale",
+      "src": "/new-event-images/bootcamp-finalle.jfif",
+      "date": "27th of July, 2026",
+      "description": "University Main Auditorium",
+      "link": "https://chat.whatsapp.com/GE6GMiixowLBGQfvsrUDOE"
+    },
+    {
       "name": "cloud skill",
       "src": "/new-event-images/aws-bootcamp.jpeg",
       "date": "13th December, 2025",
