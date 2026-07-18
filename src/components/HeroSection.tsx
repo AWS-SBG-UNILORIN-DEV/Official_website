@@ -87,7 +87,7 @@ const HeroSection = () => {
           viewport={{ once: true }}
           className='bg-[#9747FF] py-2 px-5 rounded-full text-white flex gap-3 transition hover hover:bg-[#f5f5f5] border hover:text-[#7f00ff] hover:border-[#7f00ff]/80 transition duration-400 ease-in-out cursor-pointer'
           // href='#Register'
-          href='"https://chat.whatsapp.com/GE6GMiixowLBGQfvsrUDOE"'
+          href='https://chat.whatsapp.com/GE6GMiixowLBGQfvsrUDOE'
         >
           Join Community <img className='bg-white rounded-full' src={arrow} />
         </motion.a>
