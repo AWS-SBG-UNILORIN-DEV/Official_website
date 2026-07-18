@@ -1,32 +1,29 @@
-import HeroSection from './components/HeroSection';
-import About from './components/About.tsx';
-import CommunitySection from './components/CommunitySection';
-import Team from './components/Team';
-import Event from './components/Event';
-import { Sliders } from './assets/event.json';
-import { Reviews } from './assets/review.json';
-import Review from './components/Review';
-import '@splidejs/splide/dist/css/splide.min.css';
+import { useState, useEffect } from 'react';
+import Home from './pages/Home';
+import ResourcesPage from './pages/ResourcesPage';
 import './index.css';
-import { FaqData } from './assets/faqData.json';
-import Faq from './components/Faq';
-import CallToAction from './components/CallToAction';
-import Footer from './components/Footer';
 
 const App = () => {
-  return (
-    <div className='font-alexandria '>
-      <HeroSection />
-      <About />
-      <CommunitySection />
-      <Team />
-      <Event Sliders={Sliders} />
-      <Review Reviews={Reviews} />
-      <Faq FaqData={FaqData} />
-      <CallToAction />
-      <Footer />
-    </div>
-  );
+  const [currentHash, setCurrentHash] = useState(window.location.hash);
+
+  useEffect(() => {
+    const handleHashChange = () => {
+      setCurrentHash(window.location.hash);
+      // Smooth scroll to top when page changes, or to anchor if present
+      if (window.location.hash.startsWith('#/resources')) {
+        window.scrollTo({ top: 0, behavior: 'instant' });
+      }
+    };
+
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, []);
+
+  if (currentHash.startsWith('#/resources')) {
+    return <ResourcesPage />;
+  }
+
+  return <Home />;
 };
 
 export default App;

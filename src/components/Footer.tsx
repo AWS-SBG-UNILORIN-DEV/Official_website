@@ -48,6 +48,7 @@ const Footer = () => {
               <a href='#About'>About Us</a>
               <a href='#Community'>Community</a>
               <a href='#contact'>Contact Us</a>
+              <a href='#/resources'>Resources</a>
             </div>
           </div>
 
