@@ -45,7 +45,10 @@ const Review = ({ Reviews }: ReviewsProps) => {
   const nextBtn = () => reviewRef.current?.go('>');
 
   return (
-    <div className='w-full py-8 px-4 sm:px-6 lg:px-8 lg:py-16' id='Review'>
+    <div
+      className='w-full py-8 px-4 sm:px-6 lg:px-8 lg:py-16 overflow-x-hidden'
+      id='Review'
+    >
       <div className='w-full flex flex-col space-y-6 lg:space-y-8 '>
         <div className='title'>
           <motion.h1
