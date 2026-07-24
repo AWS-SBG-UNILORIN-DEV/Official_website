@@ -15,7 +15,7 @@ import Footer from '../components/Footer';
 
 const Home = () => {
   return (
-    <div className='font-alexandria '>
+    <div className='font-alexandria overflow-x-hidden w-full max-w-full relative'>
       <HeroSection />
       <About />
       <CommunitySection />
