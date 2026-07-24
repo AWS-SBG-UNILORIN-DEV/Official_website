@@ -47,6 +47,21 @@
   --font-manrope: Manrope, 'san-serif';
 }
 
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
 /* Performance optimizations for animations */
 [data-motion] {
   transform: translateZ(0);
