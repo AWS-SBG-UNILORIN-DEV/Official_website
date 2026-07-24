@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 const CommunitySection = () => {
   return (
     <section
-      className='bg-[#FFFFFF] lg:mt-[5rem] mt-[3rem] font-alexandria text-center items-center gap-[2.8rem]'
+      className='bg-[#FFFFFF] lg:mt-[5rem] mt-[3rem] font-alexandria text-center items-center gap-[2.8rem] overflow-x-hidden'
       id='Community'
     >
       <motion.h1
