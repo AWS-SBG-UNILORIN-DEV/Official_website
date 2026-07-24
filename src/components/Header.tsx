@@ -12,12 +12,19 @@ const Header = () => {
     typeof window !== 'undefined' &&
     window.location.hash.startsWith('#/resources');
 
+  const isCertifications =
+    typeof window !== 'undefined' &&
+    (window.location.hash.startsWith('#/hall-of-certifications') ||
+      window.location.hash.startsWith('#/certifications'));
+
+  const isOtherPage = isResources || isCertifications;
+
   const navItems = [
-    { name: 'Home', href: isResources ? '/#Home' : '#Home' },
-    { name: 'About us', href: isResources ? '/#About' : '#About' },
-    { name: 'Our Team', href: isResources ? '/#Team' : '#Team' },
-    { name: 'Events', href: isResources ? '/#Event' : '#Event' },
-    { name: 'Resources', href: '#/resources' },
+    { name: 'Home', href: isOtherPage ? '/#Home' : '#Home' },
+    { name: 'About us', href: isOtherPage ? '/#About' : '#About' },
+    { name: 'Our Team', href: isOtherPage ? '/#Team' : '#Team' },
+    { name: 'Events', href: isOtherPage ? '/#Event' : '#Event' },
+    { name: 'Resources', href: isOtherPage ? '/#/resources' : '#/resources' },
   ];
 
   return (
@@ -40,7 +47,7 @@ const Header = () => {
               const isActive =
                 item.name === 'Resources'
                   ? isResources
-                  : !isResources &&
+                  : !isOtherPage &&
                     (window.location.hash === item.href ||
                       (item.name === 'Home' &&
                         (!window.location.hash ||
@@ -72,9 +79,9 @@ const Header = () => {
         </div>
 
         <div className='hidden lg:flex justify-end items-center'>
-          <a href='https://chat.whatsapp.com/GE6GMiixowLBGQfvsrUDOE'>
+          <a href='#/hall-of-certifications'>
             <button className='flex items-center gap-[1rem] font-normal text-[#fff] text-[1rem] rounded-full border-[1px] border-white p-[0.5rem] pl-[1.25rem] transition-colors bg-[#9747FF] hover hover:bg-[#fff] hover:border-purple-300 hover:text-[#9747FF] cursor-pointer transition duration-400 ease-in-out'>
-              Register Now
+              View Impacts
               <img
                 src='/Images/header/arrow.svg'
                 alt='Arrow up'
@@ -134,7 +141,7 @@ const Header = () => {
                 const isActive =
                   item.name === 'Resources'
                     ? isResources
-                    : !isResources &&
+                    : !isOtherPage &&
                       (window.location.hash === item.href ||
                         (item.name === 'Home' &&
                           (!window.location.hash ||
@@ -161,7 +168,7 @@ const Header = () => {
               })}
             </ul>
             <a
-              href='https://chat.whatsapp.com/GE6GMiixowLBGQfvsrUDOE'
+              href='#/hall-of-certifications'
               onClick={() => setIsMenuOpen(false)}
               className='mt-[2rem]'
             >
@@ -170,7 +177,7 @@ const Header = () => {
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.2 }}
               >
-                Register Now
+                View Impacts
                 <img
                   src='/Images/header/arrow.svg'
                   alt='Arrow up'

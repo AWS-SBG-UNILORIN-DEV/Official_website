@@ -127,6 +127,29 @@ const Review = ({ Reviews }: ReviewsProps) => {
             />
           </motion.div>
         </div>
+
+        {/* View Impact button container under Testimonials and image container */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: { duration: 0.8, delay: 0.6 },
+          }}
+          viewport={{ once: true }}
+          className='flex justify-center items-center pt-2 sm:pt-4'
+        >
+          <a href='#/hall-of-certifications'>
+            <button className='flex items-center gap-[0.75rem] font-normal text-white text-[1rem] rounded-full border border-purple-400 p-[0.6rem] px-[1.8rem] bg-[#9747FF] hover:bg-[#7F00FF] hover:scale-105 transition-all duration-300 shadow-md cursor-pointer'>
+              View Impacts
+              <img
+                src='/Images/header/arrow.svg'
+                alt='Arrow'
+                className='w-[1rem] h-[1rem]'
+              />
+            </button>
+          </a>
+        </motion.div>
       </div>
     </div>
   );
