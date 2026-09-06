@@ -1,67 +1,31 @@
-# AWS CLOUD CLUB
+# AWS Cloud Club
 
-This project cointains the codebase that power the official Unilorin AWS CLOUD CLUB website.
-
-# Project Startup Guide
-
-Welcome to the project! This _README_ provides a comprehensive guide to get you started with the project setup, including how to run the application locally, manage dependencies, and perform common tasks.
-
-## Table of Contents
-
-1. [Prerequisites](#prerequisites)
-2. [Setup](#setup)
-3. [Running the Project](#running-the-project)
+This repository contains the codebase that powers the official Unilorin AWS Cloud Club website.
 
 ## Prerequisites
 
-Before you begin, ensure you have the following installed:
-
-- [Node.js](https://nodejs.org/en) (v18.x or later)
-- [npm](https://www.npmjs.com/) (comes with Node.js) or [Yarn](https://yarnpkg.com/) (optional, but recommended)
+- Node.js 20 or later
+- npm
 
 ## Setup
 
-1. **Clone the Repository**
-
-   ```
-   git clone https://github.com/AWSCC-Unilorin/Official_website
-   cd official_website
-   ```
-
-2. Install Dependencies
-
-Make sure you have all necessary dependencies installed.
-
-- Using npm:
-
+```sh
+git clone https://github.com/AWS-SBG-UNILORIN-DEV/Official_website.git
+cd Official_website
+npm ci
 ```
 
-npm install
-```
+## Available Scripts
 
-## Running the Project
-
-1. - To run the project on the development server
-
-```
-
+```sh
 npm run dev
+npm run build
+npm run preview
+npm run lint
+npm run typecheck
+npm run format:check
 ```
 
-2. - To run the project on the staging server
+## Contributing
 
-```
-
-npm run staging
-```
-
-3. - To run the project on the production server
-
-```
-
-npm run prod
-```
-
-### Contributing
-
-We welcome contributions to the project! Please refer to our [CONTRIBUTING.md](./CONTRIBUTING.md) file for guidelines on how to contribute.
+Please read [CONTRIBUTING.md](./CONTRIBUTING.md) before opening a pull request.
