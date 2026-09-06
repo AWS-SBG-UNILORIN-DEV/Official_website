@@ -1,14 +1,14 @@
 import cloudCaptain from '/src/assets/abdulrahman-Team_lead.png';
-import coCaptain from '/src/assets/habeeb.jpg';
-import designLead from '/design-lead-2.jpg';
+import coCaptain from '/src/assets/Habeeb-Tech.jpeg';
+import designLead from '/src/assets/Mubarak-Design.jpeg';
 import socialLead from '/src/assets/bello_madiya-2.jpg';
 
 // New inputs
 import sponsorshipLead from '/src/assets/chukwunta-2.jpg';
 import communicationLead from '/src/assets/obekpa-2.jpg';
-import logisticsLead from '/src/assets/abdulrahman-logistics-2.jpg';
+import logisticsLead from '/src/assets/abdulrahman-operation.jpeg';
 
-import { FaXTwitter } from 'react-icons/fa6';
+import { FaAws, FaGithub, FaPinterest, FaXTwitter } from 'react-icons/fa6';
 import { FaInstagram } from 'react-icons/fa';
 
 import { RiLinkedinLine } from 'react-icons/ri';
@@ -22,25 +22,31 @@ interface TeamLeads {
   xIconLink: string;
   instagramLink: string;
   linkedInLink: string;
+  GithubLink?: string;
+  AWSBuilderCenterLink?: string;
+  pinterestLink?: string;
 }
 
 const TeamLead: TeamLeads[] = [
   {
     id: 1,
-    name: 'HABEEB BABANSULAIMON ',
+    name: 'Habeeb Babasulaiman ',
     description: 'Technical Lead',
     xIconLink: 'https://x.com/@iyanda2234',
     instagramLink: '',
     linkedInLink: 'https://www.linkedin.com/in/habeeb-babasulaiman',
+    GithubLink: 'https://github.com/FreemanBoss/',
+    AWSBuilderCenterLink: 'https://builder.aws.com/community/@freemanboss',
     src: coCaptain,
   },
   {
     id: 3,
-    name: 'ABDULKABIR YUSUF',
-    description: 'Design Team Lead',
-    xIconLink: 'https://x.com/kabiryusuf24?s=21',
+    name: ' Tomori Mubarak Temitayo',
+    description: 'Design Lead',
+    xIconLink: 'https://x.com/HemBee2024',
     instagramLink: '',
-    linkedInLink: '',
+    linkedInLink: 'https://www.linkedin.com/in/tomori-mubarak-620688360',
+    pinterestLink: ' https://pin.it/4a7cD48z3',
     src: designLead,
   },
 
@@ -79,11 +85,11 @@ const TeamLead: TeamLeads[] = [
   {
     id: 8,
     name: 'ABDULRAHMAN ADEBAYO',
-    description: 'Logistics & Operations Lead',
-    xIconLink: '',
-    instagramLink: 'https://x.com/0xDera_24',
-    linkedInLink:
-      'https://www.linkedin.com/in/chukwunta-joshua?utm_source=share_via&utm_content=profile&utm_medium=member_android',
+    description: 'Operations and Programs Lead ',
+    xIconLink: ' https://x.com/AdebayoAbd009',
+    GithubLink: 'https://github.com/adebayo-abdul',
+    instagramLink: 'https://www.instagram.com/adebayoabdul2009/?hl=en',
+    linkedInLink: 'https://www.linkedin.com/in/adebayo-abdulrahman-5b2859343',
     src: logisticsLead,
   },
 ];
@@ -195,37 +201,79 @@ const Team = () => {
                 </p>
               </div>
               <div className='icons flex item-center justify-around gap-4'>
-                <a
-                  href={item.xIconLink}
-                  target='_blank'
-                  rel='noopener noreferrer'
-                >
-                  <FaXTwitter
-                    size={35}
-                    className='border border-black-400 rounded-full p-1 cursor-pointer hover hover:scale-110 transition duration-400'
-                  />
-                </a>
+                {item.xIconLink && (
+                  <a
+                    href={item.xIconLink}
+                    target='_blank'
+                    rel='noopener noreferrer'
+                  >
+                    <FaXTwitter
+                      size={35}
+                      className='border border-black-400 rounded-full p-1 cursor-pointer hover hover:scale-110 transition duration-400'
+                    />
+                  </a>
+                )}
 
-                <a
-                  href={item.instagramLink}
-                  target='_blank'
-                  rel='noopener noreferrer'
-                >
-                  <FaInstagram
-                    size={35}
-                    className='border border-black-400 rounded-full p-1 cursor-pointer hover hover:scale-110 transition duration-400'
-                  />
-                </a>
-                <a
-                  href={item.linkedInLink}
-                  target='_blank'
-                  rel='noopener noreferrer'
-                >
-                  <RiLinkedinLine
-                    size={35}
-                    className='border border-black-400 rounded-full p-1 cursor-pointer hover hover:scale-110 transition duration-400'
-                  />
-                </a>
+                {item.instagramLink && (
+                  <a
+                    href={item.instagramLink}
+                    target='_blank'
+                    rel='noopener noreferrer'
+                  >
+                    <FaInstagram
+                      size={35}
+                      className='border border-black-400 rounded-full p-1 cursor-pointer hover hover:scale-110 transition duration-400'
+                    />
+                  </a>
+                )}
+                {item.linkedInLink && (
+                  <a
+                    href={item.linkedInLink}
+                    target='_blank'
+                    rel='noopener noreferrer'
+                  >
+                    <RiLinkedinLine
+                      size={35}
+                      className='border border-black-400 rounded-full p-1 cursor-pointer hover hover:scale-110 transition duration-400'
+                    />
+                  </a>
+                )}
+                {item.GithubLink && (
+                  <a
+                    href={item.GithubLink}
+                    target='_blank'
+                    rel='noopener noreferrer'
+                  >
+                    <FaGithub
+                      size={35}
+                      className='border border-black-400 rounded-full p-1 cursor-pointer hover hover:scale-110 transition duration-400'
+                    />
+                  </a>
+                )}
+                {item.AWSBuilderCenterLink && (
+                  <a
+                    href={item.AWSBuilderCenterLink}
+                    target='_blank'
+                    rel='noopener noreferrer'
+                  >
+                    <FaAws
+                      size={35}
+                      className='border border-black-400 rounded-full p-1 cursor-pointer hover hover:scale-110 transition duration-400'
+                    />
+                  </a>
+                )}
+                {item.pinterestLink && (
+                  <a
+                    href={item.pinterestLink}
+                    target='_blank'
+                    rel='noopener noreferrer'
+                  >
+                    <FaPinterest
+                      size={35}
+                      className='border border-black-400 rounded-full p-1 cursor-pointer hover hover:scale-110 transition duration-400'
+                    />
+                  </a>
+                )}
               </div>
             </motion.div>
           ))}
