@@ -1,6 +1,6 @@
-# AWS Cloud Club
+# AWS STUDENTS BUILDER GROUP
 
-This repository contains the codebase that powers the official Unilorin AWS Cloud Club website.
+This repository contains the codebase that powers the official Unilorin AWS STUDENTS BUILDER GROUP website.
 
 ## Prerequisites
 

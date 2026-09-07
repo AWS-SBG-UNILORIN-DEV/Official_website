@@ -28,7 +28,7 @@ const AboutSection = () => {
           className='font-semibold text-[1.5rem] text-center lg:text-left pr-0 pl-0 lg:text-[3.3rem] leading-tight'
         >
           <span className='text-[#6328A3]'>Introducing </span>
-          AWS Student Builder Group, University of Ilorin
+          AWS STUDENTS BUILDER GROUP, University of Ilorin
         </motion.h2>
 
         {/* Right Column - Merged Paragraphs */}
@@ -40,7 +40,7 @@ const AboutSection = () => {
           className='bg-[#FFFFFF] p-[2rem] rounded-lg lg:pt-0'
         >
           <p className='font-normal lg:text-[1rem] text-[0.95rem] text-[#4A5568] leading-relaxed mb-[1.5rem]'>
-            AWS Student Builder Group, University of Ilorin, is a student-led
+            AWS STUDENTS BUILDER GROUP, University of Ilorin, is a student-led
             community that empowers students to learn, build, and grow their
             skills in cloud computing using Amazon Web Services (AWS). We
             organize workshops, bootcamps, hackathons, and speaker sessions to
@@ -77,7 +77,7 @@ const AboutSection = () => {
               Our Mission
             </h3>
             <p className='font-normal lg:text-[0.95rem] text-[0.9rem] leading-relaxed text-[#4A5568]'>
-              Our mission at AWS Student Builder Group University of Ilorin is
+              Our mission at AWS STUDENTS BUILDER GROUP University of Ilorin is
               to equip students with hands-on cloud computing skills through
               workshops, mentorship, and real-world projects.
             </p>

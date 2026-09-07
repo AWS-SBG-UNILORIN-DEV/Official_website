@@ -106,7 +106,7 @@ const resourcesData: Resource[] = [
     id: 'bootcamp-resources',
     title: 'AWS Bootcamp Resources & Session Materials',
     description:
-      'Official slides, session notes, and follow-up materials from the AWS Student Builders Group Bootcamp.',
+      'Official slides, session notes, and follow-up materials from the AWS STUDENTS BUILDER GROUP Bootcamp.',
     type: 'pdf',
     fileUrl:
       'https://drive.google.com/file/d/1ExSONQpBsbJy7WQzomFySzYtlal4uluJ/view',
