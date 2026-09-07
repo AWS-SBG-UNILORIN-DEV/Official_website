@@ -34,7 +34,7 @@ const Header = () => {
           <a href='/'>
             <img
               src='/icon-3.png'
-              alt='AWS STUDENTS BUILDER GROUP Logo'
+              alt='AWS STUDENT BUILDERS GROUP Logo'
               className='w-24 sm:w-28 md:w-32 lg:w-36'
             />
           </a>
