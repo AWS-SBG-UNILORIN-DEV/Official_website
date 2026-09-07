@@ -2,48 +2,43 @@
 
 ## Commit Linting with Commitlint
 
-We use **Commitlint** to maintain a consistent commit message format across the project. This ensures a clear and meaningful commit history. Please adhere to the following guidelines:
+We use Commitlint to maintain a consistent commit message format across the project.
 
-### Commit Message Format
+## Commit Message Format
 
-- **Type**: Defines the type of change being made. Valid types include:
-  - `fix`: A bug fix
-  - `feat`: A new feature
-  - `docs`: Documentation updates
-  - `style`: Code style changes (formatting, missing semi-colons, etc.)
-  - `refactor`: Code changes that neither fix a bug nor add a feature
-  - `test`: Adding or updating tests
-  - `chore`: Changes to the build process or auxiliary tools and libraries
+- `fix`: a bug fix
+- `feat`: a new feature
+- `docs`: documentation updates
+- `style`: code style changes
+- `refactor`: code changes that neither fix a bug nor add a feature
+- `test`: adding or updating tests
+- `chore`: build process, tooling, or maintenance changes
 
-- **Subject**: A brief summary of the change, ideally less than 100 characters. It should be descriptive but concise.
-
-### Examples
+Examples:
 
 - Good: `feat: add user profile page`
-- Good: `fix: resolve issue with login form validation`
-- Bad: `update files` (too vague)
-- Bad: `fix bug` (missing details)
+- Good: `fix: resolve login form validation`
+- Bad: `update files`
+- Bad: `fix bug`
 
-**Note**: The commit message must include a type and a non-empty subject. Avoid using capital letters or punctuation (e.g., `!` or `?`) in the type.
+## Local Checks
 
-### How to Use
+Run the same checks used by CI before opening a pull request:
 
-1. Write your commit message according to the format above.
-2. Commit your changes. If your commit message does not conform to the rules, the commit will be rejected, and you’ll need to correct it.
+```sh
+npm run format:check
+npm run lint -- --max-warnings=0
+npm run typecheck
+npm run build
+```
 
-## ESLint Configuration
+## ESLint
 
-**ESLint** is used to ensure code quality and enforce coding standards across the project. Here’s what you need to know:
+ESLint checks TypeScript and React source files in `src`:
 
-### ESLint Setup
+```sh
+npm run lint
+npm run lint:fix
+```
 
-- **File Types**: ESLint is configured to lint `.js` and `.jsx` files located in the `src` directory.
-
-- **Ignored Files**: ESLint will ignore files and directories specified in the configuration:
-  - `dist/` directory
-  - `commitlint.config.js` (since it is not part of the source code)
-
-### Running ESLint
-
-- **To Check Code**: Run `npx eslint 'src/**/*.{js,jsx}'` to analyze the code for issues.
-- **To Fix Issues**: Run `npx eslint 'src/**/*.{js,jsx}' --fix` to automatically fix linting issues where possible.
+Generated build output in `dist/` is ignored.
