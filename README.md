@@ -1,6 +1,6 @@
-# AWS STUDENTS BUILDER GROUP
+# AWS STUDENT BUILDERS GROUP
 
-This repository contains the codebase that powers the official Unilorin AWS STUDENTS BUILDER GROUP website.
+This repository contains the codebase that powers the official Unilorin AWS STUDENT BUILDERS GROUP website.
 
 ## Prerequisites
 
