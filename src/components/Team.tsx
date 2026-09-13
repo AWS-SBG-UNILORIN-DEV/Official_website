@@ -152,7 +152,7 @@ const Team = () => {
             <img
               src={cloudCaptain}
               loading='lazy'
-              className='w-full h-64 object-cover rounded-tl-3xl rounded-tr-3xl'
+              className='w-full h-64 object-cover object-top rounded-tl-3xl rounded-tr-3xl'
             />
             <div className='name-card bg-[#9747FF] rounded-lg mt-[-40px] text-white w-[90%] flex flex-col items-center p-4'>
               <h3 className='text-[18px] font-light'>
@@ -225,7 +225,7 @@ const Team = () => {
               <img
                 src={item.src}
                 loading='lazy'
-                className='w-full h-64 object-cover rounded-tl-xl rounded-tr-xl'
+                className='w-full h-64 object-cover object-top rounded-tl-xl rounded-tr-xl'
               />
               <div className='name-card bg-[#9747FF] rounded-lg mt-[-40px] text-white w-[90%] flex flex-col items-center p-2'>
                 <h3 className='text-[17px] font-light text-center'>
