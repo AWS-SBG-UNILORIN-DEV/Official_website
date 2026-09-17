@@ -28,7 +28,7 @@ const Footer = () => {
             </div>
             <div>
               <p className='font-manrope'>
-                P.M.B. 1515, Ilorin, kwara state, Nigeria <br />
+                P.M.B. 1515, Ilorin, Kwara State, Nigeria <br />
                 <a href='tel:+2348026724015'>
                   <span className='font-bold'>Phone: </span>08026724015
                 </a>{' '}
@@ -47,7 +47,7 @@ const Footer = () => {
               <a href='#Home'>Home</a>
               <a href='#About'>About Us</a>
               <a href='#Community'>Community</a>
-              <a href='#contact'>Contact Us</a>
+              {/* <a href='#contact'>Contact Us</a> */}
               <a href='#/resources'>Resources</a>
             </div>
           </div>
@@ -55,21 +55,19 @@ const Footer = () => {
           <div className='mb-12'>
             <h4 className='mb-4 font-bold'>Others</h4>
             <div className='flex flex-col gap-3'>
-              <a href='#Community'>Community</a>
               <a href='https://www.meetup.com/aws-cloud-club-the-university-of-ilorin/'>
                 Meet Up
               </a>
               <a href='#Team'>Our Team</a>
-              {/* <a href=''>About Us</a> */}
             </div>
           </div>
 
           <div className='mb-12'>
             <h4 className='mb-4 font-bold'>About Us</h4>
             <div className='flex flex-col gap-3'>
-              <a href='#About'>Our Mission</a>
+              <a href='#Mission'>Our Mission</a>
               {/* <a href='#Review'>What Members Say</a> */}
-              <a href='#Review'>Our Impact</a>
+              <a href='/#/hall-of-certifications'>Our Impact</a>
             </div>
           </div>
         </motion.div>
@@ -86,7 +84,7 @@ const Footer = () => {
           className='flex items-start justify-between flex-col gap-4 lg:flex-row'
         >
           <div>
-            <p>&copy; 2026. All Rights Reserved</p>
+            <p>&copy; 2026 AWS SBG Unilorin.</p>
           </div>
           <div className='flex gap-4'>
             <a
