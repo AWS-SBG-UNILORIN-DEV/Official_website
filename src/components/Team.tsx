@@ -192,7 +192,7 @@ const Team = () => {
                 />
               </a>
               <a
-                href='https://www.instagram.com/the_global_dera/'
+                href='https://builder.aws.com/community/@0xdera24'
                 target='_blank'
                 rel='noopener noreferrer'
               >
