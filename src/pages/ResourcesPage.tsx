@@ -6,11 +6,9 @@ import {
   FiClock,
   FiFileText,
   FiVolume2,
-  FiGrid,
   FiSend,
   FiCheckCircle,
   FiChevronDown,
-  FiArrowUpRight,
   FiPlay,
   FiPause,
 } from 'react-icons/fi';
@@ -202,9 +200,27 @@ const resourcesData: Resource[] = [
   },
 ];
 
+// type ResourceTab =
+//   | 'all'
+//   | 'bootcamp'
+//   | 'exam'
+//   | 'reference'
+//   | 'immersion'
+//   | 'study-notes'
+//   | 'seminar';
+
+// const categoryByTab: Record<Exclude<ResourceTab, 'all'>, string> = {
+//   bootcamp: 'Bootcamp',
+//   exam: 'Exam Prep',
+//   reference: 'Reference',
+//   immersion: 'Immersion',
+//   'study-notes': 'Study Notes',
+//   seminar: 'Seminar',
+// };
+
 const ResourcesPage = () => {
   const [searchQuery, setSearchQuery] = useState('');
-  const [activeTab, setActiveTab] = useState<'all' | 'audio' | 'pdf'>('all');
+  // const [activeTab, setActiveTab] = useState<ResourceTab>('all');
   const [selectedCategory, setSelectedCategory] = useState('All Categories');
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
@@ -272,19 +288,16 @@ const ResourcesPage = () => {
     }, 1200);
   };
 
-  // Filter resources based on query, tabs and category
   const filteredResources = resourcesData.filter(resource => {
     const matchesSearch =
       resource.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       resource.description.toLowerCase().includes(searchQuery.toLowerCase());
 
-    const matchesTab = activeTab === 'all' || resource.type === activeTab;
-
     const matchesCategory =
       selectedCategory === 'All Categories' ||
       resource.category === selectedCategory;
 
-    return matchesSearch && matchesTab && matchesCategory;
+    return matchesSearch && matchesCategory;
   });
 
   return (
@@ -296,7 +309,7 @@ const ResourcesPage = () => {
 
       {/* Hero Section */}
       <section
-        className='w-full pt-28 pb-20 px-4 md:px-8 relative overflow-hidden flex flex-col items-center'
+        className='w-full pt-28 pb-20 px-4 md:px-8 relative overflow-visible flex flex-col items-center'
         style={{
           background: `radial-gradient(ellipse 100% 200% at center 97%,
                           #d8caeaff 0%, rgba(216, 209, 224, 0.6) 25%,
@@ -358,7 +371,7 @@ const ResourcesPage = () => {
           <div className='h-6 w-[1px] bg-gray-200' />
 
           {/* Category Dropdown */}
-          <div className='relative'>
+          <div className='relative z-50'>
             <button
               onClick={() => setIsDropdownOpen(!isDropdownOpen)}
               className='flex items-center gap-1.5 px-4 py-2 hover:bg-gray-50 rounded-full text-xs sm:text-sm font-semibold text-[#414D60] transition-colors duration-200 cursor-pointer'
@@ -375,7 +388,7 @@ const ResourcesPage = () => {
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 10 }}
-                  className='absolute right-0 mt-2 w-48 bg-white border border-gray-100 rounded-2xl shadow-xl py-2 z-50 overflow-hidden font-manrope'
+                  className='absolute right-0 mt-2 w-48 bg-white border border-gray-100 rounded-2xl shadow-xl py-2 z-[100] overflow-hidden font-manrope'
                 >
                   {[
                     'All Categories',
@@ -392,10 +405,10 @@ const ResourcesPage = () => {
                         setSelectedCategory(cat);
                         setIsDropdownOpen(false);
                       }}
-                      className={`w-full text-left px-4 py-2 text-sm transition-colors duration-150 ${
+                      className={`w-full text-left px-4 py-2 text-sm cursor-pointer transition-colors duration-150 ${
                         selectedCategory === cat
                           ? 'bg-[#F3E8FF] text-[#9747FF] font-semibold'
-                          : 'text-[#272F3A] hover:bg-gray-50'
+                          : 'text-[#272F3A] hover:bg-[#F3F4F6]'
                       }`}
                     >
                       {cat}
@@ -411,12 +424,16 @@ const ResourcesPage = () => {
       {/* Main Content & Cards */}
       <main className='w-[95%] lg:w-[90%] max-w-7xl mx-auto px-4 sm:px-6 lg:px-0 py-10 flex-grow'>
         {/* Type Filter Tab Selector */}
-        <div className='flex justify-center mb-12'>
+        {/* <div className='flex justify-center mb-12'>
           <div className='bg-[#FFFFFF] border border-gray-100 rounded-full p-1.5 shadow-[0_4px_15px_rgba(0,0,0,0.03)] flex gap-1 sm:gap-2'>
             {[
               { id: 'all', label: 'All Resources', icon: FiGrid },
-              { id: 'audio', label: 'Audio Resources', icon: FiVolume2 },
-              { id: 'pdf', label: 'PDF Resources', icon: FiFileText },
+              { id: 'bootcamp', label: 'Bootcamp', icon: FiVolume2 },
+              { id: 'exam', label: 'Exam Prep', icon: FiFileText },
+              { id: 'reference', label: 'Reference', icon: FiFileText },
+              { id: 'immersion', label: 'Immersion', icon: FiFileText },
+              { id: 'study-notes', label: 'Study Notes', icon: FiFileText },
+              { id: 'seminar', label: 'Seminar', icon: FiFileText },
             ].map(tab => {
               const Icon = tab.icon;
               const isSelected = activeTab === tab.id;
@@ -424,7 +441,16 @@ const ResourcesPage = () => {
                 <button
                   key={tab.id}
                   onClick={() =>
-                    setActiveTab(tab.id as 'all' | 'audio' | 'pdf')
+                    setActiveTab(
+                      tab.id as
+                        | 'all'
+                        | 'bootcamp'
+                        | 'exam'
+                        | 'reference'
+                        | 'immersion'
+                        | 'study-notes'
+                        | 'seminar'
+                    )
                   }
                   className={`relative flex items-center gap-2 px-4 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-colors duration-300 cursor-pointer z-10`}
                 >
@@ -453,7 +479,7 @@ const ResourcesPage = () => {
               );
             })}
           </div>
-        </div>
+        </div> */}
 
         {/* Section Header */}
         <div className='flex justify-between items-center mb-8 border-b border-gray-100 pb-4'>
@@ -462,17 +488,6 @@ const ResourcesPage = () => {
               Featured Resources
             </h2>
           </div>
-          <button
-            onClick={() => {
-              setSearchQuery('');
-              setActiveTab('all');
-              setSelectedCategory('All Categories');
-            }}
-            className='text-xs sm:text-sm font-semibold text-[#9747FF] hover:text-[#7f2df2] flex items-center gap-1 transition-colors'
-          >
-            View all resources
-            <FiArrowUpRight className='w-4 h-4' />
-          </button>
         </div>
 
         {/* Cards Grid */}
@@ -620,21 +635,14 @@ const ResourcesPage = () => {
           {filteredResources.length === 0 && (
             <div className='col-span-full py-16 flex flex-col items-center justify-center text-center'>
               <div className='w-16 h-16 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 mb-4 border border-gray-100'>
-                {activeTab === 'audio' ? (
-                  <FiVolume2 className='w-6 h-6 text-[#9747FF]' />
-                ) : (
-                  <FiSearch className='w-6 h-6' />
-                )}
+                <FiSearch className='w-6 h-6' />
               </div>
               <h4 className='text-[#002B6B] font-bold text-lg mb-1'>
-                {activeTab === 'audio'
-                  ? 'Check back later'
-                  : 'No resources found'}
+                No resources found
               </h4>
               <p className='text-gray-500 font-manrope text-sm max-w-md'>
-                {activeTab === 'audio'
-                  ? 'We are working on getting some amazing files. Kindly check back later'
-                  : "We couldn't find any resources matching your search query or filters. Try adjusting your settings."}
+                We couldn&apos;t find any resources matching your search query
+                or filters. Try adjusting your settings.
               </p>
             </div>
           )}

@@ -61,7 +61,7 @@ const CommunitySection = () => {
               className='mb-[0.75rem] size-[3rem]'
             />
             <h2 className='font-[700] text-[#1E242C] text-[1.25rem]'>
-              3000+ Active Member
+              3000+ Active Members
             </h2>
             <p className='mt-[0.6rem]'>
               A growing community of passionate students learning and building
@@ -178,7 +178,7 @@ const CommunitySection = () => {
               className='mb-[0.75rem] size-[3rem]'
             />
             <h2 className='font-[700] text-[#1E242C] text-[1.25rem]'>
-              3000+ Active Member
+              3000+ Active Members
             </h2>
             <p className='mt-[0.6rem]'>
               A growing community of passionate students learning and building
