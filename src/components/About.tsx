@@ -55,7 +55,10 @@ const AboutSection = () => {
       </article>
 
       {/* Mission + Vision */}
-      <article className='w-full grid lg:grid-cols-2 grid-cols-1 gap-[2rem] lg:gap-[2.8rem] mb-12'>
+      <article
+        className='w-full grid lg:grid-cols-2 grid-cols-1 gap-[2rem] lg:gap-[2.8rem] mb-12'
+        id='Mission'
+      >
         {/* Mission Card */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}

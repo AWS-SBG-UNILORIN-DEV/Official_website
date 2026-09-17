@@ -1,14 +1,15 @@
-import cloudCaptain from '/src/assets/abdulrahman-Team_lead.png';
-import coCaptain from '/src/assets/habeeb.jpg';
-import designLead from '/design-lead-2.jpg';
-import socialLead from '/src/assets/bello_madiya-2.jpg';
+import coCaptain from '/src/assets/Habeeb-Tech.jpeg';
+import designLead from '/src/assets/Mubarak-Design.jpeg';
+import socialLead from '/src/assets/bello_madiya-2.jpeg';
 
 // New inputs
-import sponsorshipLead from '/src/assets/chukwunta-2.jpg';
-import communicationLead from '/src/assets/obekpa-2.jpg';
-import logisticsLead from '/src/assets/abdulrahman-logistics-2.jpg';
+import cloudCaptain from '/src/assets/dera-captain.jpeg';
+import communicationLead from '/src/assets/obekpa-2.jpeg';
+import logisticsLead from '/src/assets/abdulrahman-operation.jpeg';
+import assTechLead from '/src/assets/ass-tech-lead.jpeg';
+import assMediaLead from '/src/assets/ass-media-lead.jpeg';
 
-import { FaXTwitter } from 'react-icons/fa6';
+import { FaAws, FaGithub, FaPinterest, FaXTwitter } from 'react-icons/fa6';
 import { FaInstagram } from 'react-icons/fa';
 
 import { RiLinkedinLine } from 'react-icons/ri';
@@ -22,43 +23,58 @@ interface TeamLeads {
   xIconLink: string;
   instagramLink: string;
   linkedInLink: string;
+  GithubLink?: string;
+  AWSBuilderCenterLink?: string;
+  pinterestLink?: string;
 }
 
 const TeamLead: TeamLeads[] = [
   {
     id: 1,
-    name: 'HABEEB BABANSULAIMON ',
+    name: 'Habeeb Babasulaiman ',
     description: 'Technical Lead',
     xIconLink: 'https://x.com/@iyanda2234',
     instagramLink: '',
     linkedInLink: 'https://www.linkedin.com/in/habeeb-babasulaiman',
+    GithubLink: 'https://github.com/FreemanBoss/',
+    AWSBuilderCenterLink: 'https://builder.aws.com/community/@freemanboss',
     src: coCaptain,
   },
   {
-    id: 3,
-    name: 'ABDULKABIR YUSUF',
-    description: 'Design Team Lead',
-    xIconLink: 'https://x.com/kabiryusuf24?s=21',
+    id: 2,
+    name: ' Tomori Mubarak Temitayo',
+    description: 'Design Lead',
+    xIconLink: 'https://x.com/HemBee2024',
     instagramLink: '',
-    linkedInLink: '',
+    linkedInLink: 'https://www.linkedin.com/in/tomori-mubarak-620688360',
+    pinterestLink: ' https://pin.it/4a7cD48z3',
     src: designLead,
   },
 
   {
-    id: 5,
+    id: 3,
     name: 'BELLO ABAKE MARDIYAH',
-    description: 'Social Media Lead',
-    xIconLink: '',
+    description: 'Media Lead',
+    xIconLink: 'https://x.com/tejufx8',
     instagramLink: '',
     linkedInLink:
       'https://www.linkedin.com/in/bello-mardiyat-2575762ba?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
     src: socialLead,
   },
+  {
+    id: 4,
+    name: 'Sholadoye Najib Adebisi',
+    description: 'Assistance Technical Lead',
+    xIconLink: 'https://x.com/NSholadoye',
+    instagramLink: 'https://www.instagram.com/natech_natech/',
+    linkedInLink: 'https://www.linkedin.com/in/najib-sholadoye-499449302/',
+    src: assTechLead,
+  },
 
   {
-    id: 8,
+    id: 5,
     name: 'OBEKPA PETER.',
-    description: 'Communication Lead',
+    description: ' Informations/communications Lead',
     xIconLink: '',
     instagramLink:
       'https://www.instagram.com/peter__obekpa?igsh=MXR3Y3A1bTMzNDQzNQ==',
@@ -67,24 +83,27 @@ const TeamLead: TeamLeads[] = [
     src: communicationLead,
   },
   {
-    id: 8,
-    name: 'CHUKWUNTA CHIDERA JOSHUA',
-    description: 'Communication Lead',
-    xIconLink: '',
-    instagramLink: 'https://x.com/0xDera_24',
-    linkedInLink:
-      'https://www.linkedin.com/in/chukwunta-joshua?utm_source=share_via&utm_content=profile&utm_medium=member_android',
-    src: sponsorshipLead,
+    id: 6,
+    name: 'ABDULRAHMAN ADEBAYO',
+    description: 'Operations and Programs Lead ',
+    xIconLink: ' https://x.com/AdebayoAbd009',
+    GithubLink: 'https://github.com/adebayo-abdul',
+    instagramLink: 'https://www.instagram.com/adebayoabdul2009/?hl=en',
+    linkedInLink: 'https://www.linkedin.com/in/adebayo-abdulrahman-5b2859343',
+    src: logisticsLead,
   },
   {
-    id: 8,
-    name: 'ABDULRAHMAN ADEBAYO',
-    description: 'Logistics & Operations Lead',
+    id: 7,
+    name: 'Olawuyi Olurotimi',
+    description: 'Ass Media Lead.',
     xIconLink: '',
-    instagramLink: 'https://x.com/0xDera_24',
+    GithubLink: '',
+    instagramLink: '',
     linkedInLink:
-      'https://www.linkedin.com/in/chukwunta-joshua?utm_source=share_via&utm_content=profile&utm_medium=member_android',
-    src: logisticsLead,
+      'https://www.linkedin.com/in/olurotimi-olawuyi-168bba374?utm_source=share_via&utm_content=profile&utm_medium=member_android',
+    AWSBuilderCenterLink:
+      ' https://builder.aws.com?inviteId=8f0a7432-c6da-4a62-9001-bea1efac11fc',
+    src: assMediaLead,
   },
 ];
 
@@ -117,10 +136,10 @@ const Team = () => {
         <p className=' text-3xl text-center pb-8'>Meet Our Core Team Leads</p>
       </motion.div>
 
-      <div className='team-leads-section flex flex-col items-center justify-around gap-12'>
+      <div className='team-leads-section flex w-full flex-col items-center justify-center gap-8 md:gap-10 lg:gap-12 pb-8'>
         {/* Cloud Captain Be in a section alone */}
         <motion.div
-          className='captain w-full sm:w-3/4 md:w-1/2 lg:w-[30%] h-[400px] flex flex-col justify-between'
+          className='captain w-full sm:w-3/4 md:w-[45%] lg:w-[30%] flex flex-col items-center'
           initial={{ opacity: 0, y: 40 }}
           whileInView={{
             opacity: 1,
@@ -129,37 +148,57 @@ const Team = () => {
           }}
           viewport={{ once: true }}
         >
-          <div className='w-full flex flex-col pb-12 shadow-md rounded-3xl gap-6 items-center h-full justify-between'>
+          <div className='relative w-full overflow-hidden rounded-[2rem] bg-white shadow-[0_18px_30px_rgba(15,23,42,0.08)]'>
             <img
               src={cloudCaptain}
               loading='lazy'
-              className='w-full h-64 object-cover rounded-tl-3xl rounded-tr-3xl'
+              className='w-full aspect-[4/5] object-cover rounded-t-[2rem]'
             />
-            <div className='name-card bg-[#9747FF] rounded-lg mt-[-40px] text-white w-[90%] flex flex-col items-center p-4'>
-              <h3 className='text-[18px] font-light'>ABOLAJI ABDULRAHMAN</h3>
-              <p className='text-[19px] font-light'> Leader </p>
+            <div className='relative z-10 -mt-8 mx-auto w-[92%] rounded-xl bg-[#9747FF] px-4 py-3 text-center text-white shadow-lg'>
+              <h3 className='text-[18px] font-light'>
+                Chukwunta Chidera Joshua
+              </h3>
+              <p className='text-[19px] font-light'>Community Lead / Captain</p>
             </div>
-            <div className='icons flex item-center justify-around space-x-4 mb-6'>
-              <a>
+            <div className='flex items-center justify-center gap-3 px-4 py-5'>
+              <a
+                href='https://x.com/0xDera_24'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
                 <FaXTwitter
                   size={35}
-                  className=' border border-black-400 rounded-full p-1 cursor-pointer hover hover:scale-110 transition duration-400'
-                />
-              </a>
-              <a>
-                <FaInstagram
-                  size={35}
-                  className=' border border-black-400 rounded-full p-1 cursor-pointer hover hover:scale-110 transition duration-400'
+                  className='border border-black/30 rounded-full p-1 cursor-pointer hover:scale-110 transition duration-400 text-black'
                 />
               </a>
               <a
-                href='https://www.linkedin.com/in/abolaji-abdulrahman-2a83a0232/'
+                href='https://www.instagram.com/the_global_dera/'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                <FaInstagram
+                  size={35}
+                  className='border border-black/30 rounded-full p-1 cursor-pointer hover:scale-110 transition duration-400 text-black'
+                />
+              </a>
+              <a
+                href='https://www.linkedin.com/in/chukwunta-joshua/'
                 target='_blank'
                 rel='noopener noreferrer'
               >
                 <RiLinkedinLine
                   size={35}
-                  className=' border border-black-400 rounded-full p-1 cursor-pointer hover hover:scale-110 transition duration-400'
+                  className='border border-black/30 rounded-full p-1 cursor-pointer hover:scale-110 transition duration-400 text-black'
+                />
+              </a>
+              <a
+                href='https://builder.aws.com/community/@0xdera24'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                <FaAws
+                  size={35}
+                  className='border border-black/30 rounded-full p-1 cursor-pointer hover:scale-110 transition duration-400 text-black'
                 />
               </a>
             </div>
@@ -167,7 +206,7 @@ const Team = () => {
         </motion.div>
 
         {/* Other Cloud leads in a container with flex */}
-        <div className='container flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 lg:gap-16 md:flex-wrap'>
+        <div className='container flex w-full flex-col items-center justify-center gap-6 md:flex-row md:flex-wrap md:gap-8 lg:gap-10'>
           {TeamLead.map((item, id) => (
             <motion.div
               initial={{ opacity: 0, y: 40 }}
@@ -178,54 +217,97 @@ const Team = () => {
               }}
               viewport={{ once: true }}
               key={id}
-              className='w-full sm:w-[90%] md:w-[60%] lg:w-1/4 h-[400px] flex flex-col shadow-sm rounded-3xl gap-6 items-center pb-12 justify-between'
+              className='w-full sm:w-[90%] md:w-[46%] lg:w-[30%] xl:w-[31%] flex flex-col items-center'
             >
-              <img
-                src={item.src}
-                loading='lazy'
-                className='w-full h-64 object-cover rounded-tl-xl rounded-tr-xl'
-              />
-              <div className='name-card bg-[#9747FF] rounded-lg mt-[-40px] text-white w-[90%] flex flex-col items-center p-2'>
-                <h3 className='text-[17px] font-light text-center'>
-                  {item.name}
-                </h3>
-                <p className='text-[13px] font-light text-center'>
-                  {' '}
-                  {item.description}
-                </p>
-              </div>
-              <div className='icons flex item-center justify-around gap-4'>
-                <a
-                  href={item.xIconLink}
-                  target='_blank'
-                  rel='noopener noreferrer'
-                >
-                  <FaXTwitter
-                    size={35}
-                    className='border border-black-400 rounded-full p-1 cursor-pointer hover hover:scale-110 transition duration-400'
-                  />
-                </a>
+              <div className='relative w-full overflow-hidden rounded-[2rem] bg-white shadow-[0_18px_30px_rgba(15,23,42,0.08)]'>
+                <img
+                  src={item.src}
+                  loading='lazy'
+                  className='w-full aspect-[4/5] object-cover rounded-t-[2rem]'
+                />
+                <div className='relative z-10 -mt-8 mx-auto w-[92%] rounded-xl bg-[#9747FF] px-3 py-3 text-center text-white'>
+                  <h3 className='text-[17px] font-light text-center'>
+                    {item.name}
+                  </h3>
+                  <p className='text-[13px] font-light text-center'>
+                    {item.description}
+                  </p>
+                </div>
+                <div className='flex items-center justify-center gap-3 px-4 py-5'>
+                  {item.xIconLink && (
+                    <a
+                      href={item.xIconLink}
+                      target='_blank'
+                      rel='noopener noreferrer'
+                    >
+                      <FaXTwitter
+                        size={35}
+                        className='border border-black/30 rounded-full p-1 cursor-pointer hover:scale-110 transition duration-400 text-black'
+                      />
+                    </a>
+                  )}
 
-                <a
-                  href={item.instagramLink}
-                  target='_blank'
-                  rel='noopener noreferrer'
-                >
-                  <FaInstagram
-                    size={35}
-                    className='border border-black-400 rounded-full p-1 cursor-pointer hover hover:scale-110 transition duration-400'
-                  />
-                </a>
-                <a
-                  href={item.linkedInLink}
-                  target='_blank'
-                  rel='noopener noreferrer'
-                >
-                  <RiLinkedinLine
-                    size={35}
-                    className='border border-black-400 rounded-full p-1 cursor-pointer hover hover:scale-110 transition duration-400'
-                  />
-                </a>
+                  {item.instagramLink && (
+                    <a
+                      href={item.instagramLink}
+                      target='_blank'
+                      rel='noopener noreferrer'
+                    >
+                      <FaInstagram
+                        size={35}
+                        className='border border-black/30 rounded-full p-1 cursor-pointer hover:scale-110 transition duration-400 text-black'
+                      />
+                    </a>
+                  )}
+                  {item.linkedInLink && (
+                    <a
+                      href={item.linkedInLink}
+                      target='_blank'
+                      rel='noopener noreferrer'
+                    >
+                      <RiLinkedinLine
+                        size={35}
+                        className='border border-black/30 rounded-full p-1 cursor-pointer hover:scale-110 transition duration-400 text-black'
+                      />
+                    </a>
+                  )}
+                  {item.GithubLink && (
+                    <a
+                      href={item.GithubLink}
+                      target='_blank'
+                      rel='noopener noreferrer'
+                    >
+                      <FaGithub
+                        size={35}
+                        className='border border-black/30 rounded-full p-1 cursor-pointer hover:scale-110 transition duration-400 text-black'
+                      />
+                    </a>
+                  )}
+                  {item.AWSBuilderCenterLink && (
+                    <a
+                      href={item.AWSBuilderCenterLink}
+                      target='_blank'
+                      rel='noopener noreferrer'
+                    >
+                      <FaAws
+                        size={35}
+                        className='border border-black/30 rounded-full p-1 cursor-pointer hover:scale-110 transition duration-400 text-black'
+                      />
+                    </a>
+                  )}
+                  {item.pinterestLink && (
+                    <a
+                      href={item.pinterestLink}
+                      target='_blank'
+                      rel='noopener noreferrer'
+                    >
+                      <FaPinterest
+                        size={35}
+                        className='border border-black/30 rounded-full p-1 cursor-pointer hover:scale-110 transition duration-400 text-black'
+                      />
+                    </a>
+                  )}
+                </div>
               </div>
             </motion.div>
           ))}
