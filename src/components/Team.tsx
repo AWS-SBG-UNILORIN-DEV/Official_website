@@ -136,10 +136,10 @@ const Team = () => {
         <p className=' text-3xl text-center pb-8'>Meet Our Core Team Leads</p>
       </motion.div>
 
-      <div className='team-leads-section flex flex-col items-center justify-around gap-12'>
+      <div className='team-leads-section flex w-full flex-col items-center justify-center gap-8 md:gap-10 lg:gap-12 pb-8'>
         {/* Cloud Captain Be in a section alone */}
         <motion.div
-          className='captain w-full sm:w-3/4 md:w-1/2 lg:w-[30%] h-[400px] flex flex-col justify-between'
+          className='captain w-full sm:w-3/4 md:w-[45%] lg:w-[30%] flex flex-col items-center'
           initial={{ opacity: 0, y: 40 }}
           whileInView={{
             opacity: 1,
@@ -148,22 +148,19 @@ const Team = () => {
           }}
           viewport={{ once: true }}
         >
-          <div className='w-full flex flex-col pb-12 shadow-md rounded-3xl gap-6 items-center h-full justify-between'>
+          <div className='relative w-full overflow-hidden rounded-[2rem] bg-white shadow-[0_18px_30px_rgba(15,23,42,0.08)]'>
             <img
               src={cloudCaptain}
               loading='lazy'
-              className='w-full h-64 object-cover object-top rounded-tl-3xl rounded-tr-3xl'
+              className='w-full aspect-[4/5] object-cover rounded-t-[2rem]'
             />
-            <div className='name-card bg-[#9747FF] rounded-lg mt-[-40px] text-white w-[90%] flex flex-col items-center p-4'>
+            <div className='relative z-10 -mt-8 mx-auto w-[92%] rounded-xl bg-[#9747FF] px-4 py-3 text-center text-white shadow-lg'>
               <h3 className='text-[18px] font-light'>
                 Chukwunta Chidera Joshua
               </h3>
-              <p className='text-[19px] font-light'>
-                {' '}
-                Community Lead / Captain{' '}
-              </p>
+              <p className='text-[19px] font-light'>Community Lead / Captain</p>
             </div>
-            <div className='icons flex item-center justify-around space-x-4 mb-6'>
+            <div className='flex items-center justify-center gap-3 px-4 py-5'>
               <a
                 href='https://x.com/0xDera_24'
                 target='_blank'
@@ -171,7 +168,7 @@ const Team = () => {
               >
                 <FaXTwitter
                   size={35}
-                  className=' border border-black-400 rounded-full p-1 cursor-pointer hover hover:scale-110 transition duration-400'
+                  className='border border-black/30 rounded-full p-1 cursor-pointer hover:scale-110 transition duration-400 text-black'
                 />
               </a>
               <a
@@ -181,7 +178,7 @@ const Team = () => {
               >
                 <FaInstagram
                   size={35}
-                  className=' border border-black-400 rounded-full p-1 cursor-pointer hover hover:scale-110 transition duration-400'
+                  className='border border-black/30 rounded-full p-1 cursor-pointer hover:scale-110 transition duration-400 text-black'
                 />
               </a>
               <a
@@ -191,7 +188,7 @@ const Team = () => {
               >
                 <RiLinkedinLine
                   size={35}
-                  className=' border border-black-400 rounded-full p-1 cursor-pointer hover hover:scale-110 transition duration-400'
+                  className='border border-black/30 rounded-full p-1 cursor-pointer hover:scale-110 transition duration-400 text-black'
                 />
               </a>
               <a
@@ -201,7 +198,7 @@ const Team = () => {
               >
                 <FaAws
                   size={35}
-                  className=' border border-black-400 rounded-full p-1 cursor-pointer hover hover:scale-110 transition duration-400'
+                  className='border border-black/30 rounded-full p-1 cursor-pointer hover:scale-110 transition duration-400 text-black'
                 />
               </a>
             </div>
@@ -209,7 +206,7 @@ const Team = () => {
         </motion.div>
 
         {/* Other Cloud leads in a container with flex */}
-        <div className='container flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 lg:gap-16 md:flex-wrap'>
+        <div className='container flex w-full flex-col items-center justify-center gap-6 md:flex-row md:flex-wrap md:gap-8 lg:gap-10'>
           {TeamLead.map((item, id) => (
             <motion.div
               initial={{ opacity: 0, y: 40 }}
@@ -220,96 +217,97 @@ const Team = () => {
               }}
               viewport={{ once: true }}
               key={id}
-              className='w-full sm:w-[90%] md:w-[60%] lg:w-1/4 h-[400px] flex flex-col shadow-sm rounded-3xl gap-6 items-center pb-12 justify-between'
+              className='w-full sm:w-[90%] md:w-[46%] lg:w-[30%] xl:w-[31%] flex flex-col items-center'
             >
-              <img
-                src={item.src}
-                loading='lazy'
-                className='w-full h-64 object-cover object-top rounded-tl-xl rounded-tr-xl'
-              />
-              <div className='name-card bg-[#9747FF] rounded-lg mt-[-40px] text-white w-[90%] flex flex-col items-center p-2'>
-                <h3 className='text-[17px] font-light text-center'>
-                  {item.name}
-                </h3>
-                <p className='text-[13px] font-light text-center'>
-                  {' '}
-                  {item.description}
-                </p>
-              </div>
-              <div className='icons flex item-center justify-around gap-4'>
-                {item.xIconLink && (
-                  <a
-                    href={item.xIconLink}
-                    target='_blank'
-                    rel='noopener noreferrer'
-                  >
-                    <FaXTwitter
-                      size={35}
-                      className='border border-black-400 rounded-full p-1 cursor-pointer hover hover:scale-110 transition duration-400'
-                    />
-                  </a>
-                )}
+              <div className='relative w-full overflow-hidden rounded-[2rem] bg-white shadow-[0_18px_30px_rgba(15,23,42,0.08)]'>
+                <img
+                  src={item.src}
+                  loading='lazy'
+                  className='w-full aspect-[4/5] object-cover rounded-t-[2rem]'
+                />
+                <div className='relative z-10 -mt-8 mx-auto w-[92%] rounded-xl bg-[#9747FF] px-3 py-3 text-center text-white'>
+                  <h3 className='text-[17px] font-light text-center'>
+                    {item.name}
+                  </h3>
+                  <p className='text-[13px] font-light text-center'>
+                    {item.description}
+                  </p>
+                </div>
+                <div className='flex items-center justify-center gap-3 px-4 py-5'>
+                  {item.xIconLink && (
+                    <a
+                      href={item.xIconLink}
+                      target='_blank'
+                      rel='noopener noreferrer'
+                    >
+                      <FaXTwitter
+                        size={35}
+                        className='border border-black/30 rounded-full p-1 cursor-pointer hover:scale-110 transition duration-400 text-black'
+                      />
+                    </a>
+                  )}
 
-                {item.instagramLink && (
-                  <a
-                    href={item.instagramLink}
-                    target='_blank'
-                    rel='noopener noreferrer'
-                  >
-                    <FaInstagram
-                      size={35}
-                      className='border border-black-400 rounded-full p-1 cursor-pointer hover hover:scale-110 transition duration-400'
-                    />
-                  </a>
-                )}
-                {item.linkedInLink && (
-                  <a
-                    href={item.linkedInLink}
-                    target='_blank'
-                    rel='noopener noreferrer'
-                  >
-                    <RiLinkedinLine
-                      size={35}
-                      className='border border-black-400 rounded-full p-1 cursor-pointer hover hover:scale-110 transition duration-400'
-                    />
-                  </a>
-                )}
-                {item.GithubLink && (
-                  <a
-                    href={item.GithubLink}
-                    target='_blank'
-                    rel='noopener noreferrer'
-                  >
-                    <FaGithub
-                      size={35}
-                      className='border border-black-400 rounded-full p-1 cursor-pointer hover hover:scale-110 transition duration-400'
-                    />
-                  </a>
-                )}
-                {item.AWSBuilderCenterLink && (
-                  <a
-                    href={item.AWSBuilderCenterLink}
-                    target='_blank'
-                    rel='noopener noreferrer'
-                  >
-                    <FaAws
-                      size={35}
-                      className='border border-black-400 rounded-full p-1 cursor-pointer hover hover:scale-110 transition duration-400'
-                    />
-                  </a>
-                )}
-                {item.pinterestLink && (
-                  <a
-                    href={item.pinterestLink}
-                    target='_blank'
-                    rel='noopener noreferrer'
-                  >
-                    <FaPinterest
-                      size={35}
-                      className='border border-black-400 rounded-full p-1 cursor-pointer hover hover:scale-110 transition duration-400'
-                    />
-                  </a>
-                )}
+                  {item.instagramLink && (
+                    <a
+                      href={item.instagramLink}
+                      target='_blank'
+                      rel='noopener noreferrer'
+                    >
+                      <FaInstagram
+                        size={35}
+                        className='border border-black/30 rounded-full p-1 cursor-pointer hover:scale-110 transition duration-400 text-black'
+                      />
+                    </a>
+                  )}
+                  {item.linkedInLink && (
+                    <a
+                      href={item.linkedInLink}
+                      target='_blank'
+                      rel='noopener noreferrer'
+                    >
+                      <RiLinkedinLine
+                        size={35}
+                        className='border border-black/30 rounded-full p-1 cursor-pointer hover:scale-110 transition duration-400 text-black'
+                      />
+                    </a>
+                  )}
+                  {item.GithubLink && (
+                    <a
+                      href={item.GithubLink}
+                      target='_blank'
+                      rel='noopener noreferrer'
+                    >
+                      <FaGithub
+                        size={35}
+                        className='border border-black/30 rounded-full p-1 cursor-pointer hover:scale-110 transition duration-400 text-black'
+                      />
+                    </a>
+                  )}
+                  {item.AWSBuilderCenterLink && (
+                    <a
+                      href={item.AWSBuilderCenterLink}
+                      target='_blank'
+                      rel='noopener noreferrer'
+                    >
+                      <FaAws
+                        size={35}
+                        className='border border-black/30 rounded-full p-1 cursor-pointer hover:scale-110 transition duration-400 text-black'
+                      />
+                    </a>
+                  )}
+                  {item.pinterestLink && (
+                    <a
+                      href={item.pinterestLink}
+                      target='_blank'
+                      rel='noopener noreferrer'
+                    >
+                      <FaPinterest
+                        size={35}
+                        className='border border-black/30 rounded-full p-1 cursor-pointer hover:scale-110 transition duration-400 text-black'
+                      />
+                    </a>
+                  )}
+                </div>
               </div>
             </motion.div>
           ))}
