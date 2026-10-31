@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "node vite",
+    "dev": "node api.js && vite",
     "build": "node api.js && tsc -b && vite build",
     "lint": "eslint src/**/*.{ts,tsx}",
     "typecheck": "tsc -b --noEmit",
