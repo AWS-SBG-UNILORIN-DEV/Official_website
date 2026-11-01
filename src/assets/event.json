@@ -1,6 +1,34 @@
 {
   "Sliders": [
     {
+      "name": "Career Path, Series 1",
+      "src": "/new-event-images/cp-s1.jpeg",
+      "date": "26th September, 2026",
+      "description": "Google Meet",
+      "link": "https://meet.google.com/upd-pdwk-bmb"
+    },
+    {
+      "name": "Beyond The Certificate: Building A Tech Career That Gets Noticed",
+      "src": "/new-event-images/btc.jpeg",
+      "date": "29th August, 2026",
+      "description": "University Main Auditorium",
+      "link": "https://chat.whatsapp.com/GX0wl83TFvf949JlTqcKQ1?s=cl&p=a&ilr=1"
+    },
+    {
+      "name": "cloud skill",
+      "src": "/new-event-images/aws-bootcamp.jpeg",
+      "date": "13th December, 2025",
+      "description": "AWS STUDENT BUILDERS GROUP Unilorin Bootcamp",
+      "link": "https://bit.ly/AWSCDILORIN2025"
+    },
+    {
+      "name": "Back and Ready to Build",
+      "src": "/new-event-images/cloud-bootcamp.jpeg",
+      "date": "15th May, 2025",
+      "description": "Cloud Bootcxamp Career Clinic",
+      "link": "https://www.meetup.com/aws-cloud-club-the-university-of-ilorin/events/310616721/"
+    },
+    {
       "name": "AWS Cloud Bootcamp Grand Finale",
       "src": "/new-event-images/bootcamp-finalle.jfif",
       "date": "27th of July, 2026",
