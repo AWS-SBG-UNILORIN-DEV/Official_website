@@ -2,15 +2,18 @@ import { useState, useEffect } from 'react';
 import Home from './pages/Home';
 import ResourcesPage from './pages/ResourcesPage';
 import CertificationsPage from './pages/CertificationsPage';
+import { AuthProvider } from './auth/AuthProvider';
+import AuthPage from './pages/AuthPage';
+import './auth/auth.css';
 import './index.css';
 
-const App = () => {
+const AppRoutes = () => {
   const [currentHash, setCurrentHash] = useState(window.location.hash);
 
   useEffect(() => {
     const handleHashChange = () => {
       setCurrentHash(window.location.hash);
-      // Smooth scroll to top when page changes, or to anchor if present
+      if (window.location.hash.startsWith('#/')) window.scrollTo({ top: 0, behavior: 'instant' });
       if (
         window.location.hash.startsWith('#/resources') ||
         window.location.hash.startsWith('#/hall-of-certifications') ||
@@ -24,18 +27,20 @@ const App = () => {
     return () => window.removeEventListener('hashchange', handleHashChange);
   }, []);
 
-  if (currentHash.startsWith('#/resources')) {
-    return <ResourcesPage />;
+  const pathname = window.location.pathname.replace(/\/$/, '') || '/';
+  const authPath = pathname === '/verify-email' || pathname === '/reset-password'
+    ? pathname.slice(1)
+    : currentHash.startsWith('#/') ? currentHash.slice(2).split('?')[0] : '';
+
+  if (['signin', 'signup', 'forgot-password', 'reset-password', 'verify-email', 'account'].includes(authPath)) {
+    return <AuthPage route={authPath as 'signin' | 'signup' | 'forgot-password' | 'reset-password' | 'verify-email' | 'account'} />;
   }
 
-  if (
-    currentHash.startsWith('#/hall-of-certifications') ||
-    currentHash.startsWith('#/certifications')
-  ) {
-    return <CertificationsPage />;
-  }
-
+  if (currentHash.startsWith('#/resources')) return <ResourcesPage />;
+  if (currentHash.startsWith('#/hall-of-certifications') || currentHash.startsWith('#/certifications')) return <CertificationsPage />;
   return <Home />;
 };
 
-export default App;
+export default function App() {
+  return <AuthProvider><AppRoutes /></AuthProvider>;
+}
