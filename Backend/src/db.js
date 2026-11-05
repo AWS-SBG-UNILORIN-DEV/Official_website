@@ -1,6 +1,7 @@
 import { config } from './config.js';
 import { createPostgresPool } from './db/providers/postgres.provider.js';
 import { createSupabaseClient } from './db/providers/supabase.provider.js';
+import { createSupabaseAuthClient } from './db/providers/supabase-auth.provider.js';
 
 export const pool = config.databaseProvider === 'postgres'
   ? createPostgresPool(config)
@@ -8,6 +9,7 @@ export const pool = config.databaseProvider === 'postgres'
 export const supabase = config.databaseProvider === 'supabase'
   ? createSupabaseClient(config)
   : null;
+export const supabaseAuth = createSupabaseAuthClient(config);
 
 pool?.on('error', (error) => {
   console.error('Unexpected idle PostgreSQL client error:', error.message);

@@ -1,18 +1,18 @@
+import { supabaseAuth } from '../db.js';
 import { ApiError } from '../utils/api-error.js';
-import { verifyAccessToken } from '../utils/tokens.js';
 
-export function authenticate(req, _res, next) {
+export async function authenticate(req, _res, next) {
   const match = /^Bearer\s+([^\s]+)$/i.exec(req.get('authorization') ?? '');
   if (!match) return next(new ApiError(401, 'UNAUTHORIZED', 'Authentication required.'));
 
   try {
-    const claims = verifyAccessToken(match[1]);
-    req.auth = { studentId: claims.sub };
+    const { data, error } = await supabaseAuth.auth.getUser(match[1]);
+    if (error || !data.user) {
+      return next(new ApiError(401, 'UNAUTHORIZED', 'Authentication required.'));
+    }
+    req.auth = { studentId: data.user.id };
     return next();
   } catch (error) {
-    if (error.name === 'TokenExpiredError') {
-      return next(new ApiError(401, 'TOKEN_EXPIRED', 'Session expired. Please refresh or sign in again.'));
-    }
-    return next(new ApiError(401, 'UNAUTHORIZED', 'Authentication required.'));
+    return next(error);
   }
 }

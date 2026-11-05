@@ -28,12 +28,12 @@ const AppRoutes = () => {
   }, []);
 
   const pathname = window.location.pathname.replace(/\/$/, '') || '/';
-  const authPath = pathname === '/verify-email' || pathname === '/reset-password'
+  const authPath = pathname === '/verify-email' || pathname === '/reset-password' || pathname === '/auth/callback'
     ? pathname.slice(1)
     : currentHash.startsWith('#/') ? currentHash.slice(2).split('?')[0] : '';
 
-  if (['signin', 'signup', 'forgot-password', 'reset-password', 'verify-email', 'account'].includes(authPath)) {
-    return <AuthPage route={authPath as 'signin' | 'signup' | 'forgot-password' | 'reset-password' | 'verify-email' | 'account'} />;
+  if (['signin', 'signup', 'forgot-password', 'reset-password', 'verify-email', 'auth/callback', 'complete-profile', 'account'].includes(authPath)) {
+    return <AuthPage route={authPath as 'signin' | 'signup' | 'forgot-password' | 'reset-password' | 'verify-email' | 'auth/callback' | 'complete-profile' | 'account'} />;
   }
 
   if (currentHash.startsWith('#/resources')) return <ResourcesPage />;

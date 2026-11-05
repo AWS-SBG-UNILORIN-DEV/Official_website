@@ -1,6 +1,5 @@
 import express from 'express';
 import cors from 'cors';
-import cookieParser from 'cookie-parser';
 import helmet from 'helmet';
 import { config } from './config.js';
 import { checkDatabaseConnection } from './db.js';
@@ -36,7 +35,6 @@ app.get('/health', async (_req, res) => {
 });
 
 app.use(express.json({ limit: config.jsonBodyLimit, strict: true }));
-app.use(cookieParser());
 app.use('/api/auth', authRouter);
 app.use(notFoundHandler);
 app.use(errorHandler);
