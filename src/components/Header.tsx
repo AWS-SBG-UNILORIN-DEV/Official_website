@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useAuth } from '../auth/AuthProvider';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { user } = useAuth();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -79,6 +81,9 @@ const Header = () => {
         </div>
 
         <div className='hidden lg:flex justify-end items-center'>
+          <a href={user ? '#/account' : '#/signin'} className='mr-4 text-sm font-semibold text-[#6B46C1] hover:text-[#9747FF]'>
+            {user ? 'My account' : 'Sign in'}
+          </a>
           <a href='#/hall-of-certifications'>
             <button className='flex items-center gap-[1rem] font-normal text-[#fff] text-[1rem] rounded-full border-[1px] border-white p-[0.5rem] pl-[1.25rem] transition-colors bg-[#9747FF] hover hover:bg-[#fff] hover:border-purple-300 hover:text-[#9747FF] cursor-pointer transition duration-400 ease-in-out'>
               View Impacts
@@ -167,6 +172,20 @@ const Header = () => {
                 );
               })}
             </ul>
+            <a
+              href={user ? '#/account' : '#/signin'}
+              onClick={() => setIsMenuOpen(false)}
+              className='mt-6 text-[#6B46C1] font-semibold'
+            >
+              {user ? 'My account' : 'Member sign in'}
+            </a>
+            <a
+              href='#/signup'
+              onClick={() => setIsMenuOpen(false)}
+              className='mt-3 text-[#6B46C1] font-semibold'
+            >
+              Create student account
+            </a>
             <a
               href='#/hall-of-certifications'
               onClick={() => setIsMenuOpen(false)}
