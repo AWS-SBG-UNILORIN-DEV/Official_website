@@ -45,8 +45,23 @@ export default function AuthPage({ route }: { route: Route }) {
   const tokenType = query.get('type') || 'email';
 
   useEffect(() => {
+    setError(null);
+    setNotice('');
+  }, [route]);
+
+  useEffect(() => {
     if (route !== 'verify-email') return;
-    verifyEmail(token, tokenType).then(message => { setVerified(true); setNotice(message || 'Your email is verified. You can now sign in.'); }).catch(setError).finally(() => setVerificationBusy(false));
+    let active = true;
+    setVerificationBusy(true);
+    verifyEmail(token, tokenType)
+      .then(message => {
+        if (!active) return;
+        setVerified(true);
+        setNotice(message || 'Your email is verified. You can now sign in.');
+      })
+      .catch(caught => { if (active) setError(caught); })
+      .finally(() => { if (active) setVerificationBusy(false); });
+    return () => { active = false; };
   }, [route, token, tokenType]);
 
   useEffect(() => {

@@ -145,6 +145,12 @@ export async function verifyEmail(tokenHash = '', type = 'email') {
   if (tokenHash) {
     const { error } = await client.auth.verifyOtp({ token_hash: tokenHash, type: type as 'email' });
     if (error) throw normalizeAuthError(error);
+  } else {
+    const { data, error } = await client.auth.getSession();
+    if (error) throw normalizeAuthError(error);
+    if (!data.session) {
+      throw new AuthApiError('This verification link is invalid or expired. Request a new link and try again.', 'INVALID_TOKEN', 400);
+    }
   }
 
   const { data, error } = await client.auth.getUser();
