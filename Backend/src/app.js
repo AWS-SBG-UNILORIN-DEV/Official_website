@@ -38,3 +38,5 @@ app.use(express.json({ limit: config.jsonBodyLimit, strict: true }));
 app.use('/api/auth', authRouter);
 app.use(notFoundHandler);
 app.use(errorHandler);
+
+export default app;
