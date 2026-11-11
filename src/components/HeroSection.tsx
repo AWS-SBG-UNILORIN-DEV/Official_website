@@ -69,7 +69,7 @@ const HeroSection = () => {
           viewport={{ once: true }}
           onClick={() =>
             window.open(
-              'https://www.meetup.com/aws-cloud-club-at-the-university-of-ilorin/',
+              'https://www.meetup.com/aws-sbg-the-university-of-ilorin/',
               '_blank'
             )
           }
