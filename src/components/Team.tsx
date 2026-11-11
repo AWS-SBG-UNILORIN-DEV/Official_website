@@ -64,7 +64,7 @@ const TeamLead: TeamLeads[] = [
   {
     id: 4,
     name: 'Sholadoye Najib Adebisi',
-    description: 'Assistance Technical Lead',
+    description: 'Assistant Technical Lead',
     xIconLink: 'https://x.com/NSholadoye',
     instagramLink: 'https://www.instagram.com/natech_natech/',
     linkedInLink: 'https://www.linkedin.com/in/najib-sholadoye-499449302/',
@@ -74,7 +74,7 @@ const TeamLead: TeamLeads[] = [
   {
     id: 5,
     name: 'OBEKPA PETER.',
-    description: ' Informations/communications Lead',
+    description: 'Information/Communications Lead',
     xIconLink: '',
     instagramLink:
       'https://www.instagram.com/peter__obekpa?igsh=MXR3Y3A1bTMzNDQzNQ==',
@@ -85,7 +85,7 @@ const TeamLead: TeamLeads[] = [
   {
     id: 6,
     name: 'ABDULRAHMAN ADEBAYO',
-    description: 'Operations and Programs Lead ',
+    description: 'Operations and Programs Lead',
     xIconLink: ' https://x.com/AdebayoAbd009',
     GithubLink: 'https://github.com/adebayo-abdul',
     instagramLink: 'https://www.instagram.com/adebayoabdul2009/?hl=en',
@@ -95,7 +95,7 @@ const TeamLead: TeamLeads[] = [
   {
     id: 7,
     name: 'Olawuyi Olurotimi',
-    description: 'Ass Media Lead.',
+    description: 'Assistant Media Lead',
     xIconLink: '',
     GithubLink: '',
     instagramLink: '',
