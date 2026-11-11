@@ -55,7 +55,7 @@ const Footer = () => {
           <div className='mb-12'>
             <h4 className='mb-4 font-bold'>Others</h4>
             <div className='flex flex-col gap-3'>
-              <a href='https://www.meetup.com/aws-cloud-club-the-university-of-ilorin/'>
+              <a href='https://www.meetup.com/aws-sbg-the-university-of-ilorin/'>
                 Meet Up
               </a>
               <a href='#Team'>Our Team</a>
@@ -88,7 +88,7 @@ const Footer = () => {
           </div>
           <div className='flex gap-4'>
             <a
-              href='https://www.meetup.com/aws-cloud-club-the-university-of-ilorin/'
+              href='https://www.meetup.com/aws-sbg-the-university-of-ilorin/'
               className='cursor-pointer cursor-pointer hover hover:scale-115 transition-all duration-500'
             >
               <FaMeetup size={25} />
